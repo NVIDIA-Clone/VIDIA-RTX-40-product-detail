@@ -1,7 +1,8 @@
-const express = require('express')
-const { Pool } = require('pg')
+import express from 'express'
+import pg from 'pg'
+const { Pool } = pg
 const app = express()
-const dotenv = require('dotenv')
+import dotenv from 'dotenv'
 dotenv.config()
 const PORT = process.env.PORT
 
@@ -22,7 +23,7 @@ app.get('/product', async (req, res) => {
     }
 })
 
-app.get('/gpu/:id', async (req, res) => {
+app.get('/product/:id', async (req, res) => {
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT * FROM specs WHERE spec_id = $1', [id])
