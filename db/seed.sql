@@ -105,4 +105,3 @@ INSERT INTO specs (
 
 
 
--- PGPASSWORD=ETt8D6r7WL3H09LGHYJkCwATNNfEwuZd psql -h dpg-cisqavtiuie5ebbvq74g-a.oregon-postgres.render.com -U vidia_database_user vidia_database
