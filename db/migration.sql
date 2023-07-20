@@ -1,6 +1,7 @@
-\c VIDIA_database
+-- \c VIDIA_database
 
-DROP TABLE IF EXISTS products CASCADE
+DROP TABLE IF EXISTS products CASCADE;
+DROP TABLE IF EXISTS specs CASCADE;
 CREATE TABLE products (
     product_id SERIAL PRIMARY KEY,
     name VARCHAR(50),
@@ -15,7 +16,7 @@ CREATE TABLE specs (
     vidia_cuda_cores INT,
     boost_clock NUMERIC,
     base_clock NUMERIC,
-    standard_memory_config VARCHAR, //check
+    standard_memory_config VARCHAR,
     memory_interface VARCHAR,
     ray_tracing_cores VARCHAR,
     tensor_cores VARCHAR,
@@ -24,6 +25,7 @@ CREATE TABLE specs (
     vidia_reflex BOOLEAN,
     vidia_broadcast BOOLEAN,
     pci_express_gen_4 BOOLEAN,
+    resizeable_bar BOOLEAN,
     vidia_geforce_experience BOOLEAN,
     vidia_ansel BOOLEAN,
     vidia_freestyle BOOLEAN,
@@ -33,7 +35,7 @@ CREATE TABLE specs (
     game_ready_drivers BOOLEAN,
     vidia_studio_drivers BOOLEAN,
     vidia_omniverse BOOLEAN,
-    birectx_12_ultimate BOOLEAN,
+    directx_12_ultimate BOOLEAN,
     vidia_gpu_boost BOOLEAN,
     vlink BOOLEAN,
     vulkan BOOLEAN,

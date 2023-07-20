@@ -1,4 +1,4 @@
-\c VIDIA_database
+-- \c VIDIA_database
 
 INSERT INTO products (name, price, description) VALUES 
 ('GeForce RTX 4090', 1599.00, 'The NVIDIA® GeForce RTX™ 4090 is the ultimate GeForce GPU. It brings an enormous leap in performance, efficiency, and AI-powered graphics. Experience ultra-high performance gaming, incredibly detailed virtual worlds, unprecedented productivity, and new ways to create. It’s powered by the NVIDIA Ada Lovelace architecture and comes with 24 GB of G6X memory to deliver the ultimate experience for gamers and creators.');
@@ -17,6 +17,7 @@ INSERT INTO specs (
     vidia_reflex,
     vidia_broadcast,
     pci_express_gen_4,
+    resizeable_bar,
     vidia_geforce_experience,
     vidia_ansel,
     vidia_freestyle,
@@ -26,7 +27,7 @@ INSERT INTO specs (
     game_ready_drivers,
     vidia_studio_drivers,
     vidia_omniverse,
-    birectx_12_ultimate,
+    directx_12_ultimate,
     vidia_gpu_boost,
     vlink,
     vulkan,
@@ -51,9 +52,9 @@ INSERT INTO specs (
     required_system_power,
     supplementary_power_connector) VALUES
 (
-    1,
- 16384,
-  2.52, 
+1,
+16384,
+2.52, 
 2.23, 
 '24 GB GDDR6X', 
 '384-bit', 
@@ -104,3 +105,4 @@ INSERT INTO specs (
 
 
 
+-- PGPASSWORD=ETt8D6r7WL3H09LGHYJkCwATNNfEwuZd psql -h dpg-cisqavtiuie5ebbvq74g-a.oregon-postgres.render.com -U vidia_database_user vidia_database
