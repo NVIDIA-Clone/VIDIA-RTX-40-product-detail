@@ -1,14 +1,11 @@
 const Footer = () => {
     // need to add responsiveness for smaller screens
   return (
-    <>
-    <body className="flex flex-col min-h-screen"><div className="flex-grow"></div></body> 
-    {/* above should be removed, just a placeholder */}
     <footer className="p-[30px 130.5px] sm:h-[8rem] h-[144px] xs:h-[9rem] xxs:h-[11rem] w-full mt-auto sm:flex sm:flex-col sm:justify-between">
       <div className="flex justify-between w-full h-1/5 sm:flex-col sm:items-center sm:mb-1">
         <div className="flex items-center sm:pb-1">
         <img
-          src="/public/images/blackNvidiaEye.png"
+          src="/images/blackNvidiaEye.png"
           alt="nvidia logo"
           className="h-[20px]"
           />
@@ -56,7 +53,6 @@ const Footer = () => {
         <p className="text-[#666666] text-xs mt-2">Copyright © 2023 VIDIA Corporation</p>
       </div>
     </footer>
-    </>
   );
 };
 export default Footer;
