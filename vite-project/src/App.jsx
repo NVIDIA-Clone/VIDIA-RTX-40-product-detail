@@ -1,17 +1,17 @@
 import Header from './components/Header';
-//LANDING PAGE
 import LandingPage from './components/LandingPage';
 import { LandingPageProvider } from './components/LandingPageContext';
+import Footer from './components/Footer';
 
-import { useContext, useState } from 'react';
 function App() {
-  useContext(LandingPageProvider);
-
   return (
-    <LandingPageProvider>
-      <Header />
-      <LandingPage />
-    </LandingPageProvider>
+    <>
+      <LandingPageProvider>
+        <Header />
+        <LandingPage />
+        <Footer />
+      </LandingPageProvider>
+    </>
   );
 }
 

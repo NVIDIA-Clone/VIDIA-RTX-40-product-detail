@@ -2,7 +2,8 @@ import { useContext } from 'react';
 import { LandingPageProvider } from './LandingPageContext';
 
 const LandingPage = () => {
-  useContext(LandingPageProvider);
+  const data = useContext(LandingPageProvider);
+  console.log(data);
 
   return (
     <>
@@ -15,7 +16,7 @@ const LandingPage = () => {
           className="flex w-full h-100% justify-center pr-[50vw]"
         >
           <div id="product-text-container" className="text-[#e8e6e3]">
-            <h1>This is the product</h1>
+            <h1>{data}</h1>
             <h2>Second Heading</h2>
             <p>Product Description</p>
             <h3>Price</h3>
