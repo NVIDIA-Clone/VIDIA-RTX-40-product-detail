@@ -1,4 +1,9 @@
+import { useContext } from 'react';
+import { LandingPageProvider } from './LandingPageContext';
+
 const LandingPage = () => {
+  useContext(LandingPageProvider);
+
   return (
     <>
       <div

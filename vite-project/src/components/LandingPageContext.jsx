@@ -14,13 +14,12 @@ export const LandingPageProvider = ({ children }) => {
     const getProductData = async () => {
       const productRes = await fetch('http://localhost:8000/product');
       const productData = await productRes.json();
-      console.log(productData);
       setData(productData);
     };
     getProductData();
   }, []);
 
-  console.log(data);
+  //   console.log(data);
 
   return (
     <LandingPageContext.Provider value={{ data }}>
