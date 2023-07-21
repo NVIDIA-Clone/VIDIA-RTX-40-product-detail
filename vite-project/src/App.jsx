@@ -1,12 +1,15 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Header />
-      <Footer />
+      <LandingPageProvider>
+        <Header />
+        <OuterNavBar />
+        <LandingPage />
+        <Footer />
+      </LandingPageProvider>
     </>
   );
 }
