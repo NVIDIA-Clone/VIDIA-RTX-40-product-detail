@@ -1,8 +1,9 @@
 const Footer = () => {
+    // need to add responsiveness for smaller screens
   return (
     <>
     <body className="flex flex-col min-h-screen"><div className="flex-grow"></div></body>
-    <footer className="p-4 h-[144px] w-full mt-auto">
+    <footer className="p-[30px 130.5px] h-[144px] w-full mt-auto">
       <div className="flex justify-start w-full h-1/5">
         <img
           src="/public/images/blackNvidiaEye.png"
@@ -16,7 +17,7 @@ const Footer = () => {
           United States
         </p>
       </div>
-      <div className="m{b}-{4px} flex flex-wrap w-full justify-center">
+      <div className="m{b}-{4px} flex flex-wrap w-full items-center flex-col">
         <ul className="inline-block text-center ">
           <li className="text-[#666666] inline-block mr-1  pl-1 after:content-['|']">
             {" "}
@@ -48,9 +49,7 @@ const Footer = () => {
           </li>
           <li className="text-[#666666] inline-block mr-1 "> Contact</li>
         </ul>
-      </div>
-      <div className="mt-2">
-        <p className="text-[#666666] text-xs">Copyright © 2023 VIDIA Corporation</p>
+        <p className="text-[#666666] text-xs mt-2">Copyright © 2023 VIDIA Corporation</p>
       </div>
     </footer>
     </>
