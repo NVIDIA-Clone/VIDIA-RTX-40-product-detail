@@ -4,19 +4,22 @@ const Footer = () => {
     <>
     <body className="flex flex-col min-h-screen"><div className="flex-grow"></div></body> 
     {/* above should be removed, just a placeholder */}
-    <footer className="p-[30px 130.5px] h-[144px] w-full mt-auto">
-      <div className="flex justify-start w-full h-1/5">
+    <footer className="p-[30px 130.5px] sm:h-[8rem] h-[144px] xs:h-[9rem] xxs:h-[11rem] w-full mt-auto sm:flex sm:flex-col sm:justify-between">
+      <div className="flex justify-between w-full h-1/5 sm:flex-col sm:items-center sm:mb-1">
+        <div className="flex items-center sm:pb-1">
         <img
           src="/public/images/blackNvidiaEye.png"
           alt="nvidia logo"
-          className="h-full"
-        />
+          className="h-[20px]"
+          />
         <p className="font-black font-Sig">VIDIA</p>
-      </div>
-      <div className="flex justify-end">
+          </div>
         <p className="text-[#CCCCCC] font-Sig font-semibold tracking-wide mb-1">
           United States
         </p>
+      </div>
+      <div className="flex justify-end">
+        
       </div>
       <div className="m{b}-{4px} flex flex-wrap w-full items-center flex-col">
         <ul className="inline-block text-center ">
