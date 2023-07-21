@@ -1,6 +1,6 @@
 
 
-const OuterNavbar = () => {
+const InnerNavbar = () => {
     return (
         <div class="py-2 bg-neutral-800">
             <div class="flex flex-wrap bg-neutral-800">
@@ -18,4 +18,4 @@ const OuterNavbar = () => {
     )
 }
 
-export default OuterNavbar
+export default InnerNavbar
