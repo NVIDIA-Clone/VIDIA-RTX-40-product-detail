@@ -3,7 +3,7 @@ const LandingPage = () => {
     <>
       <div
         id="landing-page-container"
-        className="flex h-[100vh] w-full justify-center items-center bg-[url('./../../public/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-[length:100vw_100%]"
+        className="flex h-[100vh] w-full justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-[length:100vw_100%]"
       >
         <div
           id="landing-page"

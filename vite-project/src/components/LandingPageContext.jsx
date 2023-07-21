@@ -1,25 +1,32 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
+/* eslint-disable react-hooks/rules-of-hooks */
 //IMPORT THE UseState Hook and UseContext from  react
 import { useState, useEffect, createContext } from 'react';
 
-const landingPageContext = createContext();
+const LandingPageContext = createContext();
 
-export const landingPageProvider = ({ children }) => {
+export const LandingPageProvider = ({ children }) => {
   //State
   const [data, setData] = useState({});
 
   useEffect(() => {
     const getProductData = async () => {
-      const productRes = await fetch('');
-      const productData = usersRes.data;
-      setUsers(userData);
+      const productRes = await fetch('http://localhost:8000/product');
+      const productData = await productRes.json();
+      console.log(productData);
+      setData(productData);
     };
-    getUserData();
+    getProductData();
   }, []);
+
+  console.log(data);
+
   return (
-    <landingPageContext.Provider value={{ data }}>
+    <LandingPageContext.Provider value={{ data }}>
       {children}
-    </landingPageContext.Provider>
+    </LandingPageContext.Provider>
   );
 };
 
-export default landingPageContext;
+export default LandingPageContext;
