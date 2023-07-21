@@ -2,7 +2,8 @@ const Footer = () => {
     // need to add responsiveness for smaller screens
   return (
     <>
-    <body className="flex flex-col min-h-screen"><div className="flex-grow"></div></body>
+    <body className="flex flex-col min-h-screen"><div className="flex-grow"></div></body> 
+    {/* above should be removed, just a placeholder */}
     <footer className="p-[30px 130.5px] h-[144px] w-full mt-auto">
       <div className="flex justify-start w-full h-1/5">
         <img
