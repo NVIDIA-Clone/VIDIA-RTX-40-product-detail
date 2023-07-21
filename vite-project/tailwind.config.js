@@ -10,6 +10,7 @@ export default {
         NVGreen: "#5e9400",
         NVBGGray: "#141516",
         BHGreen: "#749f29",
+        NVWhiteTxt: "#e8e6e3",
       },
     },
   },
