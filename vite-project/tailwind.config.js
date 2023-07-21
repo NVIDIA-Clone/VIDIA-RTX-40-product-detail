@@ -13,6 +13,11 @@ export default {
         NVWhiteTxt: "#e8e6e3",
       },
     },
+    screens: {
+      'sm' : {'max' : '640px'},
+      'xs' : {'max' : '485px'},
+      'xxs' : {'max' : '365px'}
+    },
   },
   plugins: [],
 };
