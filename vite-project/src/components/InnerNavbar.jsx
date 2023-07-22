@@ -1,29 +1,15 @@
 const InnerNavbar = () => {
   return (
-    <div className="py-2 bg-neutral-800">
-      <div className="flex flex-wrap bg-neutral-800">
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2 ml-32">
-          Architecture
-        </button>
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2">
-          Performance
-        </button>
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2">
-          Ray Tracing
-        </button>
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2">
-          DLSS 3
-        </button>
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2">
-          Reflex
-        </button>
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2">
-          Create
-        </button>
-        <button className="font-sans text-white border-none bg-inherit py-2 px-2">
-          Specs
-        </button>
-        <button className="font-sans bg-lime-600 hover:bg-lime-500 ml-80">
+    <div className="py-[1.2rem] bg-neutral-800 h-[70px]">
+      <div className="flex flex-wrap bg-neutral-800 font-Sig text-[#e7e7e7] gap-2 pl-[10rem] pr-[10rem]">
+        <button className="">Architecture</button>
+        <button className=" ">Performance</button>
+        <button className="">Ray Tracing</button>
+        <button className="">DLSS 3</button>
+        <button className="">Reflex</button>
+        <button className="">Create</button>
+        <button className="">Specs</button>
+        <button className=" bg-NVGreen hover:bg-BHGreen w-[80px] h-[48.5px] mb-[12px]">
           Shop
         </button>
       </div>

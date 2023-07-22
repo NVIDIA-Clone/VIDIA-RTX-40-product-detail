@@ -2,6 +2,10 @@ import { useState } from "react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isForYouOpen, setIsForYouOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,14 +15,36 @@ function Header() {
     setIsMenuOpen(false);
   };
 
+  const handleProductClick = () => {
+    setIsProductsOpen(!isProductsOpen);
+  };
+
+  const handleSolutionsClick = () => {
+    setIsSolutionsOpen(!isSolutionsOpen);
+  };
+
+  const handleIndustriesClick = () => {
+    setIsIndustriesOpen(!isIndustriesOpen);
+  };
+
+  const handleForYouClick = () => {
+    setIsForYouOpen(!isForYouOpen);
+  };
+
+  const handleOffClick = () => {
+    setIsProductsOpen(false);
+    setIsSolutionsOpen(false);
+    setIsIndustriesOpen(false);
+    setIsForYouOpen(false);
+  };
   return (
     <>
       <header>
-        <div className="m-auto static max-w-[100rem]">
+        <div className="mr-auto ml-auto static max-w-[100rem]">
           <nav className="h-[44px] w-full px-[11rem] bg-[#fff] font-Sig flex flex-row items-center ">
             {/* Logo */}
 
-            <div id="logoContainer" className="flex ml-[12rem]">
+            <div id="logoContainer" className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -83,22 +109,34 @@ function Header() {
             {isMenuOpen && (
               <ul className="flex space-x-4 float-left">
                 <li className="inline-block mr-[-4px]">
-                  <label className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]">
+                  <label
+                    className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]"
+                    onClick={handleProductClick}
+                  >
                     Products
                   </label>
                 </li>
                 <li>
-                  <label className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]">
+                  <label
+                    className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]"
+                    onClick={handleSolutionsClick}
+                  >
                     Solutions
                   </label>
                 </li>
                 <li>
-                  <label className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]">
+                  <label
+                    className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]"
+                    onClick={handleIndustriesClick}
+                  >
                     Industries
                   </label>
                 </li>
                 <li>
-                  <label className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]">
+                  <label
+                    className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]"
+                    onClick={handleForYouClick}
+                  >
                     For You
                   </label>
                 </li>
@@ -182,6 +220,134 @@ function Header() {
             </div>
           </nav>
         </div>
+        {/* Additional navigation bars */}
+        {isProductsOpen && (
+          <div className="w-[100%] h-[45px] bg-[#f7f7f7]">
+            {" "}
+            {/* Add your product navigation content here */}
+          </div>
+        )}
+        {isSolutionsOpen && (
+          <div className="w-[100%] h-[442px] bg-[#eeeeee]">
+            {" "}
+            {/* Add your solutions navigation content here */}
+          </div>
+        )}
+        {isIndustriesOpen && (
+          <div className="cursor-pointer w-[100%] h-[275px] bg-[#eeeeee]">
+            <div className="flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
+              <ul className="mb-0 mt-0 pb-[10px] pt-[30px]">
+                <li className="w-[835.6px]">
+                  <div className="min-h-[18px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5 ">
+                    Industries
+                  </div>
+                  <ul className="columns-4 gap-[30px] leading-5">
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Overview</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">
+                        Architecture, Engineering, Construction & Operations
+                      </a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Automotive</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Consumer Internet</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Cybersecurity</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Energy</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Financial Services</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">
+                        Healthcare and Life Sciences
+                      </a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Higher Education</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Game Development</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Manufacturing</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">
+                        Media and Entertainment
+                      </a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">US Public Sector</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Restaurants</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Retail and CPG</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Robotics</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Smart Cities</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Supercomputing</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Telecommunications</a>
+                    </li>
+                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                      <a className="text-[#666] block">Transportation</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
+        {isForYouOpen && (
+          <div className="cursor-pointer font-Sig flex flex-row w-[100%] h-[45px] bg-[#eeeeee]">
+            <div className="text-[#696969] text-md flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
+              <ul className="whitespace-nowrap ">
+                <li className=" table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">
+                    Creatives/Designers
+                  </label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">Data Scientists</label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">Developers</label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">Gamers</label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">IT Professionals</label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">Researchers</label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">Roboticists</label>
+                </li>
+                <li className="table-cell hover:text-[#1a1a1a]">
+                  <label className="cursor-pointer p-2">Startups</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );
