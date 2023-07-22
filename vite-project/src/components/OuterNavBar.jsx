@@ -1,9 +1,6 @@
-import {useState} from 'react';
 import ProductDropdown from './ProductDropdown';
 
 const OuterNavBar = () => {
-    
-    const [productsMenuActive, setProductsMenuActive] = useState(false);
     
     return (
         <>
