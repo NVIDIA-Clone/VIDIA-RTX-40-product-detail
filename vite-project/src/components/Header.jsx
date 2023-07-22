@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,6 +6,7 @@ function Header() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isForYouOpen, setIsForYouOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,27 +17,49 @@ function Header() {
   };
 
   const handleProductClick = () => {
+    setIsSolutionsOpen(false);
+    setIsIndustriesOpen(false);
+    setIsForYouOpen(false);
     setIsProductsOpen(!isProductsOpen);
   };
 
   const handleSolutionsClick = () => {
+    setIsProductsOpen(false);
+    setIsIndustriesOpen(false);
+    setIsForYouOpen(false);
     setIsSolutionsOpen(!isSolutionsOpen);
   };
 
   const handleIndustriesClick = () => {
+    setIsProductsOpen(false);
+    setIsSolutionsOpen(false);
+    setIsForYouOpen(false);
     setIsIndustriesOpen(!isIndustriesOpen);
   };
 
   const handleForYouClick = () => {
-    setIsForYouOpen(!isForYouOpen);
-  };
-
-  const handleOffClick = () => {
     setIsProductsOpen(false);
     setIsSolutionsOpen(false);
     setIsIndustriesOpen(false);
-    setIsForYouOpen(false);
+    setIsForYouOpen(!isForYouOpen);
   };
+
+  const handleOffClick = (e) => {
+    if (!menuRef.current.contains(e.target)) {
+      setIsProductsOpen(false);
+      setIsSolutionsOpen(false);
+      setIsIndustriesOpen(false);
+      setIsForYouOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleOffClick);
+    return () => {
+      document.removeEventListener("click", handleOffClick);
+    };
+  }, []);
+
   return (
     <>
       <header>
@@ -107,7 +130,7 @@ function Header() {
             {/* Conditionally render the ul based on the isMenuOpen state */}
 
             {isMenuOpen && (
-              <ul className="flex space-x-4 float-left">
+              <ul ref={menuRef} className="flex space-x-4 float-left">
                 <li className="inline-block mr-[-4px]">
                   <label
                     className="cursor-pointer text-[#696969] hover:text-[#1a1a1a]"
@@ -222,129 +245,484 @@ function Header() {
         </div>
         {/* Additional navigation bars */}
         {isProductsOpen && (
-          <div className="w-[100%] h-[45px] bg-[#f7f7f7]">
-            {" "}
-            {/* Add your product navigation content here */}
+          <div onClick={handleOffClick}>
+            <div
+              className="w-[100%] h-[45px] bg-[#f7f7f7]"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent clicks inside the modal from closing it
+              }}
+            >
+              {" "}
+              {/* Add your product navigation content here */}
+            </div>
           </div>
         )}
         {isSolutionsOpen && (
-          <div className="w-[100%] h-[442px] bg-[#eeeeee]">
-            {" "}
-            {/* Add your solutions navigation content here */}
+          <div onClick={handleOffClick}>
+            <div
+              className="cursor-pointer w-[100%] h-[442px] bg-[#eeeeee]"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent clicks inside the modal from closing it
+              }}
+            >
+              <div className="w-[1320px] ml-[auto] mr-[auto]">
+                <ul className="mb-0 mt-0 pb-[10px] pl-0 pt-[30px]">
+                  <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
+                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                      AI and Data Science
+                    </div>
+                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          AI Inference
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          AI Workflows
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Converstional AI
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Data Analytics
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Deep Learning Training
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Generative AI
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Machine Learning
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Prediction and Forecasting
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Speech AI
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
+                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                      Data Center and Cloud Computing
+                    </div>
+                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Accelerated Computing for Enterprise IT
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Cloud Computing
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Colocation
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Edge Computing
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Networking
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Virtualization
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          MLOps
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Hands-On Labs
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
+                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                      Design and Simulation
+                    </div>
+                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Augmented and Virtual Reality
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Multi-Display
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Rendering
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Metaverse
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Graphics Virtualization
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Engineering Simulation
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Broadcast
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Hands-On Labs
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
+                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                      Robotics and Edge Computing
+                    </div>
+                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          AI-on-5G
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Intelligent Video Analytics
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Industrial
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Robotics
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Edge Deployment Management
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Edge Solutions
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Hands-On Lab
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
+                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                      High-Performance Computing
+                    </div>
+                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          HPC and AI
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Simulation and Modeling
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Scientific Visualization
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Hands-On Labs
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
+                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                      Self-Driving Vehicles
+                    </div>
+                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Chauffeur
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Concierge
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          AI Training
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Simulation
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          HD Mapping
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Cloud Gaming
+                        </a>
+                      </li>
+                      <li className="pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Safety
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         )}
         {isIndustriesOpen && (
-          <div className="cursor-pointer w-[100%] h-[275px] bg-[#eeeeee]">
-            <div className="flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
-              <ul className="mb-0 mt-0 pb-[10px] pt-[30px]">
-                <li className="w-[835.6px]">
-                  <div className="min-h-[18px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5 ">
-                    Industries
-                  </div>
-                  <ul className="columns-4 gap-[30px] leading-5">
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Overview</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">
-                        Architecture, Engineering, Construction & Operations
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Automotive</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Consumer Internet</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Cybersecurity</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Energy</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Financial Services</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">
-                        Healthcare and Life Sciences
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Higher Education</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Game Development</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Manufacturing</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">
-                        Media and Entertainment
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">US Public Sector</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Restaurants</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Retail and CPG</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Robotics</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Smart Cities</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Supercomputing</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Telecommunications</a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block">Transportation</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+          <div onClick={handleOffClick}>
+            <div
+              className="cursor-pointer w-[100%] h-[275px] bg-[#eeeeee]"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent clicks inside the modal from closing it
+              }}
+            >
+              <div className="flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
+                <ul className="mb-0 mt-0 pb-[10px] pt-[30px]">
+                  <li className="w-[835.6px]">
+                    <div className="min-h-[18px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5 ">
+                      Industries
+                    </div>
+                    <ul className="columns-4 gap-[30px] leading-5">
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Overview
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Architecture, Engineering, Construction & Operations
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Automotive
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Consumer Internet
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Cybersecurity
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Energy
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Financial Services
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Healthcare and Life Sciences
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Higher Education
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Game Development
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Manufacturing
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Media and Entertainment
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          US Public Sector
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Restaurants
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Retail and CPG
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Robotics
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Smart Cities
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Supercomputing
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Telecommunications
+                        </a>
+                      </li>
+                      <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          Transportation
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         )}
         {isForYouOpen && (
-          <div className="cursor-pointer font-Sig flex flex-row w-[100%] h-[45px] bg-[#eeeeee]">
-            <div className="text-[#696969] text-md flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
-              <ul className="whitespace-nowrap ">
-                <li className=" table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">
-                    Creatives/Designers
-                  </label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">Data Scientists</label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">Developers</label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">Gamers</label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">IT Professionals</label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">Researchers</label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">Roboticists</label>
-                </li>
-                <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="cursor-pointer p-2">Startups</label>
-                </li>
-              </ul>
+          <div onClick={handleOffClick}>
+            <div
+              className="cursor-pointer font-Sig flex flex-row w-[100%] h-[45px] bg-[#eeeeee]"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent clicks inside the modal from closing it
+              }}
+            >
+              <div className="text-[#696969] text-md flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
+                <ul className="whitespace-nowrap ">
+                  <li className=" table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">
+                      Creatives/Designers
+                    </label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">
+                      Data Scientists
+                    </label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">Developers</label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">Gamers</label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">
+                      IT Professionals
+                    </label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">Researchers</label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">Roboticists</label>
+                  </li>
+                  <li className="table-cell hover:text-[#1a1a1a]">
+                    <label className="cursor-pointer p-2">Startups</label>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         )}
