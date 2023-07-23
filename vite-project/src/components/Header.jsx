@@ -143,7 +143,7 @@ function Header() {
     return () => {
       document.removeEventListener("click", handleOffClick);
     };
-  }, []);
+  });
 
   return (
     <>
