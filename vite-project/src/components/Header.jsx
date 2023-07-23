@@ -131,7 +131,7 @@ function Header() {
     <>
       <header>
         <div className="mr-auto ml-auto static max-w-[100rem]">
-          <nav className="h-[44px] w-full px-[11rem] bg-[#fff] font-Sig flex flex-row items-center ">
+          <nav className="h-[44px] w-full px-[11rem] bg-[#fff] font-Sig flex flex-row items-center">
             {/* Logo */}
             <div id="logoContainer" className="flex">
               <svg
@@ -152,7 +152,7 @@ function Header() {
             <div className="flex items-center">
               <button
                 id="menu-button"
-                className={`h-[40px] transform transition-transform ${
+                className={`h-[40px] transform transition-transform duration-500 ${
                   isMenuOpen ? "translate-x-[22rem]" : "translate-x-0"
                 }`}
                 onClick={handleArrowClick}
@@ -164,25 +164,30 @@ function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {isMenuOpen ? (
-                    // X SVG
-                    <path
-                      d="M6 18L18 6M6 6L18 18"
-                      stroke="#696969"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  ) : (
-                    // Arrow Carrot SVG
-                    <path
-                      d="M10 7L15 12L10 17"
-                      stroke="#696969"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  )}
+                  {/* Arrow Carrot SVG */}
+                  <path
+                    d="M10 7L15 12L10 17"
+                    stroke="#696969"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    style={{
+                      visibility: isMenuOpen ? "hidden" : "visible",
+                      transition: "visibility 0.2s",
+                    }}
+                  />
+                  {/* X SVG */}
+                  <path
+                    d="M6 18L18 6M6 6L18 18"
+                    stroke="#696969"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    style={{
+                      visibility: isMenuOpen ? "visible" : "hidden",
+                      transition: "visibility 0.2s",
+                    }}
+                  />
                 </svg>
               </button>
               {!isMenuOpen && (
@@ -226,11 +231,12 @@ function Header() {
                   </label>
                 </li>
                 <li
-                  className="block h-[3px] bg-[#76b900] transition-all duration-500 ease-linear"
+                  className="block h-[3px] bg-[#76b900] transition-all duration-300 ease-linear"
                   style={getMenuGreenBarStyles()}
                 ></li>
               </ul>
             )}
+
             {/* Space Between Divs */}
             <div className="flex-grow"></div>
 
@@ -255,6 +261,7 @@ function Header() {
                 </a>
               </li>
             </ul>
+
             {/* Right hand icons */}
             <div className="flex pl-[3rem] gap-2 cursor-pointer">
               <svg
@@ -303,6 +310,7 @@ function Header() {
             </div>
           </nav>
         </div>
+
         {/* Additional navigation bars */}
         {isProductsOpen && (
           <div onClick={handleOffClick}>
