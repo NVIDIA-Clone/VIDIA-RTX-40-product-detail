@@ -10,7 +10,17 @@ function Header() {
   const [isSoftwareOpen, setIsSoftwareOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) {
+      // If the menu is open, close it and the corresponding divs
+      setIsMenuOpen(false);
+      setIsProductsOpen(false);
+      setIsSolutionsOpen(false);
+      setIsIndustriesOpen(false);
+      setIsForYouOpen(false);
+    } else {
+      // If the menu is closed, just open it
+      setIsMenuOpen(true);
+    }
   };
 
   const closeMenu = () => {
@@ -138,7 +148,7 @@ function Header() {
   return (
     <>
       <header>
-        <div className="mr-auto ml-auto static max-w-[100rem]">
+        <div className="cursor-pointer mr-auto ml-auto static max-w-[100rem]">
           <nav className="h-[44px] w-full px-[11rem] bg-[#fff] font-Sig flex flex-row items-center">
             {/* Logo */}
             <div id="logoContainer" className="flex">
@@ -203,6 +213,7 @@ function Header() {
                 <span className="text-black ml-2">Main Menu</span>
               )}
             </div>
+
             {/* Conditionally render the ul based on the isMenuOpen state */}
             {isMenuOpen && (
               <ul className="flex space-x-4 float-left">
@@ -329,7 +340,7 @@ function Header() {
                 e.stopPropagation(); // Prevent clicks inside the modal from closing it
               }}
             >
-              <div className="pt-[1px]">
+              <div className="cursor-pointer pt-[1px]">
                 <div className="w-[1290px] max-w-[1290px] mr-auto ml-auto ">
                   <ul className="whitespace-nowrap m-0 pl-0 list-none">
                     <li className="table-cell list-none">
@@ -359,7 +370,7 @@ function Header() {
 
             {/* Nested divs (Hardware and Software) */}
             {isHardwareOpen && (
-              <div className="absolute z-[551] w-[100%] h-[391px] bg-[#eeeeee] mt-6">
+              <div className="cursor-pointer absolute z-[551] w-[100%] h-[391px] bg-[#eeeeee] mt-6">
                 <div className="w-[1320px] ml-[auto] mr-[auto]">
                   <ul className="mb-0 mt-4 pb-[10px] pl-0 pt-[30px] text-sm">
                     <li className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]">
@@ -560,7 +571,7 @@ function Header() {
             )}
 
             {isSoftwareOpen && (
-              <div className="absolute z-[551] w-[100%] h-[499px] bg-[#eeeeee] mt-6">
+              <div className="cursor-pointer absolute z-[551] w-[100%] h-[499px] bg-[#eeeeee] mt-6">
                 <div className="w-[1318px] ml-[auto] mr-[auto]">
                   <ul className="mb-0 mt-4 pb-[10px] pl-0 pt-[30px] text-sm">
                     <li className="float-left mr-[30px] max-w-[404.8px] pb-[20px] w-[404.8px]">
