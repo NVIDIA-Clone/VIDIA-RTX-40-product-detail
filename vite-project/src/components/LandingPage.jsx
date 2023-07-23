@@ -28,14 +28,16 @@ const LandingPage = () => {
             <h3 className="text-[26px] font-bold p-[8px_15px]">
               Starting at ${data.data.price}
             </h3>
-            <a
-              href="#"
-              className="ml-[15px] p-[13px_15px] bg-[#76b900] text-[black] font-bold hover:bg-[#91c733]"
-            >
-              <button className="text-[18px] mt-[10px]">
+
+            <button className="text-[18px] mt-[10px]">
+              {' '}
+              <a
+                href="#"
+                className="ml-[15px] p-[13px_15px] bg-[#76b900] text-[black] font-bold hover:bg-[#91c733]"
+              >
                 See All Buying Options
-              </button>
-            </a>
+              </a>
+            </button>
           </div>
         </div>
       </div>
