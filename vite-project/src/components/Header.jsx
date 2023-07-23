@@ -68,13 +68,23 @@ function Header() {
   };
 
   const handleHardwareToggle = () => {
-    setIsSoftwareOpen(false); // Close "Software" if it was open
-    setIsHardwareOpen(!isHardwareOpen); // Toggle "Hardware"
+    setIsProductsOpen(true);
+    setIsHardwareOpen(true);
+    setIsSoftwareOpen(false);
   };
 
   const handleSoftwareToggle = () => {
-    setIsHardwareOpen(false); // Close "Hardware" if it was open
-    setIsSoftwareOpen(!isSoftwareOpen); // Toggle "Software"
+    setIsProductsOpen(true);
+    setIsSoftwareOpen(true);
+    setIsHardwareOpen(false);
+  };
+
+  const getGreenBarStyles = () => {
+    const labelWidth = 88; // Width of the label (assumed 88px)
+    if (isHardwareOpen) {
+      return { left: "475px", width: `${labelWidth}px` };
+    } else isSoftwareOpen;
+    return { left: `${labelWidth + 470}px`, width: `${labelWidth}px` };
   };
 
   useEffect(() => {
@@ -285,7 +295,10 @@ function Header() {
                         Software
                       </label>
                     </li>
-                    <li className="left-[85px] w-[88px] bg-[#76b900] bottom-0 block h-[3px] mt-[-3px] relative list-none transition-all duration-[.5s] ease-linear delay-0"></li>
+                    <li
+                      className="absolute bottom-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
+                      style={getGreenBarStyles()}
+                    ></li>
                   </ul>
                 </div>
               </div>
