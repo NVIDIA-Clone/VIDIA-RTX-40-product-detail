@@ -1,26 +1,41 @@
 import { useContext } from 'react';
-import { LandingPageProvider } from './LandingPageContext';
+import LandingPageContext from './LandingPageContext';
 
 const LandingPage = () => {
-  const data = useContext(LandingPageProvider);
-  console.log(data);
+  const data = useContext(LandingPageContext);
 
   return (
     <>
       <div
         id="landing-page-container"
-        className="flex h-[100vh] w-full justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-[length:100vw_100%]"
+        className="flex h-[90vh] w-full justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-[length:100vw_120vh] bg-[position:center]"
       >
         <div
           id="landing-page"
-          className="flex w-full h-100% justify-center pr-[50vw]"
+          className="flex w-full h-100% justify-center pr-[40vw] pl-[15vw] "
         >
-          <div id="product-text-container" className="text-[#e8e6e3]">
-            <h1>This is a Heading</h1>
-            <h2>Second Heading</h2>
-            <p>Product Description</p>
-            <h3>Price</h3>
-            <button>See All Buying Options</button>
+          <div
+            id="product-text-container"
+            className="text-[#ffffff] font-Sig text-left pb-[5rem] mb-[3rem]"
+          >
+            <h1 className="text-[3.75rem] font-bold p-[8px_15px]">
+              {data.data.name}
+            </h1>
+            <h2 className="text-[36px] font-bold p-[8px_15px]">BEYOND FAST</h2>
+            <p className=" text-[15px] leading-[1.666em] pr-[22vw] p-[8px_15px]">
+              {data.data.description}
+            </p>
+            <h3 className="text-[26px] font-bold p-[8px_15px]">
+              Starting at ${data.data.price}
+            </h3>
+            <a
+              href="#"
+              className="ml-[15px] p-[13px_15px] bg-[#76b900] text-[black] font-bold hover:bg-[#91c733]"
+            >
+              <button className="text-[18px] mt-[10px]">
+                See All Buying Options
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -29,27 +44,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
-/*Context Folder
-Create Context files
-Import USESTATE and CREATE Context
-create your context
-const [name] = createContext()
-export const [name] = ({children}) => {
-    //Define State 
-
-    //Functionality /functions
-
-    return <[Name].provider value={{
-        tasks
-    }}>
-        {children}
-    </[Name].provider>
-}
-
-export default [name]
-
-In the component import UseContext from react
-In the component import the context input from the context
-Wrap the provider in the App
-*/
