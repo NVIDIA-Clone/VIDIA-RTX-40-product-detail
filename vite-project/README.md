@@ -14,7 +14,8 @@ The motivation for this project stems from our teams interest into the tech worl
 3. Add your info in `.env`
 4. Open Up Your Dev Environment `npm run dev`
 
-##Contributors<br/>
+##Contributors
+
 [Bao Tran](https://www.linkedin.com/in/baottran21/):space_invader:<br/>
 [Nathan Vititoe](https://www.linkedin.com/in/nathanvititoe/)<br/>
 [Autumn Sheridan](https://www.linkedin.com/in/autumn-r-sheridan/)<br/>
