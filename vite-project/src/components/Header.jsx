@@ -82,9 +82,17 @@ function Header() {
   const getGreenBarStyles = () => {
     const labelWidth = 88; // Width of the label (assumed 88px)
     if (isHardwareOpen) {
-      return { left: "475px", width: `${labelWidth}px` };
+      return {
+        width: `${labelWidth}px`,
+        position: "relative",
+        left: "2px",
+      };
     } else isSoftwareOpen;
-    return { left: `${labelWidth + 470}px`, width: `${labelWidth}px` };
+    return {
+      left: `85px`,
+      width: `${labelWidth}px`,
+      position: "relative",
+    };
   };
 
   const getMenuGreenBarStyles = () => {
