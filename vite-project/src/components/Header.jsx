@@ -87,6 +87,39 @@ function Header() {
     return { left: `${labelWidth + 470}px`, width: `${labelWidth}px` };
   };
 
+  const getMenuGreenBarStyles = () => {
+    const menuItemWidth = 80; // Width of each menu item (adjust as needed)
+    if (isProductsOpen) {
+      return {
+        width: `${menuItemWidth}px`,
+        position: "relative",
+        bottom: "-31px",
+        left: "-335px",
+      };
+    } else if (isSolutionsOpen) {
+      return {
+        width: `${menuItemWidth}px`,
+        position: "relative",
+        bottom: "-31px",
+        left: "-257px",
+      };
+    } else if (isIndustriesOpen) {
+      return {
+        width: `${menuItemWidth}px`,
+        position: "relative",
+        bottom: "-31px",
+        left: "-167px",
+      };
+    } else if (isForYouOpen) {
+      return {
+        width: `${menuItemWidth}px`,
+        position: "relative",
+        bottom: "-31px",
+        left: "-82px",
+      };
+    }
+  };
+
   useEffect(() => {
     document.addEventListener("click", handleOffClick);
     return () => {
@@ -192,6 +225,10 @@ function Header() {
                     For You
                   </label>
                 </li>
+                <li
+                  className="block h-[3px] bg-[#76b900] transition-all duration-500 ease-linear"
+                  style={getMenuGreenBarStyles()}
+                ></li>
               </ul>
             )}
             {/* Space Between Divs */}
