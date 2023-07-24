@@ -3,7 +3,7 @@ import LandingPage from './components/LandingPage';
 import OuterNavBar from './components/OuterNavBar';
 import { LandingPageProvider } from './components/LandingPageContext';
 import Footer from './components/Footer';
-import InnerNavbar from './components/inner-navbar';
+import InnerNavBar from './components/inner-navbar';
 
 
 function App() {
