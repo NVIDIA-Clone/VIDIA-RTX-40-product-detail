@@ -11,7 +11,9 @@ export default {
         NVBGGray: "#1A1A1A",
         BHGreen: "#749f29",
         NVWhiteTxt: "#e8e6e3",
-        NVDLightGray: "#999999"
+        NVDLightGray: "#999999",
+        NVNavBarGray: "#999999",
+        NVDropDownGray: "#666666"
       },
     },
     screens: {
@@ -20,6 +22,9 @@ export default {
       'xs' : {'max' : '485px'},
       'xxs' : {'max' : '365px'}
     },
+  },
+  variants: {
+    display:['group-hover']
   },
   plugins: [],
 };

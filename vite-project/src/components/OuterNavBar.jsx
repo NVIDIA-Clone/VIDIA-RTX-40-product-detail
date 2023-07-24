@@ -8,9 +8,9 @@ const OuterNavBar = () => {
             <div className="sub-brand-nav-container py-0 px-8 flex">
                 <span className="sub-brand-name text-NVWhiteTxt font-semibold text-2xl ">PeForce</span>
                 <ul className="flex">
-                    <li className="sub-brand-nav-item group relative dropdown"></li>
+                    <li className="sub-brand-nav-item relative dropdown"></li>
                         <div className="relative inline-block text-left">
-                            <ProductDropdown />
+                            <ProductDropdown /> 
                         </div>
                     <li className="sub-brand-nav-item">Games & Tech</li>
                     <li className="sub-brand-nav-item">PeForce Experience</li>
@@ -18,6 +18,7 @@ const OuterNavBar = () => {
                     <li className="sub-brand-nav-item">News</li>
                     <li className="sub-brand-nav-item">Support</li>
                     <li className="sub-brand-nav-item">Shop</li>
+                    <li className="sub-brand-nav-item">Test</li>
                 </ul>
             </div>
         </nav>
