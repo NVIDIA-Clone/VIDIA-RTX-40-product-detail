@@ -1,7 +1,6 @@
 const Performance = () => {
   return (
     <>
-      <body className="bg-white h-[10px]"></body>
       <div className="flex items-center justify-center bg-NVBGGray">
         <div className="flex flex-col items-center justify-center py-[75px] w-3/4 h-[80%] md:w-full md:px-[20px] ">
           <div className="p-[15px]">
