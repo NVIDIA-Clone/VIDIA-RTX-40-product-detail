@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect, createContext } from "react";
 
 const LandingPageContext = createContext();
 
@@ -8,7 +8,7 @@ export const LandingPageProvider = ({ children }) => {
 
   useEffect(() => {
     const getProductData = async () => {
-      const productRes = await fetch('http://localhost:8000/product');
+      const productRes = await fetch("http://localhost:8000/product");
       const productData = await productRes.json();
       setData(productData[0]);
     };
