@@ -1,8 +1,6 @@
 const Footer = () => {
-  // need to add responsiveness for smaller screens
   return (
     <>
-      <body className="flex flex-col min-h-screen"></body>
       <footer className="p-[30px] h-[144px] flex justify-center w-full mt-auto sm:flex-col sm:items-center sm:p-[15px]">
         <div className="w-3/4 p-[30px 130.5px] flex flex-col sm:items-center">
           <div className="flex justify-between sm:flex-col sm:items-center">
@@ -63,8 +61,4 @@ const Footer = () => {
     </>
   );
 };
-
-{
-  /* <div className="flex justify-between w-full h-1/5 sm:flex-col sm:items-center sm:mb-1"></div> */
-}
 export default Footer;
