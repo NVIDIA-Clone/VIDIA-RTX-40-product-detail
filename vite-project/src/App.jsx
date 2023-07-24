@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
+import OuterNavBar from "./components/OuterNavBar";
+import { LandingPageProvider } from "./components/LandingPageContext";
+import Footer from "./components/Footer";
+import InnerNavbar from "./components/InnerNavbar";
+=======
 import Header from './components/Header';
 import LandingPage from './components/LandingPage';
 import OuterNavBar from './components/OuterNavBar';
 import { LandingPageProvider } from './components/LandingPageContext';
 import Footer from './components/Footer';
-import InnerNavBar from './components/inner-navbar';
+import InnerNavbar from './components/inner-navbar';
 
 
 function App() {
@@ -13,7 +21,7 @@ function App() {
         <Header />
         <OuterNavBar />
         <LandingPage />
-        <InnerNavBar />
+        <InnerNavbar />
         <Footer />
       </LandingPageProvider>
     </>
