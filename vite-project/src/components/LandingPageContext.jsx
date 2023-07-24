@@ -15,7 +15,7 @@ export const LandingPageProvider = ({ children }) => {
     getProductData();
   }, []);
 
-  // console.log(data.name); //Returns the object of the product
+  //  console.log(data.name); //Returns the object of the product
 
   return (
     <LandingPageContext.Provider value={{ data }}>
