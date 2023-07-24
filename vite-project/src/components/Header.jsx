@@ -97,12 +97,13 @@ function Header() {
         position: "relative",
         left: "2px",
       };
-    } else isSoftwareOpen;
-    return {
-      left: `85px`,
-      width: `${labelWidth}px`,
-      position: "relative",
-    };
+    } else if (isSoftwareOpen) {
+      return {
+        left: `85px`,
+        width: `${labelWidth}px`,
+        position: "relative",
+      };
+    }
   };
 
   const getMenuGreenBarStyles = () => {
