@@ -5,7 +5,6 @@ import { LandingPageProvider } from './components/LandingPageContext';
 import Footer from './components/Footer';
 import InnerNavbar from './components/inner-navbar';
 
-
 function App() {
   return (
     <>
@@ -13,7 +12,7 @@ function App() {
         <Header />
         <OuterNavBar />
         <LandingPage />
-        <InnerNavBar />
+        <InnerNavbar />
         <Footer />
       </LandingPageProvider>
     </>
