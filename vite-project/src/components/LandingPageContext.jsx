@@ -19,10 +19,10 @@ const items = [
 const LandingPageContext = createContext();
 
 export const LandingPageProvider = ({ children }) => {
-  //STATES
+  //ESTABLISH STATES
   const [data, setData] = useState({});
   const accoladesList = useRef(items);
-  //FUNCTIONS
+  //CREATE FUNCTIONS
   //FETCHING THE DATA FROM THE DATABASE
   useEffect(() => {
     const getProductData = async () => {

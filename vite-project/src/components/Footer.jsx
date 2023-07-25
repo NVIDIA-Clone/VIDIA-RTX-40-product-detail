@@ -20,35 +20,35 @@ const Footer = () => {
           <div className="m{b}-{4px} flex items-start flex-col sm:items-center">
             <ul className="inline-block w-full sm:justify-center sm:flex-wrap sm:flex">
               <li className="text-[#696969] inline-block mr-1 hover:text-[#181818] pl-1 after:content-['|'] cursor-pointer">
-                {" "}
-                Privacy Policy{" "}
+                {' '}
+                Privacy Policy{' '}
               </li>
               <li className="text-[#696969] hover:text-[#181818] inline-block mr-1   after:content-['|'] cursor-pointer">
-                {" "}
-                Manage My Privacy{" "}
+                {' '}
+                Manage My Privacy{' '}
               </li>
               <li className="text-[#696969] hover:text-[#181818] inline-block mr-1 after:content-['|'] cursor-pointer">
-                {" "}
-                Do Not Sell or Share My Data{" "}
+                {' '}
+                Do Not Sell or Share My Data{' '}
               </li>
               <li className="text-[#696969] hover:text-[#181818] inline-block mr-1   after:content-['|'] cursor-pointer">
-                {" "}
-                Legal{" "}
+                {' '}
+                Legal{' '}
               </li>
               <li className="text-[#696969] hover:text-[#181818] inline-block mr-1 after:content-['|'] cursor-pointer">
-                {" "}
-                Accessibility{" "}
+                {' '}
+                Accessibility{' '}
               </li>
               <li className="text-[#696969] hover:text-[#181818] inline-block mr-1  after:content-['|'] cursor-pointer">
-                {" "}
-                Corporate Policies{" "}
+                {' '}
+                Corporate Policies{' '}
               </li>
               <li className="text-[#696969]  hover:text-[#181818] inline-block mr-1 pl-1 after:content-['|'] cursor-pointer">
-                {" "}
-                Product Security{" "}
+                {' '}
+                Product Security{' '}
               </li>
               <li className="text-[#696969]  hover:text-[#181818] inline-block mr-1 cursor-pointer">
-                {" "}
+                {' '}
                 Contact
               </li>
             </ul>

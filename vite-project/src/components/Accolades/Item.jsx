@@ -3,12 +3,13 @@ import LandingPageContext from './../LandingPageContext';
 
 const Item = () => {
   let { accoladesList } = useContext(LandingPageContext);
-
+  //NEEDING TO WORK IN TANDEM TO CHANGE BACKGROUND OF SELECTED
   const [selected, setSelected] = useState(accoladesList.current[0]);
 
   function handleClick(e) {
     let index = e.currentTarget.id;
     setSelected(accoladesList.current[index]);
+    console.log(e.currentTarget.className, selected);
   }
 
   return (
@@ -26,7 +27,7 @@ const Item = () => {
               <li
                 id={index}
                 key={index}
-                className="w-3 h-3 rounded-full bg-[#ccc] m-[0_5px] hover:bg-[#76b900] cursor-pointer"
+                className="w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer"
                 onClick={handleClick}
               ></li>
             ))}
