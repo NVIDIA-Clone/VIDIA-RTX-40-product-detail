@@ -1,4 +1,4 @@
-import ImageComparison from "./ImageComparison";
+import ImageComparison from "../ImageComparison";
 
 const RayTracing = () => {
   return (

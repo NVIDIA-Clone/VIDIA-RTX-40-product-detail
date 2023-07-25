@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import HeaderProducts from "./HeaderComponents/HeaderProducts";
-import HeaderSolutions from "./HeaderComponents/HeaderSolutions";
-import HeaderIndustries from "./HeaderComponents/HeaderIndustries";
-import HeaderForYou from "./HeaderComponents/HeaderForYou";
-import MainMenuAnimation from "./HeaderComponents/MainMenuAnimation";
-import HeaderLogo from "./HeaderComponents/HeaderLogo";
-import MainMenu from "./HeaderComponents/MainMenu";
-import SearchBar from "./HeaderComponents/SearchBar";
-import Profile from "./HeaderComponents/Profile";
+import HeaderProducts from "./HeaderProducts";
+import HeaderSolutions from "./HeaderSolutions";
+import HeaderIndustries from "./HeaderIndustries";
+import HeaderForYou from "./HeaderForYou";
+import MainMenuAnimation from "./MainMenuAnimation";
+import HeaderLogo from "./HeaderLogo";
+import MainMenu from "./MainMenu";
+import SearchBar from "./SearchBar";
+import Profile from "./Profile";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
