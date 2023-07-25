@@ -1,0 +1,22 @@
+
+        
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="m48-download" width="64" height="64" viewBox="0 0 64 64">
+          <title>Game Ready and Studio Drivers</title>
+          <desc>
+            An icon of a downward-facing arrow typically used to download NVIDIA
+            drivers.
+          </desc>
+          <rect
+            id="m48-download-rect"
+            width="64"
+            height="64"
+            fill="none"
+          ></rect>
+          <path
+            id="m48-download-path"
+            d="M48.136,45.843l-1.622,5.829H17.414l-1.622-5.829h-7.319l3.242,11.657H52.2l3.459-11.657h-7.523Zm2.928,10.2H12.877l-2.433-8.743h4.188l1.622,5.829h31.422l1.624-5.829h4.359l-2.595,8.743Zm.7-30.6h-9.964v-7.286H22.131v7.286H12.165l19.8,22.249,19.799-22.249Zm-28.12,1.457v-7.286h16.643v7.286h8.19l-16.512,18.551L15.454,26.9h8.19ZM41.8,6.5H22.131V15.243h19.669V6.5Zm-1.513,7.286H23.644V7.957h16.643v5.829Z"
+            fill="#76b900"
+          ></path>
+        </symbol>
+      </svg>
