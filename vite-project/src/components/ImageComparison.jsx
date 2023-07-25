@@ -7,6 +7,11 @@ const ImageComparison = () => {
     setSliderValue(e.target.value);
   };
 
+  const calculateOpacity = () => {
+    // Map the sliderValue (0-100) to an opacity value (1-0) for the images.
+    return sliderValue / 100;
+  };
+
   return (
     <>
       {/* Image Comparison */}
@@ -20,7 +25,10 @@ const ImageComparison = () => {
           }}
         />
         <div className="absolute z-10 bottom-10 left-10">
-          <div className="cursor-pointer p-2 text-[#eee] text-[26px] font-black drop-shadow-2xl">
+          <div
+            className="cursor-pointer p-2 text-[#eee] text-[26px] font-black drop-shadow-2xl"
+            style={{ opacity: calculateOpacity() }}
+          >
             RTX
             <span className="text-gray-700"> Off</span>
           </div>
@@ -34,29 +42,46 @@ const ImageComparison = () => {
           }}
         />
         <div className="absolute z-10 bottom-10 right-10">
-          <div className="cursor-pointer p-2 text-[#eee] text-[26px] font-black drop-shadow-2xl">
+          <div
+            className="cursor-pointer p-2 text-[#eee] text-[26px] font-black drop-shadow-2xl"
+            style={{ opacity: 1 - calculateOpacity() }}
+          >
             RTX
             <span className="text-[#76b900]"> On</span>
           </div>
         </div>
         <div
-          className="absolute w-4 h-full transform -translate-x-1/2 slider-line left-[calc(${sliderValue}% - 2px)]"
-          style={{ top: 0, bottom: 0 }}
+          className="absolute w-[2px] h-full transform bg-[#76b900] -translate-x-1/2 slider-line left-[calc(${sliderValue}% - 2px)]"
+          style={{
+            top: 0,
+            bottom: 0,
+            transform: "translateX(-50%)",
+            left: `${sliderValue}%`,
+          }}
         ></div>
-        <div className="absolute w-16 h-16 text-white transform -translate-x-1/2 -translate-y-1/2 slider-icon left-[calc(${sliderValue}% - 8px)] top-1/2">
-          {/* SVG icon */}
+        <div
+          className="absolute z-10 w-16 h-16 text-white top-1/2 right-[calc(${sliderValue}% - 0px)]"
+          style={{ left: `calc(${sliderValue}% - 20px)` }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
+            fill="none"
+            stroke="#76b900"
+            strokeWidth="2"
+            width="40"
+            height="40"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
-            />
+            {/* Outer Circle */}
+            <circle cx="12" cy="12" r="11" fill="#76b900" />
+            {/* Left Arrow */}
+            <text x="6" y="15" fontSize="8" stroke="#FFFFFF">
+              &lt;
+            </text>
+            {/* Right Arrow */}
+            <text x="14" y="15" fontSize="8" stroke="#FFFFFF">
+              &gt;
+            </text>
           </svg>
         </div>
         <input
