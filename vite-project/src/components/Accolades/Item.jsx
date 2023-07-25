@@ -2,16 +2,17 @@ import { useContext, useState } from 'react';
 import LandingPageContext from './../LandingPageContext';
 
 const Item = () => {
-  let { accoladesList } = useContext(LandingPageContext);
+  let { accoladesList } = useContext(LandingPageContext); //Array of Objects
   //NEEDING TO WORK IN TANDEM TO CHANGE BACKGROUND OF SELECTED
   const [selected, setSelected] = useState(accoladesList.current[0]);
 
   function handleClick(e) {
-    let index = e.currentTarget.id;
+    let index = e.currentTarget.id - 1;
     setSelected(accoladesList.current[index]);
-    console.log(e.currentTarget.className, selected);
+    console.log();
   }
 
+  //   console.log(selected);
   return (
     <>
       <blockquote className="text-[36px] mb-[42px] mt-[3px]">
@@ -25,7 +26,7 @@ const Item = () => {
           <ol className="flex p-[0_auto]">
             {accoladesList.current.map((elem, index) => (
               <li
-                id={index}
+                id={elem.id}
                 key={index}
                 className="w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer"
                 onClick={handleClick}

@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS products CASCADE;
 DROP TABLE IF EXISTS specs CASCADE;
 CREATE TABLE products (
     product_id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
+    name VARCHAR(100),
     price NUMERIC,
     description TEXT
 );
@@ -16,11 +16,11 @@ CREATE TABLE specs (
     vidia_cuda_cores INT,
     boost_clock NUMERIC,
     base_clock NUMERIC,
-    standard_memory_config VARCHAR(50),
-    memory_interface VARCHAR(50),
-    ray_tracing_cores VARCHAR(50),
-    tensor_cores VARCHAR(50),
-    vidia_architecture VARCHAR(50),
+    standard_memory_config VARCHAR(100),
+    memory_interface VARCHAR(100),
+    ray_tracing_cores VARCHAR(100),
+    tensor_cores VARCHAR(100),
+    vidia_architecture VARCHAR(100),
     vidia_dlss INT,
     vidia_reflex BOOLEAN,
     vidia_broadcast BOOLEAN,
@@ -39,26 +39,26 @@ CREATE TABLE specs (
     vidia_gpu_boost BOOLEAN,
     vlink BOOLEAN,
     vulkan BOOLEAN,
-    vidia_encoder VARCHAR(50),
-    vidia_decoder VARCHAR(50),
+    vidia_encoder VARCHAR(100),
+    vidia_decoder VARCHAR(100),
     av1_encode BOOLEAN,
     av1_decode BOOLEAN,
     cuda_capabilities NUMERIC,
     vr_ready BOOLEAN,
-    maximum_resolution VARCHAR(50),
-    standard_display_connectors VARCHAR(50),
-    multimonitor VARCHAR(50),
+    maximum_resolution VARCHAR(100),
+    standard_display_connectors VARCHAR(100),
+    multimonitor VARCHAR(100),
     hdcp NUMERIC,
-    length VARCHAR(50),
-    width VARCHAR(50),
-    slots VARCHAR(50),
+    length VARCHAR(100),
+    width VARCHAR(100),
+    slots VARCHAR(100),
     maximum_gpu_temp INT,
     idle_power INT,
     video_playback_power INT,
     average_gaming_power INT,
     total_graphics_power INT,
     required_system_power INT,
-    supplementary_power_connector VARCHAR(50)
+    supplementary_power_connector text
 );
 
 

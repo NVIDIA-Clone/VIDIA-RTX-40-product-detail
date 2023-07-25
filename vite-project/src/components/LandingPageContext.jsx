@@ -2,18 +2,24 @@
 import { useState, useEffect, createContext, useRef } from 'react';
 //DATA BEING USED FOR REFERENCE
 const items = [
-  { name: 'TechRadar', comment: `More powerful than we even thought possible` },
-  { name: 'PCWorld', comment: `Fantastically, futuristically fast` },
   {
+    id: 1,
+    name: 'TechRadar',
+    comment: `More powerful than we even thought possible`,
+  },
+  { id: 2, name: 'PCWorld', comment: `Fantastically, futuristically fast` },
+  {
+    id: 3,
     name: 'The Verge',
     comment: `I couldn't quite believe my eyes... The RTX 4090 is a beast`,
   },
   {
+    id: 4,
     name: 'Hardware Canucks',
     comment: `Creator apps... absolutely demolishing every other card`,
   },
-  { name: 'KitGuru', comment: `A new efficiency champion` },
-  { name: 'TweakTown', comment: `DLSS 3 is pure magic` },
+  { id: 5, name: 'KitGuru', comment: `A new efficiency champion` },
+  { id: 6, name: 'TweakTown', comment: `DLSS 3 is pure magic` },
 ];
 //CREATING THE CONTEXT TO BE USED
 const LandingPageContext = createContext();
