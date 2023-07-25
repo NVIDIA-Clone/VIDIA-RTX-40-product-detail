@@ -49,8 +49,63 @@ const Architecture = () => {
   //   );
 
   return (
-    <div className="bg-black h-[960px] w-full">
-      <img src="assets/GPUIcon.svg" alt="icons" />
+    <div className="bg-black w-full flex flex-col items-center pb-[60px]">
+      <div className="flex flex-col pt-[120px] pb-[30px] items-center">
+        <h2 className="text-white mb-[25px] text-xl font-bold">
+          The Ultimate Platform for Gamers and Creators
+        </h2>
+        <p className="font-bold text-white text-[2.25rem]">
+          Powered by PeForce RTX 40 Series and DLSS 3
+        </p>
+      </div>
+      <img
+        className="opacity-50 z-1"
+        src="/images/architecture.png"
+        alt="Microchip made by Vidia with a rainbow color scheme"
+      />
+      <div className="flex flex-wrap w-3/5 justify-evenly z-2">
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">Cutting Edge <br /> GPUs</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">VIDIA Ada Lovelace Architecture</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">Realistic and Immersive <br /> Graphics</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">Dedicated Ray Tracing Cores</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">AI-Accelerated <br /> Performance</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">VIDIA DLSS 3</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">Game-Winning <br />Responsiveness</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">VIDIA Reflex low-latency platform</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">Built for <br />Live Streaming</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">VIDIA Encoder</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">AI-Enhanced Voice and <br />Video</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">RTX Video Super Resolution and <br />VIDIA Broadcast</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">Fast-Track Your <br />Creativity</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">VIDIA Studio</p>  
+        </div>
+        <div className="flex flex-col items-center mb-45px">
+            {/* insert svg here  */}
+            <p className="text-white py-[10px] mb-[9px] text-[1.5rem] font-bold text-center">Performance and <br />Reliability</p>
+            <p className="text-white text-[1rem] mx-[17.5px] p-[10px]">Game Ready and Studio Drivers</p>  
+        </div>
+      </div>
+      
     </div>
   );
 };
