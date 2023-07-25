@@ -22,10 +22,11 @@ const AccoladesItemsContext = createContext();
 export const AccoladesItemsProvider = ({ children }) => {
   //State
   const list = useRef(items); //Lists  out an array of objects
+  let selected = list.current[0];
 
   return (
     <>
-      <AccoladesItemsContext.Provider value={{ list }}>
+      <AccoladesItemsContext.Provider value={{ list, selected }}>
         {children}
       </AccoladesItemsContext.Provider>
     </>
