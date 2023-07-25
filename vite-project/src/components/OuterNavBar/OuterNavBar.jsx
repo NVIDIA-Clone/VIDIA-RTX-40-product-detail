@@ -1,5 +1,6 @@
 import ProductDropdown from './ProductDropdown';
 import GamesDropdown from './GamesDropdown';
+import MoreDropdown from './MoreDropdown';
 
 const OuterNavBar = () => {
     
@@ -25,9 +26,13 @@ const OuterNavBar = () => {
                         <span className="relative inline-block text-left text-base">Drivers</span>
                     </li>
                     <li className="sub-brand-nav-item hover:text-NVGreen tracking-wide">
-                    <span className="relative inline-block text-left text-base">News</span>
+                        <span className="relative inline-block text-left text-base">News</span>
                     </li>
-                    <li className="sub-brand-nav-item tracking-wide">Support&Shop</li>
+                    <li className="sub-brand-nav-item tracking-wide">
+                        <span className="relative inline-block text-left text-base">
+                            <MoreDropdown />
+                        </span>
+                    </li>
                 </ul>
             </div>
         </nav>
