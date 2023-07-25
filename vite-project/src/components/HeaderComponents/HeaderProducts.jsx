@@ -159,7 +159,7 @@ const HeaderProducts = ({
                       </li>
                       <li className="pt-[7px] pb-[7px] text-sm list-none">
                         <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Drive Sim
+                          DRIVE Sim
                         </a>
                       </li>
                     </ul>

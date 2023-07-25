@@ -10,6 +10,7 @@ const HeaderForYou = ({
   handleItProfClick,
   handleResearcherClick,
   handleRoboticistClick,
+  handleStartupsClick,
   getForYouGreenBar,
   isCreativesOpen,
   isDataSOpen,
@@ -18,6 +19,7 @@ const HeaderForYou = ({
   isItProfessionalOpen,
   isResearcherOpen,
   isRoboticistOpen,
+  isStartupsOpen,
 }) => {
   return (
     <>
@@ -88,10 +90,15 @@ const HeaderForYou = ({
                   </label>
                 </li>
                 <li className="table-cell hover:text-[#1a1a1a]">
-                  <label className="p-2 cursor-pointer">Startups</label>
+                  <label
+                    className="p-2 cursor-pointer"
+                    onClick={handleStartupsClick}
+                  >
+                    Startups
+                  </label>
                 </li>
                 <li
-                  className="block h-[3px] w-[120px] bg-[#76b900] transition-all duration-300 ease-linear"
+                  className="block h-[3px] w-[168px] bg-[#76b900] transition-all duration-300 ease-linear"
                   style={getForYouGreenBar()}
                 ></li>
               </ul>
@@ -1206,6 +1213,7 @@ const HeaderForYou = ({
               </div>
             </div>
           )}
+          {isStartupsOpen && <div></div>}
         </div>
       )}
     </>
@@ -1221,6 +1229,7 @@ HeaderForYou.propTypes = {
   isItProfessionalOpen: PropTypes.bool.isRequired,
   isResearcherOpen: PropTypes.bool.isRequired,
   isRoboticistOpen: PropTypes.bool.isRequired,
+  isStartupsOpen: PropTypes.bool.isRequired,
   handleCreativeClick: PropTypes.func.isRequired,
   handleDataClick: PropTypes.func.isRequired,
   handleDevClick: PropTypes.func.isRequired,
@@ -1228,6 +1237,7 @@ HeaderForYou.propTypes = {
   handleItProfClick: PropTypes.func.isRequired,
   handleResearcherClick: PropTypes.func.isRequired,
   handleRoboticistClick: PropTypes.func.isRequired,
+  handleStartupsClick: PropTypes.func.isRequired,
   handleOffClick: PropTypes.func.isRequired,
   getForYouGreenBar: PropTypes.func.isRequired,
 };

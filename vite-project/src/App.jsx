@@ -4,6 +4,8 @@ import OuterNavBar from "./components/OuterNavBar";
 import { LandingPageProvider } from "./components/LandingPageContext";
 import Footer from "./components/Footer";
 import InnerNavbar from "./components/inner-navbar";
+import Architecture from "./components/Architecture"
+import Performance from "./components/Performance";
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
         <OuterNavBar />
         <LandingPage />
         <InnerNavbar />
+        <Architecture />
+        {/* insert accolades here  */}
+        <Performance />
         <Footer />
       </LandingPageProvider>
     </>
