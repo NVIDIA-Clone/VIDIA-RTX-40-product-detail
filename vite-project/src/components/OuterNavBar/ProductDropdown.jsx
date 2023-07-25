@@ -1,13 +1,13 @@
 const ProductDropdown = () => {
     return (
-    <div className="group/main relative dropdown px-4 hover:text-white tracking-wide">
+    <div className="group/product relative dropdown px-4 hover:text-white tracking-wide">
             <a>Products</a>
-            <div className="group-hover/main:block dropdown-menu hidden absolute h-auto">
-                <ul className="top-0 w-48 bg-white">
-                    <li className="group/rtx40series py-1" ><a className="block text-NVDropDownGray hover:text-black">Graphics Cards & Desktops</a>
-                        <div className="group/rtx40series dropdown px-4 hover:text-black tracking-wide">
+            <div className="group-hover/product:block dropdown-menu hidden absolute h-auto ">
+                <ul className="top-0 w-72 space-y-1 bg-white">
+                    <li className="group/graphicscardsdesktops py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">Graphics Cards & Desktops</a>
+                        <div className="group/graphicscardsdesktops dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
-                                <div className="group-hover/rtx40series:block bg-white box-content inset-x-48 inset-y-0 top-0 dropdown-menu hidden absolute h-fit w-56">
+                                <div className="group-hover/graphicscardsdesktops:block bg-white box-content inset-x-72 top-1.5 dropdown-menu hidden absolute h-fit w-56 space-y-2 p-1 shadow-2xl">
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 40 Series</a></li>
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 4080</a></li>
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 4070 Ti / 4070</a></li>
@@ -24,9 +24,18 @@ const ProductDropdown = () => {
                             </ul> 
                         </div>        
                     </li>
-                    <li className="py-1"><a className="block text-NVDropDownGray hover:text-black">Laptops</a></li>
-                    <li className="py-1"><a className="block text-NVDropDownGray hover:text-NVGreen">G-Sync Monitors</a></li>
-                    <li className="py-1"><a className="block text-NVDropDownGray hover:text-NVGreen">PeForce NOW Cloud Gaming</a></li>
+                    <li className="group/laptops py-1 m-2"><a className="block text-NVDropDownGray hover:text-black">Laptops</a>
+                        <div className="group/laptops dropdown px-4 hover:text-black tracking-wide">
+                            <ul className="flex">
+                                <div className="group-hover/laptops:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
+                                    <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 40 Series Laptops</a></li>
+                                    <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 30 Series Laptops</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li className="py-1 m-1.5"><a className="block text-NVDropDownGray hover:text-NVGreen">G-Sync Monitors</a></li>
+                    <li className="py-1 m-1.5"><a className="block text-NVDropDownGray hover:text-NVGreen">PeForce NOW Cloud Gaming</a></li>
                 </ul>
             </div>
         </div>

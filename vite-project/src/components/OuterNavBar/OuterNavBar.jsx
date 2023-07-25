@@ -1,4 +1,5 @@
 import ProductDropdown from './ProductDropdown';
+import GamesDropdown from './GamesDropdown';
 
 const OuterNavBar = () => {
     
@@ -9,10 +10,15 @@ const OuterNavBar = () => {
                 <span className="sub-brand-name text-NVWhiteTxt font-semibold text-2xl ">PeForce</span>
                 <ul className="flex">
                     <li className="sub-brand-nav-item relative dropdown"></li>
-                        <div className="relative inline-block text-left">
+                        <div className="relative inline-block text-left text-base">
                             <ProductDropdown /> 
+                            
                         </div>
-                    <li className="sub-brand-nav-item">Games & Tech</li>
+                    <li className="sub-brand-nav-item">
+                        <div className="relative inline-block text-left text-base">
+                            <GamesDropdown />
+                        </div>
+                    </li>
                     <li className="sub-brand-nav-item">PeForce Experience</li>
                     <li className="sub-brand-nav-item">Drivers</li>
                     <li className="sub-brand-nav-item">News</li>
