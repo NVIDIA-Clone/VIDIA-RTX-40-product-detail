@@ -32,7 +32,7 @@ export const LandingPageProvider = ({ children }) => {
     };
     getProductData();
   }, []);
-  //RETURNING THE PROPERTIES NEEDED
+  // RETURNING THE PROPERTIES NEEDED
   return (
     <LandingPageContext.Provider value={{ data, accoladesList }}>
       {children}

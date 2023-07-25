@@ -1,8 +1,8 @@
 const Performance = () => {
   return (
     <>
-      <div className="flex items-center justify-center bg-NVBGGray">
-        <div className="flex flex-col items-center justify-center py-[75px] w-3/4 h-[80%] md:w-full md:px-[20px] ">
+      <div className="flex items-center justify-center bg-NVBGGray ">
+        <div className="flex flex-col items-center justify-center max-w-[1100px] py-[75px] w-3/4 h-[80%] md:w-full md:px-[20px] ">
           <div className="p-[15px]">
             <h1 className="text-white text-[2.25rem] md:text-[1.75rem] font-bold pb-[40px]">
               Performance
