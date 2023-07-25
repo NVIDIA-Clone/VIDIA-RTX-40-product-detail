@@ -15,13 +15,15 @@ const items = [
   { name: 'KitGuru', comment: `A new efficiency champion` },
   { name: 'TweakTown', comment: `DLSS 3 is pure magic` },
 ];
-
+//CREATING THE CONTEXT TO BE USED
 const LandingPageContext = createContext();
 
 export const LandingPageProvider = ({ children }) => {
+  //STATES
   const [data, setData] = useState({});
   const accoladesList = useRef(items);
-
+  //FUNCTIONS
+  //FETCHING THE DATA FROM THE DATABASE
   useEffect(() => {
     const getProductData = async () => {
       const productRes = await fetch('http://localhost:8000/product');
@@ -30,7 +32,7 @@ export const LandingPageProvider = ({ children }) => {
     };
     getProductData();
   }, []);
-
+  //RETURNING THE PROPERTIES NEEDED
   return (
     <LandingPageContext.Provider value={{ data, accoladesList }}>
       {children}

@@ -5,7 +5,7 @@ const Accolades = () => {
     <>
       <div
         id="accolades-container"
-        className="w-[100%] h-[20vh] bg-[#2A2A2A] flex justify-center items-center"
+        className="w-full h-[28vh] bg-[#2A2A2A] flex justify-center items-center"
       >
         <div id="accolades-display" className="text-center text-[#ffffff]">
           <AccoladesItems />

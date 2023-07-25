@@ -13,22 +13,26 @@ const Item = () => {
 
   return (
     <>
-      <blockquote className="text-[36px]">
+      <blockquote className="text-[36px] mb-[42px] mt-[3px]">
         <span>
           <q>{selected.comment}</q>
         </span>
       </blockquote>
-      <h2 className="text-[15px]">- {selected.name}</h2>
-      <ol className="flex p-[0_16vw]">
-        {accoladesList.current.map((elem, index) => (
-          <li
-            id={index}
-            key={index}
-            className="w-3 h-3 rounded-full bg-[#ccc] m-[0_5px] hover:bg-[#76b900]"
-            onClick={handleClick}
-          ></li>
-        ))}
-      </ol>
+      <div className="px-[15px]">
+        <h2 className="text-[15px]">- {selected.name}</h2>
+        <div className="h-[60px] flex items-end justify-center pb-[10px]">
+          <ol className="flex p-[0_auto]">
+            {accoladesList.current.map((elem, index) => (
+              <li
+                id={index}
+                key={index}
+                className="w-3 h-3 rounded-full bg-[#ccc] m-[0_5px] hover:bg-[#76b900] cursor-pointer"
+                onClick={handleClick}
+              ></li>
+            ))}
+          </ol>
+        </div>
+      </div>
     </>
   );
 };
