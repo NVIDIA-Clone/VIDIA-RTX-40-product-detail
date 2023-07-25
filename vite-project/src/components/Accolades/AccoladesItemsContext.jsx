@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+//DATA BEING USED FOR REFERENCE
 const items = [
   { name: 'TechRadar', comment: `More powerful than we even thought possible` },
   { name: 'PCWorld', comment: `Fantastically, futuristically fast` },
@@ -21,8 +22,6 @@ const AccoladesItemsContext = createContext();
 export const AccoladesItemsProvider = ({ children }) => {
   //State
   const list = useRef(items); //Lists  out an array of objects
-
-  //Function
 
   return (
     <>
