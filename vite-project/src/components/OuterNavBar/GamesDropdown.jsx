@@ -4,7 +4,7 @@ const GamesDropdown = () => {
             <a>Games & Tech</a>
             <div className="group-hover/games:block dropdown-menu hidden absolute h-auto ">
                 <ul className="top-0 w-72 space-y-1 bg-white">
-                    <li className="group/games py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">DLSS & Raytracing</a>
+                    <li className="group/dlss py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">DLSS & Raytracing</a>
                         <div className="group/dlss dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
                                 <div className="group-hover/dlss:block bg-white box-content inset-x-72 top-1.5 dropdown-menu hidden absolute h-fit w-56 space-y-2 p-1 shadow-2xl">
@@ -15,9 +15,9 @@ const GamesDropdown = () => {
                         </div>        
                     </li>
                     <li className="group/architecture py-1 m-2"><a className="block text-NVDropDownGray hover:text-black">Architecture</a>
-                        <div className="group/laptops dropdown px-4 hover:text-black tracking-wide">
+                        <div className="group-hover/architecture dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
-                                <div className="group-hover/laptops:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
+                                <div className="group-hover/architecture:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>VIDA Ada Lovelace Architecture</a></li>
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>Max-Q</a></li>
                                 </div>
