@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import InnerNavbar from './components/inner-navbar';
 import Performance from './components/Performance';
 import Accolades from './components/Accolades/Accolades';
-import { AccoladesItemsProvider } from './components/Accolades/AccoladesItemsContext';
+// import { AccoladesItemsProvider } from './components/Accolades/AccoladesItemsContext';
 
 function App() {
   return (
@@ -16,9 +16,7 @@ function App() {
         <OuterNavBar />
         <LandingPage />
         <InnerNavbar />
-        <AccoladesItemsProvider>
-          <Accolades />
-        </AccoladesItemsProvider>
+        <Accolades />
         <Performance />
         <Footer />
       </LandingPageProvider>

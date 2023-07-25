@@ -1,26 +1,26 @@
-import { useContext, useEffect, useRef } from 'react';
-import AccoladesItemsContext from './AccoladesItemsContext';
+import { useContext, useState } from 'react';
+import LandingPageContext from './../LandingPageContext';
 
 const Item = () => {
-  let { list, selected } = useContext(AccoladesItemsContext);
-  const listAll = list.current;
-  let selectedRef = useRef(selected);
-  console.log(selectedRef.current);
+  let { accoladesList } = useContext(LandingPageContext);
+
+  const [selected, setSelected] = useState(accoladesList.current[0]);
 
   function handleClick(e) {
-    console.log(selectedRef.current, listAll[e.currentTarget.id]);
+    let index = e.currentTarget.id;
+    setSelected(accoladesList.current[index]);
   }
 
   return (
     <>
       <blockquote className="text-[36px]">
         <span>
-          <q></q>
+          <q>{selected.comment}</q>
         </span>
       </blockquote>
-      <h2 className="text-[15px]">-</h2>
+      <h2 className="text-[15px]">- {selected.name}</h2>
       <ol className="flex p-[0_16vw]">
-        {listAll.map((elem, index) => (
+        {accoladesList.current.map((elem, index) => (
           <li
             id={index}
             key={index}
