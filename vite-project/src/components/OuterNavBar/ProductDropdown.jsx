@@ -1,12 +1,18 @@
 const ProductDropdown = () => {
     return (
     <div className="group/product relative dropdown px-4 hover:text-white tracking-wide">
-            <a>Products</a>
+            <a className="flex">Products
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 10l5 5 5-5z"></path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+            </svg>
+            
+            </a>
             <div className="group-hover/product:block dropdown-menu hidden absolute h-auto ">
                 <ul className="top-0 w-72 space-y-1 bg-white">
                     <li className="group/graphicscardsdesktops py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">Graphics Cards & Desktops</a>
                         <div className="group/graphicscardsdesktops dropdown px-4 hover:text-black tracking-wide">
-                            <ul className="flex">
+                            <ul>
                                 <div className="group-hover/graphicscardsdesktops:block bg-white box-content inset-x-72 top-1.5 dropdown-menu hidden absolute h-fit w-56 space-y-2 p-1 shadow-2xl">
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 40 Series</a></li>
                                     <li className="block text-NVDropDownGray relative hover:text-NVGreen"><a>RTX 4080</a></li>

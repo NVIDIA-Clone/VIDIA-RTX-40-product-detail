@@ -1,7 +1,12 @@
 const GamesDropdown = () => {
     return (
     <div className="group/games relative dropdown px-4 hover:text-white tracking-wide">
-            <a>Games & Tech</a>
+            <a className="flex">Games & Tech
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z"></path>
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                </svg>
+            </a>
             <div className="group-hover/games:block dropdown-menu hidden absolute h-auto ">
                 <ul className="top-0 w-72 space-y-1 bg-white">
                     <li className="group/dlss py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">DLSS & Raytracing</a>
