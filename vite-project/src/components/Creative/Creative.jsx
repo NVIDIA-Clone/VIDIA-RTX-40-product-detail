@@ -56,7 +56,7 @@ const Creative = () => {
           </h2>
           <div className="space-x-16 w-[1080px] mt-[40px] ml-auto mr-auto items-center font-semibold text-[18px] text-[#ffffff] ">
             <div
-              className="relative bottom-[-36px] block h-[3px] mt-[-3px] bg-[#76b900] z-[80px]"
+              className="relative bottom-[-36px] block h-[5px] mt-[-3px] bg-[#76b900] z-[500px]"
               style={sliderStyle()}
             ></div>
             <button
@@ -92,7 +92,7 @@ const Creative = () => {
             </button>
           </div>
           <div className="relative content-center w-full">
-            <hr className="ml-auto mr-auto w-[1080px] mt-2 border-gray-300" />
+            <hr className=" ml-auto mr-auto w-[1080px] mt-1.5 border-gray-300" />
           </div>
           <div className="absolute slider" style={sliderStyle()}></div>
           {activeTab === 1 && <TabContentNvidiaStudio />}
