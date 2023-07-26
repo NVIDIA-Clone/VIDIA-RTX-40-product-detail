@@ -1,7 +1,7 @@
 const Reflex = () => {
   return (
     <>
-      <div className="font-Sig bg-[url(images/geforce-reflex-overwatch2-video-bg-2560-d.jpg)] float-left w-[100%] h-[990px]">
+      <div className="font-Sig content-center bg-[url(images/geforce-reflex-overwatch2-video-bg-2560-d.jpg)] float-left w-[100%] h-[990px]">
         <div className="w-[990pt] ml-auto mr-auto pl-0 pr-0 text-center">
           <h2 className="text-[#ffffff] pt-[75px] text-[20px] font-bold text-center">
             NVIDIA Reflex
@@ -21,35 +21,16 @@ const Reflex = () => {
               Get a Competitive Advantage with Reflex
             </span>
           </div>
-          <div className="relative overflow-hidden">
+          <div className="relative left-[18%] pt-[40px] w-[850px] h-[478px] ">
             <iframe
-              src="https://www.youtube.com/embed/Yd7Wmgl2oow?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1&amp;rel=0"
+              src="https://www.youtube.com/embed/Yd7Wmgl2oow?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;loop=0&amp;controls=1&amp;enablejsapi=0&amp;rel=0"
               allowFullScreen=""
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               title="YouTube Video"
               loading="lazy"
               aria-label="YouTube Video"
-              className="absolute top-0 left-0 w-full h-full"
+              className="relative top-0 left-0 w-full h-full"
             ></iframe>
-            <a
-              href="https://www.youtube.com/embed/Yd7Wmgl2oow?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1&amp;rel=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-0 left-0 w-full h-full"
-            >
-              <img
-                src="/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/video-thumbnail-3.jpg"
-                alt="Play Video"
-                className="object-cover w-full h-full"
-              />
-            </a>
-            <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-              {/* You can add your custom play button here if needed */}
-              {/* For example, you can use SVG icons or other elements */}
-              <div className="play-button-container">
-                <div className="play-button"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
