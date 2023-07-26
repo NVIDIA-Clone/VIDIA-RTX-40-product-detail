@@ -23,6 +23,7 @@ function App() {
         <Architecture />
         <Performance />
         <RayTracing />
+        <Dlss />
         <Footer />
       </LandingPageProvider>
     </>
