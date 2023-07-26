@@ -4,6 +4,7 @@ const InnerNavbar = () => {
   const [showSecondaryButtons, setShowSecondaryButtons] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false)
+  const [showing, setShowing] = useState(false)
   const [currentSection, setCurrentSection] = useState('');
   const landingPageRef = useRef(null);
   const architectureRef = useRef(null);
@@ -34,6 +35,10 @@ const InnerNavbar = () => {
   const handleMouseLeave = () => {
     setIsOpen(false);
   };
+
+  const show = () => {
+    setShowing(!setShowing)
+  }
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -139,9 +144,40 @@ const InnerNavbar = () => {
         </div>
         ) : (
           <div>
-            <button className='inline-block'
-            style={arrow()}
-            ></button>
+            {!showing ? (
+            <div>
+              <button onClick={show} className='inline-block'
+              style={arrow()}
+              ></button>
+            </div>
+            ) : (
+              <div>
+                <button text-black bg-white className='inline-block'
+                  style={arrow()}
+                ></button>
+                <button className="border-none h-10 bg-inherit">
+                  Architecture
+                </button>
+                <button className="border-none bg-inherit">
+                  Performance
+                </button>
+                <button className="border-none bg-inherit">
+                  Ray Tracing
+                </button>
+                <button className="border-none bg-inherit">
+                  DLSS 3
+                </button>
+                  <button className="border-none bg-inherit">
+                  Reflex
+                </button>
+                <button className="border-none bg-inherit">
+                  Create
+                </button>
+                <button className="border-none bg-inherit">
+                  Specs
+                </button>
+              </div>
+            )}
           </div>
         )}
         <button className="bg-BHGreen h-10 w-14 hover:bg-NVGreen ml-80">
