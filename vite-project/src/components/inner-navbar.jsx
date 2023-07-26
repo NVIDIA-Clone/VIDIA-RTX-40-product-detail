@@ -66,6 +66,16 @@ const InnerNavbar = () => {
     }
   }
 
+  const arrow = () => {
+    return {
+      width: 0, 
+      height: 0,
+      borderLeft: '8px solid transparent',
+      borderRight: '8px solid transparent',
+      borderTop: '8px solid white'
+    }
+  }
+
   const isgreenbar = () => {
     const labelwidth = 88
     if (windowWidth < 640) {
@@ -127,7 +137,13 @@ const InnerNavbar = () => {
             </div>
           )}
         </div>
-        ) : (showSecondaryButtons)}
+        ) : (
+          <div>
+            <button className='inline-block'
+            style={arrow()}
+            ></button>
+          </div>
+        )}
         <button className="bg-BHGreen h-10 w-14 hover:bg-NVGreen ml-80">
           Shop
         </button>
