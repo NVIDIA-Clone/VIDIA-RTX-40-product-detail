@@ -1,13 +1,16 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import HeaderContext from "./HeaderContext";
 
-const MainMenu = ({
-  isMenuOpen,
-  handleProductClick,
-  handleSolutionsClick,
-  handleIndustriesClick,
-  handleForYouClick,
-  getMenuGreenBarStyles,
-}) => {
+const MainMenu = () => {
+  const {
+    isMenuOpen,
+    handleProductClick,
+    handleSolutionsClick,
+    handleIndustriesClick,
+    handleForYouClick,
+    getMenuGreenBarStyles,
+  } = useContext(HeaderContext);
+
   return (
     <>
       {isMenuOpen && (
@@ -52,15 +55,6 @@ const MainMenu = ({
       )}
     </>
   );
-};
-
-MainMenu.propTypes = {
-  isMenuOpen: PropTypes.bool.isRequired,
-  handleIndustriesClick: PropTypes.func.isRequired,
-  handleProductClick: PropTypes.func.isRequired,
-  handleSolutionsClick: PropTypes.func.isRequired,
-  handleForYouClick: PropTypes.func.isRequired,
-  getMenuGreenBarStyles: PropTypes.func.isRequired,
 };
 
 export default MainMenu;
