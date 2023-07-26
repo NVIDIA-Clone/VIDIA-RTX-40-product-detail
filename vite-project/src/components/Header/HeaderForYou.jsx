@@ -1,26 +1,29 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import HeaderContext from "./HeaderContext";
 
-const HeaderForYou = ({
-  isForYouOpen,
-  handleOffClick,
-  handleCreativeClick,
-  handleDataClick,
-  handleDevClick,
-  handleGamerClick,
-  handleItProfClick,
-  handleResearcherClick,
-  handleRoboticistClick,
-  handleStartupsClick,
-  getForYouGreenBar,
-  isCreativesOpen,
-  isDataSOpen,
-  isDevOpen,
-  isGamersOpen,
-  isItProfessionalOpen,
-  isResearcherOpen,
-  isRoboticistOpen,
-  isStartupsOpen,
-}) => {
+const HeaderForYou = () => {
+  const {
+    isForYouOpen,
+    handleOffClick,
+    handleCreativeClick,
+    handleDataClick,
+    handleDevClick,
+    handleGamerClick,
+    handleItProfClick,
+    handleResearcherClick,
+    handleRoboticistClick,
+    handleStartupsClick,
+    getForYouGreenBar,
+    isCreativesOpen,
+    isDataSOpen,
+    isDevOpen,
+    isGamersOpen,
+    isItProfessionalOpen,
+    isResearcherOpen,
+    isRoboticistOpen,
+    isStartupsOpen,
+  } = useContext(HeaderContext);
+
   return (
     <>
       {isForYouOpen && (
@@ -1218,28 +1221,6 @@ const HeaderForYou = ({
       )}
     </>
   );
-};
-
-HeaderForYou.propTypes = {
-  isForYouOpen: PropTypes.bool.isRequired,
-  isCreativesOpen: PropTypes.bool.isRequired,
-  isDataSOpen: PropTypes.bool.isRequired,
-  isDevOpen: PropTypes.bool.isRequired,
-  isGamersOpen: PropTypes.bool.isRequired,
-  isItProfessionalOpen: PropTypes.bool.isRequired,
-  isResearcherOpen: PropTypes.bool.isRequired,
-  isRoboticistOpen: PropTypes.bool.isRequired,
-  isStartupsOpen: PropTypes.bool.isRequired,
-  handleCreativeClick: PropTypes.func.isRequired,
-  handleDataClick: PropTypes.func.isRequired,
-  handleDevClick: PropTypes.func.isRequired,
-  handleGamerClick: PropTypes.func.isRequired,
-  handleItProfClick: PropTypes.func.isRequired,
-  handleResearcherClick: PropTypes.func.isRequired,
-  handleRoboticistClick: PropTypes.func.isRequired,
-  handleStartupsClick: PropTypes.func.isRequired,
-  handleOffClick: PropTypes.func.isRequired,
-  getForYouGreenBar: PropTypes.func.isRequired,
 };
 
 export default HeaderForYou;

@@ -36,7 +36,7 @@ const RayTracing = () => {
           <p>
             The Ada architecture unleashes the full glory of ray tracing, which
             simulates how light behaves in the real world. With the power of RTX
-            40 Series and third-gen RT<br></br> Cores, you can experience
+            40 Series<br></br> and third-gen RT Cores, you can experience
             incredibly detailed virtual worlds like never before.{" "}
           </p>
         </div>

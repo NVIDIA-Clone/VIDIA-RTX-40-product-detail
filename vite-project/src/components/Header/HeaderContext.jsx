@@ -27,7 +27,90 @@ export function HeaderProvider({ children }) {
     "Supercomputing",
     "Telecommunications",
     "Transportation",
-    // Add more industries here if needed
+  ]);
+
+  //State for the solutions list
+  const [solution, setSolution] = useState([
+    {
+      title: "AI and Data Science",
+      items: [
+        "Overview",
+        "AI Inference",
+        "AI Workflows",
+        "Conversational AI",
+        "Data Analytics",
+        "Deep Learning Training",
+        "Generative AI",
+        "Machine Learning",
+        "Prediction and Forecasting",
+        "Speech AI",
+      ],
+    },
+    {
+      title: "Data Center and Cloud Computing",
+      items: [
+        "Overview",
+        "Accelerated Computing for Enterprise IT",
+        "Cloud Computing",
+        "Colocation",
+        "Edge Computing",
+        "Networking",
+        "Virtualization",
+        "MLOps",
+        "Hands-On Labs",
+      ],
+    },
+    {
+      title: "Design and Simulation",
+      items: [
+        "Overview",
+        "Augmented and Virtual Reality",
+        "Multi-Display",
+        "Rendering",
+        "Metaverse",
+        "Graphics Virtualization",
+        "Engineering Simulation",
+        "Broadcast",
+        "Hands-On Labs",
+      ],
+    },
+    {
+      title: "Robotics and Edge Computing",
+      items: [
+        "Overview",
+        "AI-on-5G",
+        "Intelligent Video Analytics",
+        "Industrial",
+        "Robotics",
+        "Edge Deployment Management",
+        "Edge Solutions",
+        "Hands-On Labs",
+      ],
+    },
+    {
+      title: "High-Performance Computing",
+      items: [
+        "Overview",
+        "HPC and AI",
+        "Simulation and Modeling",
+        "Scientific Visualization",
+        "Hands-On Labs",
+      ],
+    },
+    {
+      title: "Self-Driving Vehicles",
+      items: [
+        "Overview",
+        "Chauffeur",
+        "Concierge",
+        "AI Training",
+        "Simulation",
+        "HD Mapping",
+        "Cloud Gaming",
+        "Safety",
+      ],
+    },
+    // Add more solution categories here if needed
   ]);
 
   // State for the header component
@@ -340,6 +423,8 @@ export function HeaderProvider({ children }) {
       value={{
         industries,
         setIndustries,
+        solution,
+        setSolution,
         isMenuOpen,
         setIsMenuOpen,
         isProductsOpen,

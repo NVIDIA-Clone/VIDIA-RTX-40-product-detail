@@ -1,14 +1,17 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import HeaderContext from "./HeaderContext";
 
-const HeaderProducts = ({
-  isProductsOpen,
-  isHardwareOpen,
-  isSoftwareOpen,
-  handleHardwareToggle,
-  handleSoftwareToggle,
-  handleOffClick,
-  getGreenBarStyles,
-}) => {
+const HeaderProducts = () => {
+  const {
+    isProductsOpen,
+    isHardwareOpen,
+    isSoftwareOpen,
+    handleHardwareToggle,
+    handleSoftwareToggle,
+    handleOffClick,
+    getGreenBarStyles,
+  } = useContext(HeaderContext);
+
   return (
     <>
       {isProductsOpen && (
@@ -532,16 +535,6 @@ const HeaderProducts = ({
       )}
     </>
   );
-};
-
-HeaderProducts.propTypes = {
-  isProductsOpen: PropTypes.bool.isRequired,
-  isHardwareOpen: PropTypes.bool.isRequired,
-  isSoftwareOpen: PropTypes.bool.isRequired,
-  handleHardwareToggle: PropTypes.func.isRequired,
-  handleSoftwareToggle: PropTypes.func.isRequired,
-  handleOffClick: PropTypes.func.isRequired,
-  getGreenBarStyles: PropTypes.func.isRequired,
 };
 
 export default HeaderProducts;

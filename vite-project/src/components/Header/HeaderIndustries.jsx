@@ -1,6 +1,10 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import HeaderContext from "./HeaderContext";
 
-const HeaderIndustries = ({ isIndustriesOpen, handleOffClick }) => {
+const HeaderIndustries = () => {
+  const { industries, isIndustriesOpen, handleOffClick } =
+    useContext(HeaderContext);
+
   return (
     <>
       {isIndustriesOpen && (
@@ -18,106 +22,16 @@ const HeaderIndustries = ({ isIndustriesOpen, handleOffClick }) => {
                     Industries
                   </div>
                   <ul className="columns-4 gap-[30px] leading-5">
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Overview
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Architecture, Engineering, Construction & Operations
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Automotive
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Consumer Internet
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Cybersecurity
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Energy
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Financial Services
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Healthcare and Life Sciences
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Higher Education
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Game Development
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Manufacturing
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Media and Entertainment
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        US Public Sector
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Restaurants
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Retail and CPG
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Robotics
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Smart Cities
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Supercomputing
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Telecommunications
-                      </a>
-                    </li>
-                    <li className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none">
-                      <a className="text-[#666] block hover:text-[#1a1a1a]">
-                        Transportation
-                      </a>
-                    </li>
+                    {industries.map((industry) => (
+                      <li
+                        key={industry}
+                        className="inline-block w-[100%] pt-[7px] pb-[7px] text-sm list-none"
+                      >
+                        <a className="text-[#666] block hover:text-[#1a1a1a]">
+                          {industry}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </li>
               </ul>
@@ -127,11 +41,6 @@ const HeaderIndustries = ({ isIndustriesOpen, handleOffClick }) => {
       )}
     </>
   );
-};
-
-HeaderIndustries.propTypes = {
-  isIndustriesOpen: PropTypes.bool.isRequired,
-  handleOffClick: PropTypes.func.isRequired,
 };
 
 export default HeaderIndustries;
