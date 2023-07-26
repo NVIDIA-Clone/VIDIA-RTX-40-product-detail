@@ -7,6 +7,7 @@ import InnerNavbar from "./components/inner-navbar";
 import Architecture from "./components/Architecture";
 import Performance from "./components/Performance";
 import RayTracing from "./components/RayTracing";
+import Dlss from "./components/Dlss";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         {/* insert accolades here  */}
         <Performance />
         <RayTracing />
+        <Dlss />
         <Footer />
       </LandingPageProvider>
     </>
