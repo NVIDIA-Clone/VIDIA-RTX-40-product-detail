@@ -7,7 +7,7 @@ import InnerNavbar from "./components/inner-navbar";
 import Architecture from "./components/Architecture";
 import Performance from "./components/Performance";
 import RayTracing from "./components/RayTracing/RayTracing";
-
+import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
         <OuterNavBar />
         <LandingPage />
         <InnerNavbar />
+        <Accolades />
         <Architecture />
-        {/* insert accolades here  */}
         <Performance />
         <RayTracing />
 

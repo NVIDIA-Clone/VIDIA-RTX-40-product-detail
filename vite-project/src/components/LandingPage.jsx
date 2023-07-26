@@ -1,8 +1,9 @@
-import { useContext } from "react";
-import LandingPageContext from "./LandingPageContext";
+import { useContext } from 'react';
+import LandingPageContext from './LandingPageContext';
 
 const LandingPage = () => {
   const data = useContext(LandingPageContext);
+  // console.log(data);
 
   return (
     <>
@@ -30,7 +31,7 @@ const LandingPage = () => {
             </h3>
 
             <button className="text-[18px] mt-[10px]">
-              {" "}
+              {' '}
               <a
                 href="#"
                 className="ml-[15px] p-[13px_15px] bg-[#76b900] text-[black] font-bold hover:bg-[#91c733]"
