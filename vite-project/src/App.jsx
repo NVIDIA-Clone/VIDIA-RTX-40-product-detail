@@ -24,6 +24,7 @@ function App() {
         <Performance />
         <RayTracing />
         <Dlss />
+        <Reflex />
         <Footer />
       </LandingPageProvider>
     </>
