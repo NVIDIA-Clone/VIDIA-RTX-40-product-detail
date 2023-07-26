@@ -21,10 +21,10 @@ const InnerNavbar = () => {
     for (let i = sections.length - 1; i >= 0; i--) {
       const { ref, id } = sections[i];
       const section = ref.current;
-      if (section.getBoundingClientRect().top <= window.innerHeight * 0.5) {
-        setCurrentSection(id);
-        break;
-      }
+      // if (section.getBoundingClientRect().top <= window.innerHeight * 0.5) {
+      //   setCurrentSection(id);
+      //   break;
+      // }
     }
   };
 
@@ -96,29 +96,29 @@ const InnerNavbar = () => {
   return (
     <div className="py-2 bg-NVBGGray">
       <div className="flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
-        <button className="text-white border-none h-10 bg-inherit py-2 px-2 ml-60">
+        <button className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
           Architecture
         </button>
         {windowWidth >= 640 ? (
         <div className="flex flex-wrap">
-          <button className="text-white border-none bg-inherit py-2 px-2">
+          <button className="px-2 py-2 text-white border-none bg-inherit">
             Performance
           </button>
-          <button className="text-white border-none bg-inherit py-2 px-2">
+          <button className="px-2 py-2 text-white border-none bg-inherit">
             Ray Tracing
           </button>
-          <button className="text-white border-none bg-inherit py-2 px-2">
+          <button className="px-2 py-2 text-white border-none bg-inherit">
             DLSS 3
           </button>
-          <button className="text-white border-none bg-inherit py-2 px-2">
+          <button className="px-2 py-2 text-white border-none bg-inherit">
             Reflex
           </button>
           {windowWidth >= 1024 ? (
           <div className="flex flex-wrap">
-            <button className="text-white border-none bg-inherit py-2 px-2">
+            <button className="px-2 py-2 text-white border-none bg-inherit">
               Create
             </button>
-            <button className="text-white border-none bg-inherit py-2 px-2">
+            <button className="px-2 py-2 text-white border-none bg-inherit">
               Specs
             </button>
           </div>
@@ -130,11 +130,11 @@ const InnerNavbar = () => {
                 <div className='w-2 h-2 px-1 bg-white rounded-full'></div>
               </div>
               {isOpen && (
-              <div className='bg-white flex flex-wrap w-20 h-20'>
-                <button className="text-black border-none bg-inherit py-2 px-2">
+              <div className='flex flex-wrap w-20 h-20 bg-white'>
+                <button className="px-2 py-2 text-black border-none bg-inherit">
                   Create
                 </button>
-                <button className="text-black border-none bg-inherit py-2 px-2">
+                <button className="px-2 py-2 text-black border-none bg-inherit">
                   Specs
                 </button>
               </div>
@@ -155,7 +155,7 @@ const InnerNavbar = () => {
                 <button text-black bg-white className='inline-block'
                   style={arrow()}
                 ></button>
-                <button className="border-none h-10 bg-inherit">
+                <button className="h-10 border-none bg-inherit">
                   Architecture
                 </button>
                 <button className="border-none bg-inherit">
@@ -180,7 +180,7 @@ const InnerNavbar = () => {
             )}
           </div>
         )}
-        <button className="bg-BHGreen h-10 w-14 hover:bg-NVGreen ml-80">
+        <button className="h-10 bg-BHGreen w-14 hover:bg-NVGreen ml-80">
           Shop
         </button>
       </div>
