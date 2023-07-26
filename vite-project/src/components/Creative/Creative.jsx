@@ -8,51 +8,50 @@ const Creative = () => {
   };
 
   const sliderStyle = () => {
-    const menuWidth = 200;
+    const menuWidth = 208;
     if (activeTab === 1) {
       return {
         width: `${menuWidth}px`,
         position: "relative",
-        left: "222px",
+        left: "0px",
       };
     } else if (activeTab === 2) {
       return {
         width: `${menuWidth}px`,
         position: "relative",
-        left: "428px",
+        left: "220px",
       };
     } else if (activeTab === 3) {
       return {
         width: `${menuWidth}px`,
         position: "relative",
-        left: "640px",
+        left: "440px",
       };
     } else if (activeTab === 4) {
       return {
         width: `${menuWidth}px`,
         position: "relative",
-        left: "874px",
+        left: "670px",
       };
     } else if (activeTab === 5) {
       return {
         width: `${menuWidth}px`,
         position: "relative",
-        left: "1090px",
+        left: "880px",
       };
     }
   };
 
   return (
     <>
-      <div className="float-left w-full">
-        <div className="bg-[url(/images/creative-background-bb1200-d.jpg)] bg-center h-[1200.57px] bg-no-repeat pt-[105px] pb-[105px]">
+      <div className="float-left w-full bg-black">
+        <div className=" bg-[url(/images/creative-background-bb1200-d.jpg)] bg-center h-[1200.57px] bg-no-repeat pt-[105px] pb-[105px]">
           <h2 className="text-[#ffffff] font-Sig text-center text-[36px] font-bold">
             Top Tools for the Creative Trade
           </h2>
-          <div className="h-[30px] w-[1320px]"></div>
-          <div className="flex gap-16 mt-[18px] ml-[18%] items-center font-semibold text-[18px] text-[#ffffff] ">
+          <div className="space-x-16 w-[1080px] mt-[40px] ml-auto mr-auto items-center font-semibold text-[18px] text-[#ffffff] ">
             <div
-              className="relative bottom-[-24px] block h-[3px] mt-[-3px] bg-[#76b900] z-[50px]"
+              className="relative bottom-[-36px] block h-[3px] mt-[-3px] bg-[#76b900] z-[80px]"
               style={sliderStyle()}
             ></div>
             <button
@@ -87,10 +86,12 @@ const Creative = () => {
               NVIDIA Canvas
             </button>
           </div>
-          <hr className="float-left ml-[29%] w-[1050px] mt-2 border-gray-300" />
+          <div className="relative content-center w-full">
+            <hr className="ml-auto mr-auto w-[1080px] mt-2 border-gray-300" />
+          </div>
           <div className="absolute slider" style={sliderStyle()}></div>
-          <div className="bg-[url(/images/nvidia-studio.jpg)] bg-contain ml-[33%] mt-[3rem] w-[850px] h-[478px]"></div>
-          <div className="float-left font-Sig text-left ml-[33%] mt-[14px]">
+          <div className="bg-[url(/images/nvidia-studio.jpg)] bg-contain ml-auto mr-auto mt-[3rem] w-[850px] h-[478px]"></div>
+          <div className="w-[858px] font-Sig text-left ml-auto mr-auto mt-[14px]">
             <h3 className="font-semibold text-white text-[22px]">
               Nvidia Studio
             </h3>
