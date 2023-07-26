@@ -8,6 +8,8 @@ import Architecture from "./components/Architecture";
 import Performance from "./components/Performance";
 import RayTracing from "./components/RayTracing/RayTracing";
 
+import Reflex from "./components/Reflex";
+
 function App() {
   return (
     <>
@@ -20,6 +22,8 @@ function App() {
         {/* insert accolades here  */}
         <Performance />
         <RayTracing />
+
+        <Reflex />
         <Footer />
       </LandingPageProvider>
     </>
