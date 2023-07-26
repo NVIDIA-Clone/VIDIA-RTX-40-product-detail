@@ -9,6 +9,7 @@ import Performance from "./components/Performance";
 import RayTracing from "./components/RayTracing/RayTracing";
 import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
+import Dlss from "./components/Dlss";
 
 function App() {
   return (
@@ -22,8 +23,7 @@ function App() {
         <Architecture />
         <Performance />
         <RayTracing />
-
-        <Reflex />
+        <Dlss />
         <Footer />
       </LandingPageProvider>
     </>
