@@ -9,10 +9,12 @@ const Item = () => {
   function handleClick(e) {
     let index = e.currentTarget.id - 1;
     setSelected(accoladesList.current[index]);
-    console.log();
+    //NEEDING TO CHANGE THIS TO STATE BUT GOT IT WORKING
+    if (accoladesList.current[e.currentTarget.id - 1].clicked === false) {
+      accoladesList.current[e.currentTarget.id - 1].clicked = true;
+      accoladesList.current[selected.id - 1].clicked = false;
+    }
   }
-
-  //   console.log(selected);
   return (
     <>
       <blockquote className="text-[36px] mb-[42px] mt-[3px]">
@@ -23,16 +25,18 @@ const Item = () => {
       <div className="px-[15px]">
         <h2 className="text-[15px]">- {selected.name}</h2>
         <div className="h-[60px] flex items-end justify-center pb-[10px]">
-          <ol className="flex p-[0_auto]">
-            {accoladesList.current.map((elem, index) => (
-              <li
-                id={elem.id}
-                key={index}
-                className="w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer"
-                onClick={handleClick}
-              ></li>
-            ))}
-          </ol>
+          {accoladesList.current.map((elem, index) => (
+            <div
+              className={
+                elem.clicked
+                  ? 'flex p-[0_auto] w-3 h-3 rounded-full bg-NVGreen m-[0_5px] hover:bg-[#00661f] cursor-pointer'
+                  : 'flex p-[0_auto] w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer'
+              }
+              id={elem.id}
+              key={index}
+              onClick={handleClick}
+            ></div>
+          ))}
         </div>
       </div>
     </>
