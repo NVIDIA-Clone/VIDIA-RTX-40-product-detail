@@ -1,6 +1,11 @@
 import ImageComparison from "./ImageComparison";
+import { useContext } from "react";
+import LandingPageContext from "../LandingPageContext.jsx";
 
 const RayTracing = () => {
+  const { isHovered, handleMouseEnter, handleMouseLeave } =
+    useContext(LandingPageContext);
+
   return (
     <>
       <div className="w-full bg-black h-[450px] pt-[75px] pb-[75px]">
@@ -41,8 +46,8 @@ const RayTracing = () => {
           </p>
         </div>
         <div className="float-left w-[100%] text-center mt-[24px] font-bold text-[17px]">
-          <a className="text-white">
-            <span>Get Real With RTX Ray Tracing</span>
+          <a className="">
+            <span className="text-white">Get Real With RTX Ray Tracing</span>
             <button>
               <svg
                 width="30px"
@@ -50,10 +55,15 @@ const RayTracing = () => {
                 viewBox="0 0 30 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
+                  isHovered ? "translate-x-2" : ""
+                }`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 <path
                   d="M10 7L15 12L10 17"
-                  stroke="#76b900"
+                  stroke={isHovered ? "white" : "#76b900"}
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
