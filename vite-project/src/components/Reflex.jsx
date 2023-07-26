@@ -21,18 +21,7 @@ const Reflex = () => {
               Get a Competitive Advantage with Reflex
             </span>
           </div>
-          <div>
-            <iframe
-              src="https://www.youtube.com/embed/Yd7Wmgl2oow?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1&amp;rel=0"
-              allowfullscreen=""
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}.play-button-container {display: flex;justify-content:center;cursor: pointer;}.play-button{width: 68px;height: 48px;}.ytp-large-play-button-bg{fill: #212121;fill-opacity: .8;}.play-button-container:hover .ytp-large-play-button-bg{fill:#f00;fill-opacity: 1;}</style><a href='https://www.youtube.com/embed/Yd7Wmgl2oow?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1?origin=https%3A%2F%2Fwww.nvidia.com&amp;hl=en_US&amp;mute=1&amp;autoplay=1&amp;loop=0&amp;controls=1&amp;enablejsapi=1&amp;rel=0'><img src='/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/video-thumbnail-3.jpg' alt='Play Video'></a>"
-              loading="lazy"
-              aria-label="YouTube Video"
-              data-modal-autoplay="false"
-              frameborder="0"
-            ></iframe>
-          </div>
+          <div></div>
         </div>
       </div>
     </>
