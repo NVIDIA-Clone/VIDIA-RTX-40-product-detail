@@ -91,6 +91,12 @@ const architectureListItems = [
   },
 ];
 
+const architectureListItemsVer2 = [
+    "VIDIA Ada Lovelace Architecture",
+    "Ahead of its Time, Ahead of the Game",
+    
+]
+
 //CREATE THE CONTEXT
 const ArchitectureContext = createContext();
 //CREATE THE PROVIDER
