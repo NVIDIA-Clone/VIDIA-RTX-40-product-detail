@@ -113,6 +113,179 @@ export function HeaderProvider({ children }) {
     // Add more solution categories here if needed
   ]);
 
+  const [hardware, setHardware] = useState([
+    {
+      title: "Gaming and Creating",
+      items: [
+        "GeForce Graphics Cards",
+        "Laptops",
+        "G-SYNC Monitors",
+        "Studio",
+        "SHIELD TV",
+      ],
+    },
+    {
+      title: "Laptops and Workstations",
+      items: [
+        "Laptops",
+        "NVIDIA RTX Desktop Workstations",
+        "NVIDIA RTX in Professional Laptops",
+        "NVIDIA RTX Data Science Workstations",
+      ],
+    },
+    {
+      title: "Cloud and Data Center",
+      items: [
+        "Overview",
+        "Grace CPU",
+        "DGX Platform",
+        "EGX Platform",
+        "IGX Platform",
+        "HGX Platform",
+        "NVIDIA MGX",
+        "NVIDIA OVX",
+        "DRIVE Sim",
+      ],
+    },
+    {
+      title: "Networking",
+      items: ["Overview", "DPU", "Ethernet", "InfiniBand"],
+    },
+    {
+      title: "GPUs",
+      items: ["GeForce", "NVIDIA RTX / Quadro", "Data Center", "Titan RTX"],
+    },
+    {
+      title: "Embedded Systems",
+      items: ["Jetson", "DRIVE AGX", "Clara AGX"],
+    },
+    // Add more hardware categories here if needed
+  ]);
+
+  const [software, setSoftware] = useState([
+    {
+      title: "Apps and Tools",
+      items: [
+        "Application Catalog",
+        "NGC Catalog",
+        "NVIDIA NGC",
+        "3D Workflows - Omniverse",
+        "Data Center",
+        "GPU Monitoring",
+        "NVIDIA RTX Experience",
+        "NVIDIA RTX Desktop Manager",
+        "RTX Accelerated Creative Apps",
+        "Video Conferencing",
+        "NVIDIA Workbench",
+      ],
+    },
+    {
+      title: "Gaming and Creating",
+      items: [
+        "Laptops",
+        "GeForce NOW Cloud Gaming",
+        "GeForce Experience",
+        "NVIDIA Broadcast App",
+        "Animation - Machinima",
+        "Modding - RTX Remix",
+        "Studio",
+      ],
+    },
+    {
+      title: "Infastructure",
+      items: [
+        "AI Enterprise Suite",
+        "Cloud Native Support",
+        "Cluster Management",
+        "Edge Deployment Management",
+        "IO Acceleration",
+        "Networking",
+        "Virtual GPU",
+      ],
+    },
+    {
+      title: "Cloud Services",
+      items: [
+        "Cloud Gaming",
+        "Omniverse",
+        "NeMo",
+        "BioNeMo",
+        "Picasso",
+        "Riva Studio",
+        "Private Registry",
+        "Base Command",
+        "Fleet Command",
+      ],
+    },
+    // Add more software categories here if needed
+  ]);
+
+  const [dataScientist, setdataScientist] = useState([
+    {
+      title: "Industries",
+      items: [
+        "Financial Services",
+        "Consumer Internet",
+        "Healthcare",
+        "Higher Education",
+        "Retail",
+        "Public Sector",
+        "All Industries  >",
+      ],
+    },
+    {
+      title: "Solutions",
+      items: [
+        "AI Inference",
+        "AI Workflows",
+        "Conversational AI",
+        "Data Analytics",
+        "Deep Learning Training",
+        "Generative AI",
+        "Machine Learning",
+        "Prediction and Forecasting",
+        "Speech AI",
+      ],
+    },
+    {
+      title: "Software",
+      items: [
+        "AI Enterprise Suite",
+        "AI Inference - Triton",
+        "AI Workflows",
+        "Avatar - Tokkio",
+        "Cybersecurity - Morpheus",
+        "Data Analytics - RAPIDS",
+        "Apache Spark",
+        "Workbench",
+        "Large Language Models - NeMo Framwork",
+        "Logistics and Route Optimization - cuOpt",
+        "Recommender Systems - Merlin",
+        "Speech AI - Riva",
+        "NGC Software Catalog",
+        "Open Software Catalog",
+      ],
+    },
+    {
+      title: "Products",
+      items: ["PC", "Laptops & Workstations", "Data Center", "Cloud"],
+    },
+    {
+      title: "Resources",
+      items: [
+        "Professional Services",
+        "Technical Training",
+        "Startups",
+        "AI Accelerator Program",
+        "Content Library",
+        "NVIDIA Research",
+        "Developer Blog",
+        "Kaggle Grandmasters",
+      ],
+    },
+    // Add more software categories here if needed
+  ]);
+
   // State for the header component
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -425,6 +598,12 @@ export function HeaderProvider({ children }) {
         setIndustries,
         solution,
         setSolution,
+        hardware,
+        setHardware,
+        software,
+        setSoftware,
+        dataScientist,
+        setdataScientist,
         isMenuOpen,
         setIsMenuOpen,
         isProductsOpen,

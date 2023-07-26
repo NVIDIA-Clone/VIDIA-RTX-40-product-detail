@@ -18,7 +18,7 @@ const HeaderIndustries = () => {
             <div className="flex gap-4 ml-[auto] mr-[auto] overflow-x-auto p-2 w-[1290px]">
               <ul className="mb-0 mt-0 pb-[10px] pt-[30px]">
                 <li className="w-[835.6px]">
-                  <div className="min-h-[18px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5 ">
+                  <div className="min-h-[18px] text-[14px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5 ">
                     Industries
                   </div>
                   <ul className="columns-4 gap-[30px] leading-5">

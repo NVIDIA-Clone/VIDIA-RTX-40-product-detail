@@ -21,7 +21,7 @@ const HeaderSolutions = () => {
                     key={category.title}
                     className="float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]"
                   >
-                    <div className="h-[47px] min-h-[35px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
+                    <div className="h-[47px] min-h-[35px] text-[14px] font-bold border-b-2 border-solid border-[#ccc] pb-[10px] leading-5">
                       {category.title}
                     </div>
                     <ul className="leading-5 mt-0 pl-0 pt-[5px]">
