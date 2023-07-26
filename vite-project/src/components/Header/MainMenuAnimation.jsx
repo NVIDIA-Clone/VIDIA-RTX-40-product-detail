@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import HeaderContext from "./HeaderContext";
 
-const MainMenuAnimation = ({ isMenuOpen, handleArrowClick }) => {
+const MainMenuAnimation = () => {
+  const { isMenuOpen, handleArrowClick } = useContext(HeaderContext);
   return (
     <>
       <div className="flex items-center">
@@ -51,11 +53,6 @@ const MainMenuAnimation = ({ isMenuOpen, handleArrowClick }) => {
       </div>
     </>
   );
-};
-
-MainMenuAnimation.propTypes = {
-  isMenuOpen: PropTypes.bool.isRequired,
-  handleArrowClick: PropTypes.func.isRequired,
 };
 
 export default MainMenuAnimation;

@@ -1,26 +1,30 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import HeaderContext from "./HeaderContext";
 
-const HeaderForYou = ({
-  isForYouOpen,
-  handleOffClick,
-  handleCreativeClick,
-  handleDataClick,
-  handleDevClick,
-  handleGamerClick,
-  handleItProfClick,
-  handleResearcherClick,
-  handleRoboticistClick,
-  handleStartupsClick,
-  getForYouGreenBar,
-  isCreativesOpen,
-  isDataSOpen,
-  isDevOpen,
-  isGamersOpen,
-  isItProfessionalOpen,
-  isResearcherOpen,
-  isRoboticistOpen,
-  isStartupsOpen,
-}) => {
+const HeaderForYou = () => {
+  const {
+    isForYouOpen,
+    handleOffClick,
+    handleCreativeClick,
+    handleDataClick,
+    handleDevClick,
+    handleGamerClick,
+    handleItProfClick,
+    handleResearcherClick,
+    handleRoboticistClick,
+    handleStartupsClick,
+    getForYouGreenBar,
+    isCreativesOpen,
+    isDataSOpen,
+    isDevOpen,
+    isGamersOpen,
+    isItProfessionalOpen,
+    isResearcherOpen,
+    isRoboticistOpen,
+    isStartupsOpen,
+    dataScientist,
+  } = useContext(HeaderContext);
+
   return (
     <>
       {isForYouOpen && (
@@ -224,253 +228,33 @@ const HeaderForYou = ({
             <div className="cursor-pointer absolute z-[551] w-[100%] h-[635px] bg-[#eeeeee] mt-6">
               <div className="w-[1280px] ml-[auto] mr-[auto]">
                 <ul className="mb-0 mt-4 pb-[10px] pl-0 pt-[30px] text-sm">
-                  <li className="float-left mr-[30px] w-[190px] max-w-[190px] pb-[20px]">
-                    <div className="h-[30px] min-h-[30px] font-bold border-b-2 border-solid border-[#ccc] pb-[5px] leading-5">
-                      Industries
-                    </div>
-                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Financial Services
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Consumer Internet
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Healthcare
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Higher Education
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Retail
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Public Sector
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          <p>
-                            <i>All Industries {">"}</i>
-                          </p>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="float-left mr-[30px] w-[calc(32% - 8px)] max-w-[none] pb-[20px]">
-                    <div className="h-[30px] min-h-[30px] font-bold border-b-2 border-solid border-[#ccc] pb-[5px] leading-5">
-                      Solutions
-                    </div>
-                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          AI Inference
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          AI Workflows
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Conversational AI
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Data Analytics
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Deep Learning Training
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Generative AI
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Machine Learning
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Prediction and Forecasting
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Speech AI
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="float-left mr-[30px] w-[190px] max-w-[none] pb-[20px]">
-                    <div className="h-[30px] min-h-[30px] font-bold border-b-2 border-solid border-[#ccc] pb-[5px] leading-5">
-                      Software
-                    </div>
-                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          AI Enterprise Suite
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          AI Inference - Triton
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          AI Workflows
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Avatar - Tokkio
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Cybersecurity - Morpheus
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Data Analytics - RAPIDS
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Apache Spark
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Workbench
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Large Language Models - NeMo Framwork
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Logistics and Route Optimization - cuOpt
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Recommender Systems - Merlin
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Speech AI - Riva
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          NGC Software Catalog
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Open Software Catalog
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="float-left mr-[30px] w-[calc(32% - 8px)] max-w-[none] pb-[20px]">
-                    <div className="h-[30px] min-h-[30px] font-bold border-b-2 border-solid border-[#ccc] pb-[5px] leading-5">
-                      Products
-                    </div>
-                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          PC
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Laptops & Workstations
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Data Center
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Cloud
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="float-left mr-[30px] w-[calc(32% - 8px)] max-w-[none] pb-[20px]">
-                    <div className="h-[30px] min-h-[30px] font-bold border-b-2 border-solid border-[#ccc] pb-[5px] leading-5">
-                      Resources
-                    </div>
-                    <ul className="leading-5 mt-0 pl-0 pt-[5px]">
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Professional Services
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Technical Training
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Startups
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          AI Accelerator Program
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Content Library
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          NVIDIA Research
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Developer Blog
-                        </a>
-                      </li>
-                      <li className="pt-[7px] pb-[7px] text-sm list-none">
-                        <a className="text-[#666] block hover:text-[#1a1a1a]">
-                          Kaggle Grandmasters
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  {dataScientist.map((category) => (
+                    <li
+                      key={category.title}
+                      className={`float-left mr-[30px] max-w-[190px] pb-[20px] w-[calc(16.66667%-25px)]`}
+                    >
+                      <div className="h-[25px] min-h-[30px] font-bold border-b-2 border-solid border-[#ccc] pb-[5px] leading-5">
+                        {category.title}
+                      </div>
+                      <ul className="leading-5 mt-0 pl-0 pt-[5px]">
+                        {category.items.map((item, itemIndex) => (
+                          <li
+                            key={item}
+                            className="pt-[7px] pb-[7px] text-sm list-none"
+                          >
+                            <a className="text-[#666] block hover:text-[#1a1a1a]">
+                              {category.title === "Industries" &&
+                              itemIndex === category.items.length - 1 ? (
+                                <i>{item}</i>
+                              ) : (
+                                item
+                              )}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -1218,28 +1002,6 @@ const HeaderForYou = ({
       )}
     </>
   );
-};
-
-HeaderForYou.propTypes = {
-  isForYouOpen: PropTypes.bool.isRequired,
-  isCreativesOpen: PropTypes.bool.isRequired,
-  isDataSOpen: PropTypes.bool.isRequired,
-  isDevOpen: PropTypes.bool.isRequired,
-  isGamersOpen: PropTypes.bool.isRequired,
-  isItProfessionalOpen: PropTypes.bool.isRequired,
-  isResearcherOpen: PropTypes.bool.isRequired,
-  isRoboticistOpen: PropTypes.bool.isRequired,
-  isStartupsOpen: PropTypes.bool.isRequired,
-  handleCreativeClick: PropTypes.func.isRequired,
-  handleDataClick: PropTypes.func.isRequired,
-  handleDevClick: PropTypes.func.isRequired,
-  handleGamerClick: PropTypes.func.isRequired,
-  handleItProfClick: PropTypes.func.isRequired,
-  handleResearcherClick: PropTypes.func.isRequired,
-  handleRoboticistClick: PropTypes.func.isRequired,
-  handleStartupsClick: PropTypes.func.isRequired,
-  handleOffClick: PropTypes.func.isRequired,
-  getForYouGreenBar: PropTypes.func.isRequired,
 };
 
 export default HeaderForYou;
