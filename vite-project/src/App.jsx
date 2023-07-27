@@ -4,7 +4,7 @@ import OuterNavBar from "./components/OuterNavBar/OuterNavBar";
 import { LandingPageProvider } from "./components/LandingPageContext";
 import Footer from "./components/Footer";
 import InnerNavbar from "./components/inner-navbar";
-import Architecture from "./components/Architecture";
+import Architecture from "./components/Architecture/Architecture";
 import Performance from "./components/Performance";
 import RayTracing from "./components/RayTracing/RayTracing";
 import Accolades from "./components/Accolades/Accolades";
