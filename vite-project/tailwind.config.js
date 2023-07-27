@@ -12,9 +12,18 @@ export default {
             opacity: 1,
           },
         },
+        fadeOut: {
+          "0%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
+          },
+        },
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in", // Here, we link the keyframes to the animation with a duration, easing, and animation name
+        fadeOut: "fadeOut 1s ease-out",      
       },
       fontFamily: {
         Sig: ['Signika', 'sans-serif'],

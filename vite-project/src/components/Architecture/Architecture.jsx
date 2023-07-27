@@ -3,9 +3,9 @@ import { useEffect, useRef, useContext, useState } from "react";
 import ArchitectureContext from "./ArchitectureContext";
 
 const Architecture = () => {
-  const { setisScrolled, setIsFaded } = useContext(ArchitectureContext);
+  const { isScrolled, setisScrolled, setIsFaded, setIsFadedOut } =
+    useContext(ArchitectureContext);
   const architectureRef = useRef(null);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,16 +17,32 @@ const Architecture = () => {
         const windowBottom = window.innerHeight - 50;
 
         setisScrolled(architectureBottom <= windowBottom);
-        setIsFaded(true);
       }
     };
+
+    const handleScrollTimeout = () => {
+      setTimeout(() => {
+        setIsFaded(isScrolled);
+        setIsFadedOut(isScrolled);
+      }, 500);
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScrollTimeout);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScrollTimeout);
+    };
+  }, [setisScrolled, setIsFaded, setIsFadedOut, isScrolled]);
+
+  // useEffect(() => {
+
+  //     },[isScrolled]);
+
   return (
     <div
       ref={architectureRef}
-      className="bg-black w-full flex flex-col items-center pb-[60px] relative h-[1000px]"
+      className="bg-black w-full flex flex-col items-center pb-[10%] relative h-[1000px]"
     >
       <ArchitectureList />
     </div>

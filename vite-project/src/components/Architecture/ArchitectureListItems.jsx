@@ -5,13 +5,25 @@ import ArchitectureContext from "./ArchitectureContext";
 import LandingPageContext from "../LandingPageContext.jsx";
 
 const ArchitectureListItems = () => {
-  const { architectureList, architectureListVer2, isScrolled, isFaded } =
-    useContext(ArchitectureContext);
+  const {
+    architectureList,
+    architectureListVer2,
+    isScrolled,
+    isFaded,
+    isFadedOut,
+  } = useContext(ArchitectureContext);
   const { isHovered, handleMouseEnter, handleMouseLeave } =
     useContext(LandingPageContext);
+
   const beforeScroll = () => {
     return (
-      <>
+      <div
+        className={`transition-opacity duration-[1500ms] ${
+          isFadedOut
+            ? "opacity-0 pointer-events-none"
+            : "opacity-100 pointer-events-none"
+        }`}
+      >
         <div className="mx-[78px] pt-[120px] pb-[90px] flex flex-col items-center">
           <h2 className="text-white mb-[25px] font-bold text-[1.25rem] font-Sig">
             {architectureListVer2.current[0]}
@@ -60,16 +72,16 @@ const ArchitectureListItems = () => {
             </span>
           </div>
         </div>
-      </>
+      </div>
     );
   };
 
   const afterScroll = () => {
     return (
       <div
-        className={` ${
-          isFaded ? "animate-fadeIn" : "" // Conditionally apply the animation class
-        }`}
+      className={`transition-opacity duration-[1500ms] ${
+        isFaded ? "opacity-100 pointer-events-none" : "opacity-0 pointer-events-none"
+      }`}
       >
         <div className="flex flex-col pt-[120px] pb-[30px] items-center justify-center">
           <h2 className="text-white mb-[25px] text-xl font-bold">
@@ -114,11 +126,7 @@ const ArchitectureListItems = () => {
       </div>
     );
   };
-  //Conditional Here
-  if (isScrolled) {
-    return afterScroll();
-  } else {
-    return beforeScroll();
-  }
+  // Conditional rendering based on isScrolled
+  return isScrolled ? afterScroll() : beforeScroll();
 };
 export default ArchitectureListItems;
