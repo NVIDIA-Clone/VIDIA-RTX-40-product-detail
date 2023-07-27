@@ -1,7 +1,6 @@
 import ArchitectureList from "./ArchitectureList";
 import { useEffect, useRef, useContext } from "react";
 import ArchitectureContext from "./ArchitectureContext";
-import { Scroll } from "react-fns";
 
 const Architecture = () => {
   const { isScrolled, setisScrolled } = useContext(ArchitectureContext);
