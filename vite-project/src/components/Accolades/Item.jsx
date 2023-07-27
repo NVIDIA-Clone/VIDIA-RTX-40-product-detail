@@ -5,6 +5,7 @@ const Item = () => {
   let { accoladesList } = useContext(LandingPageContext); //Array of Objects
   //NEEDING TO WORK IN TANDEM TO CHANGE BACKGROUND OF SELECTED
   const [selected, setSelected] = useState(accoladesList.current[0]);
+  const [isFadingIn, setIsFadingIn] = useState(true); // New state variable
 
   // Function to handle automatic cycling of comments
   useEffect(() => {
@@ -13,22 +14,31 @@ const Item = () => {
         (elem) => elem.id === selected.id
       );
       const nextIndex = (currentIndex + 1) % accoladesList.current.length;
-      setSelected(accoladesList.current[nextIndex]);
+      setIsFadingIn(false); // Set isFadingIn to false to trigger fade-out
+      setTimeout(() => {
+        setSelected(accoladesList.current[nextIndex]);
+        setIsFadingIn(true); // Set isFadingIn to true after changing the comment to trigger fade-in
+      }, 500); // Wait for 500ms before changing the comment to allow time for fade-out
     }, 5000); // Change comment every 5 seconds (adjust as needed)
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(interval);
-  });
+  }, [selected, accoladesList]);
 
   // Function to handle click on comments
   function handleClick(index) {
     setSelected(accoladesList.current[index]);
+    setIsFadingIn(true); // Set isFadingIn to true when manually changing the comment to trigger fade-in
   }
 
   return (
     <>
       <blockquote className="text-[36px] mb-[42px] mt-[3px]">
-        <span>
+        <span
+          className={`block ${
+            isFadingIn ? "animate-fadeIn" : "" // Conditionally apply the animation class
+          }`}
+        >
           <q>{selected.comment}</q>
         </span>
       </blockquote>
