@@ -12,13 +12,13 @@ const Dlss = () => {
             <h2 className="text-base text-center font-bold p-4">VIDIA DLSS 3</h2>
             <h1 className="text-2xl text-center font-bold">The Performance Multiplier, Powered by AI</h1>
             <p className="text-sm text-center p-4">DLSS is a revolutionary breakthrough in AI-powered graphics that massively boosts performance. Powered by the new fourth-gen Tensor Cores and Optical Flow Accelerator on PeForce RTX 40 Series GPUs, DLSS 3 uses AI to create additional high-quality frames.</p>
-            <div className="text-base text-center font-bold">
-                <span className="object-center py-1">See How DLSS Works</span>
+            <div className="text-base text-center font-bold py-1 m-0.5">
+                <span className="object-center">See How DLSS Works</span>
                 <button>
                     <svg
                     width="30px"
                     height="30px"
-                    viewBox="0 0 30 10"
+                    viewBox="0 -2 30 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
