@@ -11,7 +11,7 @@ import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
 import Creative from "./components/Creative/Creative";
-import Specs from "./components/Specs";
+import Specs from "./components/Specs/Specs";
 import Shop from "./components/Shop";
 
 function App() {
