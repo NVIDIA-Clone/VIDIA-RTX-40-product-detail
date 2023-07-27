@@ -302,6 +302,23 @@ export function HeaderProvider({ children }) {
   const [isResearcherOpen, setIsResearcherOpen] = useState(false);
   const [isRoboticistOpen, setIsRoboticistOpen] = useState(false);
   const [isStartupsOpen, setIsStartupsOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setIsNavbarVisible(prevScrollPos > currentScrollPos);
+      prevScrollPos = currentScrollPos;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     if (isMenuOpen) {
@@ -652,6 +669,7 @@ export function HeaderProvider({ children }) {
         getGreenBarStyles,
         getMenuGreenBarStyles,
         getForYouGreenBar,
+        isNavbarVisible,
         // ... Add other state variables and functions from the context ...
       }}
     >

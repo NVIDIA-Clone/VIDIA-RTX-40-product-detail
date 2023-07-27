@@ -11,23 +11,26 @@ import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
 import Creative from "./components/Creative/Creative";
+import { HeaderProvider } from "./HeaderContext";
 
 function App() {
   return (
     <>
       <LandingPageProvider>
-        <Header />
-        <OuterNavBar />
-        <LandingPage />
-        <InnerNavbar />
-        <Accolades />
-        <Architecture />
-        <Performance />
-        <RayTracing />
-        <Dlss />
-        <Reflex />
-        <Creative />
-        <Footer />
+        <HeaderProvider>
+          <Header />
+          <OuterNavBar />
+          <LandingPage />
+          <InnerNavbar />
+          <Accolades />
+          <Architecture />
+          <Performance />
+          <RayTracing />
+          <Dlss />
+          <Reflex />
+          <Creative />
+          <Footer />
+        </HeaderProvider>
       </LandingPageProvider>
     </>
   );

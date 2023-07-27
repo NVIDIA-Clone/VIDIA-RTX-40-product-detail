@@ -46,6 +46,7 @@ export const LandingPageProvider = ({ children }) => {
   //ESTABLISH STATES
   const [data, setData] = useState({});
   const accoladesList = useRef(items);
+
   //Added Hovers for arrowcarrots..
   const [isHovered, setIsHovered] = useState(false);
 
