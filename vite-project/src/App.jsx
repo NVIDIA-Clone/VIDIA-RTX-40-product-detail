@@ -10,6 +10,7 @@ import RayTracing from "./components/RayTracing/RayTracing";
 import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
+import Specs from "./components/Specs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <RayTracing />
         <Dlss />
         <Reflex />
+        <Specs />
         <Footer />
       </LandingPageProvider>
     </>
