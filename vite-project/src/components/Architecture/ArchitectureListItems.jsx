@@ -4,9 +4,9 @@ import { useContext } from "react";
 import ArchitectureContext from "./ArchitectureContext";
 
 const ArchitectureListItems = () => {
-  const { architectureList, architectureListVer2, isScrolled, setisScrolled } =
+  const { architectureList, architectureListVer2, isScrolled } =
     useContext(ArchitectureContext);
-console.log(window)
+  console.log(window);
   const beforeScroll = () => {
     return (
       <>
@@ -102,11 +102,10 @@ console.log(window)
     );
   };
   //Conditional Here
-    if (isScrolled) {
-     return afterScroll();
-    } else {
-     return beforeScroll();
-    }
-    
+  if (isScrolled) {
+    return afterScroll();
+  } else {
+    return beforeScroll();
+  }
 };
 export default ArchitectureListItems;

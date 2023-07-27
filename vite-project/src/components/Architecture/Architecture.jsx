@@ -3,7 +3,7 @@ import { useEffect, useRef, useContext } from "react";
 import ArchitectureContext from "./ArchitectureContext";
 
 const Architecture = () => {
-  const { isScrolled, setisScrolled } = useContext(ArchitectureContext);
+  const { setisScrolled } = useContext(ArchitectureContext);
   const architectureRef = useRef(null);
 
   useEffect(() => {
@@ -16,7 +16,6 @@ const Architecture = () => {
         const windowBottom = window.innerHeight - 50;
 
         setisScrolled(architectureBottom <= windowBottom);
-        console.log(isScrolled)
       }
     };
     window.addEventListener("scroll", handleScroll);
