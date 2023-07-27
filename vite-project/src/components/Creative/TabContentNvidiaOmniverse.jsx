@@ -16,10 +16,15 @@ const TabContentNvidiaOmniverse = () => {
           Connect Your Creative Worlds to a Universe of Possibility
         </h4>
         <p className="text-[#eee] text-[15px] mt-[10px]">
-          NVIDIA Omniverse™ is a 3D design collaboration platform within the
-          NVIDIA Studio suite of tools for creators. Built to<br></br>{" "}
-          accelerate workflows and unite apps and assets to bring your ideas to
-          life—fast.
+          <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
+            NVIDIA Omniverse™
+          </a>{" "}
+          is a 3D design collaboration platform within the{" "}
+          <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
+            NVIDIA Studio
+          </a>{" "}
+          suite of tools for creators. Built to<br></br> accelerate workflows
+          and unite apps and assets to bring your ideas to life—fast.
         </p>
         <div
           className="cursor-pointer mt-[24px] font-semibold text-white text-[18px]"

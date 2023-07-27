@@ -16,10 +16,14 @@ const TabContentNvidiaBroadcast = () => {
           Your AI-Powered Home Studio
         </h4>
         <p className="text-[#eee] text-[15px] mt-[10px]">
-          The NVIDIA Broadcast app transforms any room into a home studio—taking
-          your live streams, voice chats, and video<br></br> calls to the next
-          level with powerful AI effects like noise and room echo removal,
-          virtual background, and more.
+          The{" "}
+          <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
+            NVIDIA Broadcast
+          </a>{" "}
+          app transforms any room into a home studio—taking your live streams,
+          voice chats, and video<br></br> calls to the next level with powerful
+          AI effects like noise and room echo removal, virtual background, and
+          more.
         </p>
         <div
           className="cursor-pointer mt-[24px] font-semibold text-white text-[18px]"
