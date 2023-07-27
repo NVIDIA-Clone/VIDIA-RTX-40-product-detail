@@ -26,10 +26,7 @@ function App() {
         <RayTracing />
         <Dlss />
         <Reflex />
-<<<<<<< HEAD
         <Creative />
-=======
->>>>>>> 418621837871dbf453ff7fb7c0c463bab9aae450
         <Footer />
       </LandingPageProvider>
     </>
