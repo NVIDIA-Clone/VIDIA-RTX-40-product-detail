@@ -10,6 +10,7 @@ import RayTracing from "./components/RayTracing/RayTracing";
 import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
+import Creative from "./components/Creative/Creative";
 import Specs from "./components/Specs";
 import Creative from "./components/Creative/Creative";
 import Shop from "./components/Shop";
@@ -28,8 +29,8 @@ function App() {
         <RayTracing />
         <Dlss />
         <Reflex />
-        <Specs />
         <Creative />
+        <Specs />
         <Shop />
         <Footer />
       </LandingPageProvider>
