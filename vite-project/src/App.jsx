@@ -19,18 +19,18 @@ function App() {
       <LandingPageProvider>
         <HeaderProvider>
           <Header />
-          <OuterNavBar />
-          <LandingPage />
-          <InnerNavbar />
-          <Accolades />
-          <Architecture />
-          <Performance />
-          <RayTracing />
-          <Dlss />
-          <Reflex />
-          <Creative />
-          <Footer />
         </HeaderProvider>
+        <OuterNavBar />
+        <LandingPage />
+        <InnerNavbar />
+        <Accolades />
+        <Architecture />
+        <Performance />
+        <RayTracing />
+        <Dlss />
+        <Reflex />
+        <Creative />
+        <Footer />
       </LandingPageProvider>
     </>
   );

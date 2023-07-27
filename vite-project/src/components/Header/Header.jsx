@@ -7,14 +7,11 @@ import HeaderLogo from "./HeaderLogo";
 import MainMenu from "./MainMenu";
 import SearchBar from "./SearchBar";
 import Profile from "./Profile";
-import { useContext } from "react";
-import HeaderContext from "./HeaderContext.jsx";
 
 function Header() {
-  const { headerStyle } = useContext(HeaderContext);
   return (
     <>
-      <header className="font-Sig" style={headerStyle}>
+      <header className="font-Sig">
         <div className="fixed cursor-pointer mr-auto ml-auto max-w-[100rem]">
           <nav className="h-[44px] w-full px-[11rem] bg-[#fff] font-Sig flex flex-row items-center">
             <HeaderLogo />
