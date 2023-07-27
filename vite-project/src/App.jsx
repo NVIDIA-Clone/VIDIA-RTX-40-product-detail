@@ -11,6 +11,7 @@ import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
 import Specs from "./components/Specs";
+import Creative from "./components/Creative/Creative"
 
 function App() {
   return (
@@ -35,3 +36,4 @@ function App() {
 }
 
 export default App;
+
