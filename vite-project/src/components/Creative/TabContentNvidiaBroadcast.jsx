@@ -21,20 +21,22 @@ const TabContentNvidiaBroadcast = () => {
           level with powerful AI effects like noise and room echo removal,
           virtual background, and more.
         </p>
-        <div className="mt-[24px] font-semibold text-white text-[18px]">
+        <div
+          className="cursor-pointer mt-[24px] font-semibold text-white text-[18px]"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <span>Enhance Your Live Audio and Video</span>
           <button>
             <svg
               width="30px"
               height="30px"
-              viewBox="0 0 30 10"
+              viewBox="0 -3 30 10"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
                 isHovered ? "translate-x-2" : ""
               }`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
             >
               <path
                 d="M10 7L15 12L10 17"

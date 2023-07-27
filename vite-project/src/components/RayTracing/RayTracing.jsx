@@ -45,21 +45,23 @@ const RayTracing = () => {
             incredibly detailed virtual worlds like never before.{" "}
           </p>
         </div>
-        <div className="float-left w-[100%] text-center mt-[24px] font-bold text-[17px]">
+        <div
+          className="cursor-pointer float-left w-[100%] text-center mt-[24px] font-bold text-[17px]"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <a className="">
             <span className="text-white">Get Real With RTX Ray Tracing</span>
             <button>
               <svg
                 width="30px"
                 height="30px"
-                viewBox="0 0 30 10"
+                viewBox="0 -3 30 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
-                  isHovered ? "translate-x-2" : ""
+                  isHovered ? "translate-x-1" : ""
                 }`}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
               >
                 <path
                   d="M10 7L15 12L10 17"

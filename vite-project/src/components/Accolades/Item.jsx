@@ -1,20 +1,30 @@
-import { useContext, useState } from 'react';
-import LandingPageContext from './../LandingPageContext';
+import { useContext, useState, useEffect } from "react";
+import LandingPageContext from "./../LandingPageContext";
 
 const Item = () => {
   let { accoladesList } = useContext(LandingPageContext); //Array of Objects
   //NEEDING TO WORK IN TANDEM TO CHANGE BACKGROUND OF SELECTED
   const [selected, setSelected] = useState(accoladesList.current[0]);
 
-  function handleClick(e) {
-    let index = e.currentTarget.id - 1;
+  // Function to handle automatic cycling of comments
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentIndex = accoladesList.current.findIndex(
+        (elem) => elem.id === selected.id
+      );
+      const nextIndex = (currentIndex + 1) % accoladesList.current.length;
+      setSelected(accoladesList.current[nextIndex]);
+    }, 5000); // Change comment every 5 seconds (adjust as needed)
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  });
+
+  // Function to handle click on comments
+  function handleClick(index) {
     setSelected(accoladesList.current[index]);
-    //NEEDING TO CHANGE THIS TO STATE BUT GOT IT WORKING
-    if (accoladesList.current[e.currentTarget.id - 1].clicked === false) {
-      accoladesList.current[e.currentTarget.id - 1].clicked = true;
-      accoladesList.current[selected.id - 1].clicked = false;
-    }
   }
+
   return (
     <>
       <blockquote className="text-[36px] mb-[42px] mt-[3px]">
@@ -28,13 +38,13 @@ const Item = () => {
           {accoladesList.current.map((elem, index) => (
             <div
               className={
-                elem.clicked
-                  ? 'flex p-[0_auto] w-3 h-3 rounded-full bg-NVGreen m-[0_5px] hover:bg-[#00661f] cursor-pointer'
-                  : 'flex p-[0_auto] w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer'
+                elem.id === selected.id
+                  ? "flex p-[0_auto] w-3 h-3 rounded-full bg-NVGreen m-[0_5px] hover:bg-[#00661f] cursor-pointer"
+                  : "flex p-[0_auto] w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer"
               }
               id={elem.id}
               key={index}
-              onClick={handleClick}
+              onClick={() => handleClick(index)}
             ></div>
           ))}
         </div>
