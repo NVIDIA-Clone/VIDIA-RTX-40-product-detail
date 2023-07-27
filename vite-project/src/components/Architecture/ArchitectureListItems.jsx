@@ -2,11 +2,13 @@
 import { useContext } from "react";
 //IMPORTING THE CONTEXT TO BE USED IN THIS PARTICULAR COMPONENT
 import ArchitectureContext from "./ArchitectureContext";
+import LandingPageContext from "../LandingPageContext.jsx";
 
 const ArchitectureListItems = () => {
-  const { architectureList, architectureListVer2, isScrolled } =
+  const { architectureList, architectureListVer2, isScrolled, isFaded } =
     useContext(ArchitectureContext);
-  console.log(window);
+  const { isHovered, handleMouseEnter, handleMouseLeave } =
+    useContext(LandingPageContext);
   const beforeScroll = () => {
     return (
       <>
@@ -29,26 +31,33 @@ const ArchitectureListItems = () => {
                 <p className="text-white py-[10px] ">{bullet.info}</p>
               </div>
             ))}
-            <div className="flex ">
-              <span className=" text-white text-[1rem]">
-                {architectureListVer2.current[3].learn.text}
-                <svg>
-                  <path
-                    d={architectureListVer2.current[3].learn.symbol.d}
-                    strokeLinecap={
-                      architectureListVer2.current[3].learn.symbol.linecap
-                    }
-                    stroke={architectureListVer2.current[3].learn.symbol.stroke}
-                    strokeWidth={
-                      architectureListVer2.current[3].learn.symbol.width
-                    }
-                    strokeLinejoin={
-                      architectureListVer2.current[3].learn.symbol.linejoin
-                    }
-                  ></path>
-                </svg>
-              </span>
-            </div>
+
+            <span
+              className=" text-white text-[1rem] flex font-bold items-center cursor-pointer"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {architectureListVer2.current[3].learn.text}
+              <svg height={23} width={20}>
+                <path
+                  d={architectureListVer2.current[3].learn.symbol.d}
+                  strokeLinecap={
+                    architectureListVer2.current[3].learn.symbol.linecap
+                  }
+                  stroke={
+                    isHovered
+                      ? "white"
+                      : architectureListVer2.current[3].learn.symbol.stroke
+                  }
+                  strokeWidth={
+                    architectureListVer2.current[3].learn.symbol.width
+                  }
+                  strokeLinejoin={
+                    architectureListVer2.current[3].learn.symbol.linejoin
+                  }
+                ></path>
+              </svg>
+            </span>
           </div>
         </div>
       </>
@@ -57,7 +66,11 @@ const ArchitectureListItems = () => {
 
   const afterScroll = () => {
     return (
-      <>
+      <div
+        className={` ${
+          isFaded ? "animate-fadeIn" : "" // Conditionally apply the animation class
+        }`}
+      >
         <div className="flex flex-col pt-[120px] pb-[30px] items-center justify-center">
           <h2 className="text-white mb-[25px] text-xl font-bold">
             The Ultimate Platform for Gamers and Creators
@@ -98,7 +111,7 @@ const ArchitectureListItems = () => {
             </div>
           ))}
         </div>
-      </>
+      </div>
     );
   };
   //Conditional Here

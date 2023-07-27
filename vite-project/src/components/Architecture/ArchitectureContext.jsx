@@ -106,7 +106,7 @@ const architectureListItemsVer2 = [
         title: "Fourth-Gen Tensor Cores",
         info: "Up to 4X performance with DLSS 3 vs. brute force rendering",
       },
-  {
+      {
         id: 3,
         title: "Third-Gen RT Cores",
         info: "Up to 2X ray tracing performance",
@@ -114,21 +114,18 @@ const architectureListItemsVer2 = [
     ],
   },
   {
-    learn: 
-        {
-            text: "Learn More About the Architecture",
-            symbol: {
-                        d: "M10 7L15 12L10 17", 
-                        stroke: "#76B900",
-                        width: "1.5",
-                        linecap: "round",
-                        linejoin: "round"
-                    }
-        }
-    }, 
+    learn: {
+      text: "Learn More About the Architecture",
+      symbol: {
+        d: "M10 7L15 12L10 17",
+        stroke: "#76B900",
+        width: "2.5",
+        linecap: "round",
+        linejoin: "round",
+      },
+    },
+  },
 ];
-
-
 
 //CREATE THE CONTEXT
 const ArchitectureContext = createContext();
@@ -136,12 +133,22 @@ const ArchitectureContext = createContext();
 export const ArchitectureProvider = ({ children }) => {
   //ESTABLISH STATES
   const architectureList = useRef(architectureListItems);
-  const architectureListVer2 = useRef(architectureListItemsVer2)
+  const architectureListVer2 = useRef(architectureListItemsVer2);
   const [isScrolled, setisScrolled] = useState(false);
+  const [isFaded, setIsFaded] = useState(false);
   //FUNCTIONS IF NEED BE
   //RETURN PROPERTIES NEEDED
   return (
-    <ArchitectureContext.Provider value={{ architectureList, architectureListVer2, isScrolled, setisScrolled}}>
+    <ArchitectureContext.Provider
+      value={{
+        architectureList,
+        architectureListVer2,
+        isScrolled,
+        setisScrolled,
+        isFaded,
+        setIsFaded,
+      }}
+    >
       {children}
     </ArchitectureContext.Provider>
   );

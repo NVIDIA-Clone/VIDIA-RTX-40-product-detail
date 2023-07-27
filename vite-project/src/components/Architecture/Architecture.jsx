@@ -1,10 +1,11 @@
 import ArchitectureList from "./ArchitectureList";
-import { useEffect, useRef, useContext } from "react";
+import { useEffect, useRef, useContext, useState } from "react";
 import ArchitectureContext from "./ArchitectureContext";
 
 const Architecture = () => {
-  const { setisScrolled } = useContext(ArchitectureContext);
+  const { setisScrolled, setIsFaded } = useContext(ArchitectureContext);
   const architectureRef = useRef(null);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,7 @@ const Architecture = () => {
         const windowBottom = window.innerHeight - 50;
 
         setisScrolled(architectureBottom <= windowBottom);
+        setIsFaded(true);
       }
     };
     window.addEventListener("scroll", handleScroll);
