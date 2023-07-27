@@ -2,7 +2,6 @@ import { useContext } from "react";
 import LandingPageContext from "./LandingPageContext.jsx";
 
 const Dlss = () => {
-    
     const { isHovered, handleMouseEnter, handleMouseLeave } = useContext(LandingPageContext);
     
     return (
@@ -51,4 +50,3 @@ const Dlss = () => {
 }
 
 export default Dlss;
-
