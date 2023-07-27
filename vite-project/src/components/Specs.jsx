@@ -5,22 +5,22 @@ const Specs = () => {
                  <h1>Specs</h1>
             </div>
             <div className="spec-table col-start-3 col-span-4 row-start-2 row-span-2 justify-self-center">
-                <table>
+                <table className="table-fixed">
                     <tr className="specs-row border-t border-NVDropDownGray">
-                        <td>VIDIA CUDA Cores</td>
-                        <td><h5 className="text-lg font-bold">16384</h5></td>
+                        <td className="w-72 py-4">VIDIA CUDA Cores</td>
+                        <td className="w-40 py-4"><h5 className="text-lg font-bold">16384</h5></td>
                     </tr>
                     <tr className="specs-row border-t border-NVDropDownGray">
-                        <td>Boost Clock (GHz)</td>
-                        <td><h5 className="text-lg font-bold">2.52</h5></td>
+                        <td className="py-4">Boost Clock (GHz)</td>
+                        <td className="py-4"><h5 className="text-lg font-bold">2.52</h5></td>
                     </tr>
                     <tr className="specs-row border-t border-NVDropDownGray">
-                        <td>Memory Size</td>
-                        <td><h5 className="text-lg font-bold">24 GB</h5></td>
+                        <td className="py-4">Memory Size</td>
+                        <td className="py-4"><h5 className="text-lg font-bold">24 GB</h5></td>
                     </tr>
                     <tr className="specs-row border-t border-NVDropDownGray">
-                        <td>Memory Type</td>
-                        <td><h5 className="text-lg font-bold">GDDR6X</h5></td>
+                        <td className="py-4">Memory Type</td>
+                        <td className="py-4"><h5 className="text-lg font-bold">GDDR6X</h5></td>
                     </tr>
                 </table>
             </div>
