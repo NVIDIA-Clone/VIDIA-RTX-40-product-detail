@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import LandingPageContext from "./LandingPageContext.jsx";
+
 const Reflex = () => {
+  const { isHovered, handleMouseEnter, handleMouseLeave } =
+    useContext(LandingPageContext);
+
   return (
     <>
       <div className="font-Sig float-left w-[100%] h-[940px] bg-black">
@@ -22,6 +28,28 @@ const Reflex = () => {
               <span className="text-[#ffffff] text-[16px] font-bold">
                 Get a Competitive Advantage with Reflex
               </span>
+              <button>
+                <svg
+                  width="30px"
+                  height="30px"
+                  viewBox="0 0 30 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
+                    isHovered ? "translate-x-2" : ""
+                  }`}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <path
+                    d="M10 7L15 12L10 17"
+                    stroke={isHovered ? "white" : "#76b900"}
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
             <div className="relative left-[18%] pt-[40px] w-[850px] h-[478px] ">
               <iframe
