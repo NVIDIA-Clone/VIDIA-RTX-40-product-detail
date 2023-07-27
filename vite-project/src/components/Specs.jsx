@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import LandingPageContext from "./LandingPageContext.jsx";
+
 const Specs = () => {
+
+    const { isHovered, handleMouseEnter, handleMouseLeave } = useContext(LandingPageContext);
+
     return (
         <div className="specs-grid grid grid-cols-8 grid-rows-6 bg-black font-Sig text-NVWhiteTxt w-screen">
              <div className="specs-title col-start-3 col-span-4 row-start-1 row-span-1 justify-self-center w-28 text-2xl font-bold">
@@ -24,8 +30,31 @@ const Specs = () => {
                     </tr>
                 </table>
             </div>
+            <div className="system-compatibility col-start-3 col-span4 row-start 3 row-span-1 justify-self-center">
+                <div className="text-center font-bold py-1 m-0.5" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <span className="object-center">Check Your System Compatibility</span>
+                <button>
+                    <svg
+                    width="30px"
+                    height="30px"
+                    viewBox="1 -2 30 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
+                        isHovered ? "translate-x-1" : ""
+                    }`}>
+                    <path
+                        d="M10 7L15 12L10 17"
+                        stroke={isHovered ? "white" : "#76b900"}
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                    </svg>
+                </button>
+                </div>
+            </div>
         </div>
-   
     )
 }
 
