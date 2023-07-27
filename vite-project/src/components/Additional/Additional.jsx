@@ -7,7 +7,7 @@ const Additional = () => {
     <AdditionalProvider>
       <div
         id="additional-list-container"
-        className="justify-center items-center w-full h-[100vh] bg-[#1A1A1A] font-Sig flex flex-col text-white"
+        className="float-left justify-center items-center w-full  bg-[#1A1A1A] font-Sig flex flex-col text-white"
       >
         <AdditionalList />
       </div>

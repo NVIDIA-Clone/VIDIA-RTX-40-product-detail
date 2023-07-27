@@ -46,10 +46,22 @@ export const LandingPageProvider = ({ children }) => {
   //ESTABLISH STATES
   const [data, setData] = useState({});
   const accoladesList = useRef(items);
+  //Added Hovers for arrowcarrots..
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   //CREATE FUNCTIONS
   //FETCHING THE DATA FROM THE DATABASE
   useEffect(() => {
     const getProductData = async () => {
+      // Change to deployed URL
       const productRes = await fetch('http://localhost:8000/product');
       const productData = await productRes.json();
       setData(productData[0]);
@@ -58,7 +70,16 @@ export const LandingPageProvider = ({ children }) => {
   }, []);
   // RETURNING THE PROPERTIES NEEDED
   return (
-    <LandingPageContext.Provider value={{ data, accoladesList }}>
+    <LandingPageContext.Provider
+      value={{
+        data,
+        accoladesList,
+        isHovered,
+        setIsHovered,
+        handleMouseEnter,
+        handleMouseLeave,
+      }}
+    >
       {children}
     </LandingPageContext.Provider>
   );

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { createContext, useRef } from 'react';
 const additional = [
   { mainTitle: 'Additional Features and Benefits' },
   {
-    pic: './../../../public/images/features-8k-bg-2560-d.png',
+    pic: '/images/features-8k-bg-2560-d.png',
     hdrTitle: '8K HDR Gaming',
     text: 'Connect, play, capture, and watch in brilliant HDR at resolutions up to 8K with the GeForce RTX 4090. Capture up to 8K HDR footage with the GeForce Experience™ ShadowPlay™ feature and play back smoothly with AV1 decode.',
     explore: {
@@ -100,23 +101,12 @@ const additional = [
           ],
         },
       },
-      {
-        picture: './../../../public/images/nvidia-resizable-bar.jpeg',
-        title: 'Resizable BAR',
-        info: `Resizable BAR is an advanced PCI Express feature that enables the CPU to access the entire GPU frame buffer at once, improving performance in many games.`,
-        // explore: {
-        //   explore: `Improve Your Games' Performance`,
-        //   symbol: [
-        //     {
-        //       d: 'M10 7L15 12L10 17',
-        //       stroke: 'NVGreen',
-        //       width: '1.5',
-        //       linecap: 'round',
-        //     },
-        //   ],
-        // },
-      },
     ],
+  },
+  {
+    picture: './../../../public/images/nvidia-resizable-bar.jpeg',
+    title: 'Resizable BAR',
+    info: `Resizable BAR is an advanced PCI Express feature that enables the CPU to access the entire GPU frame buffer at once, improving performance in many games.`,
   },
 ];
 //CREATE CONTEXT
