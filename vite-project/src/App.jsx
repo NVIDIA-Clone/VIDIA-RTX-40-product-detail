@@ -27,6 +27,8 @@ function App() {
         <RayTracing />
         <Dlss />
         <Reflex />
+        <Creative />
+        <Specs />
         <Footer />
       </LandingPageProvider>
     </>
