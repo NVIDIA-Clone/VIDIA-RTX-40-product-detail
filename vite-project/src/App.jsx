@@ -11,6 +11,8 @@ import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
 import Specs from "./components/Specs";
+import Creative from "./components/Creative/Creative"
+import { ArchitectureProvider } from "./components/Architecture/ArchitectureContext";
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
         <LandingPage />
         <InnerNavbar />
         <Accolades />
+        <ArchitectureProvider>
         <Architecture />
+        </ArchitectureProvider>
         <Performance />
         <RayTracing />
         <Dlss />

@@ -21,10 +21,10 @@ const InnerNavbar = () => {
     for (let i = sections.length - 1; i >= 0; i--) {
       const { ref, id } = sections[i];
       const section = ref.current;
-      if (section.getBoundingClientRect().top <= window.innerHeight * 0.5) {
-        setCurrentSection(id);
-        break;
-      }
+      // if (section.getBoundingClientRect().top <= window.innerHeight * 0.5) {
+      //   setCurrentSection(id);
+      //   break;
+      // }
     }
   };
 
