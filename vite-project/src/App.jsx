@@ -28,6 +28,7 @@ import Accolades from "./components/Accolades/Accolades";
 import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
 import Creative from "./components/Creative/Creative";
+import Creative from "./components/Creative/Creative";
 import Specs from "./components/Specs";
 import Creative from "./components/Creative/Creative";
 import Shop from "./components/Shop";
@@ -48,13 +49,6 @@ function App() {
         <Dlss />
         <Reflex />
         <Creative />
-<<<<<<< HEAD
-        <Additional />
-        <Specs />
-=======
-        <Specs />
-        <Shop />
->>>>>>> origin/main
         <Footer />
       </LandingPageProvider>
     </>
