@@ -16,10 +16,7 @@ const AdditionalList = () => {
       {/* 8K Container */}
       <div className="w-full mt-[5.5%]">
         <img src={list[1].pic} alt="" className=" absolute z-0 w-[80vw] max-w-[1230px] h-[300px]" />
-        {/* <div
-          id="8k-container"
-          className=" flex z-50 justify-start py-[30px] w-full"
-        > */}
+        
           <div
             id="text-container"
             className="relative py-[45px] px-[15px] pl-[30px] flex flex-col w-full items-start h-fit"
@@ -59,8 +56,6 @@ const AdditionalList = () => {
               </svg>
             </div>
           </div>
-        {/* </div> */}
-              {/* <img src={list[1].pic} alt="" className="absolute z-0 w-[80vw] mb-[30px]" /> */}
       </div>
       {/* Cards */}
       <div
