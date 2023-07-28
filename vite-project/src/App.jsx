@@ -13,7 +13,7 @@ import Dlss from "./components/Dlss";
 import Creative from "./components/Creative/Creative";
 import Specs from "./components/Specs/Specs";
 import { ArchitectureProvider } from "./components/Architecture/ArchitectureContext";
-import Shop from "./components/Shop";
+import Shop from "./components/Shop/Shop";
 
 function App() {
   return (
