@@ -16,25 +16,32 @@ const TabContentNvidiaOmniverse = () => {
           Connect Your Creative Worlds to a Universe of Possibility
         </h4>
         <p className="text-[#eee] text-[15px] mt-[10px]">
-          NVIDIA Omniverse™ is a 3D design collaboration platform within the
-          NVIDIA Studio suite of tools for creators. Built to<br></br>{" "}
-          accelerate workflows and unite apps and assets to bring your ideas to
-          life—fast.
+          <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
+            NVIDIA Omniverse™
+          </a>{" "}
+          is a 3D design collaboration platform within the{" "}
+          <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
+            NVIDIA Studio
+          </a>{" "}
+          suite of tools for creators. Built to<br></br> accelerate workflows
+          and unite apps and assets to bring your ideas to life—fast.
         </p>
-        <div className="mt-[24px] font-semibold text-white text-[18px]">
+        <div
+          className="cursor-pointer mt-[24px] font-semibold text-white text-[18px]"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <span>See the Future of 3D Design</span>
           <button>
             <svg
               width="30px"
               height="30px"
-              viewBox="0 0 30 10"
+              viewBox="0 -3 30 10"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
                 isHovered ? "translate-x-2" : ""
               }`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
             >
               <path
                 d="M10 7L15 12L10 17"

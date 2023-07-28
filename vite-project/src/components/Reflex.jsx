@@ -24,22 +24,24 @@ const Reflex = () => {
               <br></br> reaction times, and the best aim precision for
               competitive games.
             </p>
-            <div className="pt-[18px]">
-              <span className="text-[#ffffff] text-[16px] font-bold">
+            <div
+              className="pt-[18px]"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span className="cursor-pointer text-[#ffffff] text-[16px] font-bold">
                 Get a Competitive Advantage with Reflex
               </span>
               <button>
                 <svg
                   width="30px"
                   height="30px"
-                  viewBox="0 0 30 10"
+                  viewBox="0 -3 30 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
-                    isHovered ? "translate-x-2" : ""
+                    isHovered ? "translate-x-1" : ""
                   }`}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
                 >
                   <path
                     d="M10 7L15 12L10 17"
