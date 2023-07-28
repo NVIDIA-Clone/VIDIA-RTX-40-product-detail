@@ -1,6 +1,11 @@
 import ImageComparison from "./ImageComparison";
+import { useContext } from "react";
+import LandingPageContext from "../LandingPageContext.jsx";
 
 const RayTracing = () => {
+  const { isHovered, handleMouseEnter, handleMouseLeave } =
+    useContext(LandingPageContext);
+
   return (
     <>
       <div className="w-full bg-black h-[450px] pt-[75px] pb-[75px]">
@@ -20,7 +25,7 @@ const RayTracing = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-black h-[400px] pt-[75px] pb-[75px]">
+      <div className="w-full bg-black h-[410px] pt-[75px] pb-[75px]">
         <hr className="bg-[#999999] box-content w-[100%] max-w-[1290px] h-[1px] m-auto"></hr>
         <div className="text-center mt-[8px] mb-[8px] mr-[15px] ml-[15px]">
           <h3 className="font-bold text-[20px] text-center text-white mt-[75px]">
@@ -40,9 +45,33 @@ const RayTracing = () => {
             incredibly detailed virtual worlds like never before.{" "}
           </p>
         </div>
-        <div className="float-left w-[100%] text-center mt-[40px] font-bold text-[17px]">
-          <a className="text-white">
-            <span>Get Real With RTX Ray Tracing</span>
+        <div
+          className="cursor-pointer float-left w-[100%] text-center mt-[24px] font-bold text-[17px]"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <a className="">
+            <span className="text-white">Get Real With RTX Ray Tracing</span>
+            <button>
+              <svg
+                width="30px"
+                height="30px"
+                viewBox="0 -3 30 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
+                  isHovered ? "translate-x-1" : ""
+                }`}
+              >
+                <path
+                  d="M10 7L15 12L10 17"
+                  stroke={isHovered ? "white" : "#76b900"}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </a>
         </div>
       </div>

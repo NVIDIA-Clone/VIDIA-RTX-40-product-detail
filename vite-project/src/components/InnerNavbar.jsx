@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const InnerNavbar = () => {
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
   const [showing, setShowing] = useState(false);
   const [currentSection, setCurrentSection] = useState("");
+
   const [barLocation, setBarLocation] = useState(1)
   //const landingPageRef = useRef(null);
   //const architectureRef = useRef(null);
@@ -13,6 +15,7 @@ const InnerNavbar = () => {
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
+
 
   // const handleScroll = () => {
   //   const sections = [
@@ -30,6 +33,7 @@ const InnerNavbar = () => {
   //   }
   // };
 
+
   const handleMouseEnter = () => {
     setIsOpen(true);
   };
@@ -44,10 +48,12 @@ const InnerNavbar = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+
     //window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
      // window.removeEventListener("scroll", handleScroll);
+
     };
   }, []);
 
@@ -93,6 +99,7 @@ const InnerNavbar = () => {
     return {
       width: `${labelwidth}px`,
       position: "relative",
+
       left: "595px",
     };
   };
@@ -105,10 +112,12 @@ const InnerNavbar = () => {
     <div className="py-2 bg-NVBGGray">
       <div className="flex justify-center flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
         <button onClick={(handleClick(1))} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
+
           Architecture
         </button>
         {windowWidth >= 640 ? (
           <div className="flex flex-wrap">
+
             <button onClick={(handleClick(2))} className="px-2 py-2 text-white border-none bg-inherit">
               Performance
             </button>
@@ -119,14 +128,17 @@ const InnerNavbar = () => {
               DLSS 3
             </button>
             <button onClick={(handleClick(5))} className="px-2 py-2 text-white border-none bg-inherit">
+
               Reflex
             </button>
             {windowWidth >= 1024 ? (
               <div className="flex flex-wrap">
+
                 <button onClick={(handleClick(6))} className="px-2 py-2 text-white border-none bg-inherit">
                   Create
                 </button>
                 <button onClick={(handleClick(7))} className="px-2 py-2 text-white border-none bg-inherit">
+
                   Specs
                 </button>
               </div>
