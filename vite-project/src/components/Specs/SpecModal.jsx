@@ -3,7 +3,7 @@ import LandingPageContext from "../LandingPageContext.jsx";
 
 const SpecModal = () => {
     const [showModal, setShowModal] = useState(false);
-    const { isHovered, handleMouseEnter, handleMouseLeave } = useContext(LandingPageContext);
+    const { isHovered, handleMouseEnter, handleMouseLeave, specs } = useContext(LandingPageContext);
 
     return (
         <>
@@ -17,8 +17,10 @@ const SpecModal = () => {
                         className="fixed inset-0 w-full h-full bg-black"
                         onClick={() => setShowModal(false)}
                     ></div>
-                    <div className="specs-modal-grid grid grid-cols-8 grid-rows-6 py-5 min-h-screen items-stretch" >
-                        <div className="specs-modal-header col-start-3 col-span-4 row-start-1 row-span-1 flex items-start bg-[#262626] relative">
+                    <div className="specs-modal-grid grid grid-cols-8 py-5 min-h-screen items-stretch" >
+                        <div className="specs-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-[#1A1A1A] relative">
+                            <span className="padding div ml-auto inline-flex justify-center items-center px-4"></span>
+                            <span className="text-3xl font-bold text-NVWhiteTxt py-16">PeForce RTX 4090</span>
                             <button type="button" className="text-gray-400 bg-transparent text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
                                 <span onClick={() => setShowModal(false) } onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-3 2 24 24"><path className= "transition-transform duration-500 ease-in-out transform"  
@@ -27,13 +29,28 @@ const SpecModal = () => {
                             <span className="sr-only">Close modal</span>
                             </button>
                         </div>
-                        <div className="full-specs-table col-start-3 col-span-4 row-start-2 row-span-1 relative w-full bg-[#262626] rounded-md justify-self-center">
-                                                         
-                            <div className="mt-2 text-center sm:ml-4 sm:text-left">
-                                <p className="mt-2 text-[15px] leading-relaxed text-NVWhiteTxt">
-                                    Insert Specs Here
-                                </p>
-                            </div>
+                        <div className="specs-modal-table col-start-2 col-span-6 row-start-2 row-span-1 relative w-full bg-[#1A1A1A] rounded-md text-center justify-self-center">
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        This will contain the table<br>
+                        </br>
+                        
+                        This will contain the table<br>
+                        </br>
+                                                  
+                            
                         </div>
                     </div>
                 </div>
