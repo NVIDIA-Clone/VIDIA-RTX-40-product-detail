@@ -6,19 +6,22 @@ const AdditionalList = () => {
   const { list } = useContext(AdditionalContext);
   const { isHovered, handleMouseEnter, handleMouseLeave } =
     useContext(LandingPageContext);
-  console.log(list[2].cards[0].explore.symbol[0]);
+  console.log(list[1]);
   return (
-    <>
-      <h1 className="text-[3rem] m-[2vh_0]">{list[0].mainTitle}</h1>
+    <div className='flex flex-col items-center'>
+    <div className='py-[8px] px-[15px]'>
+      <h2 className="text-[2.25rem] m-[2vh_0] font-Sig font-bold">{list[0].mainTitle}</h2>
+    </div>
       {/* 8K Container */}
-      <div id="8k-container" className="relative w-full h-full">
-        <img src={list[1].pic} alt="" className="w-full h-[28vh]" />
+        <img src={list[1].pic} alt="" className="absolute w-fit h-[300px] mt-[5%]" />
+      <div id="8k-container" className="flex justify-start z-0 h-full py-[30px] w-full">
         <div
           id="text-container"
-          className="absolute inset-0 flex flex-col items-left justify-center ml-[26vw] mr-[50vw]"
+          className="p-[15px] z-50 inset-0 flex flex-col left-[20%] w-1/4 items-start ml-[16%]"
         >
-          <h1>{list[1].hdrTitle}</h1>
-          <p>{list[1].text}</p>
+          <h1 className='pb-[10px] font-bold text-[1.5rem] font-Sig'>{list[1].hdrTitle}</h1>
+          <p className='pt-[10px] pb-[30px] text-[15px] font-Sig'>{list[1].text}</p>
+          <p className='font-bold text-[18px]'>Explore the pinnacle of Gaming</p>
         </div>
       </div>
       {/* Cards */}
@@ -78,7 +81,7 @@ const AdditionalList = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

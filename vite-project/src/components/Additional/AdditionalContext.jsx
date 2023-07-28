@@ -3,7 +3,7 @@ import { createContext, useRef } from 'react';
 const additional = [
   { mainTitle: 'Additional Features and Benefits' },
   {
-    pic: '/images/features-8k-bg-2560-d.png',
+    pic: '/images/8k.png',
     hdrTitle: '8K HDR Gaming',
     text: 'Connect, play, capture, and watch in brilliant HDR at resolutions up to 8K with the GeForce RTX 4090. Capture up to 8K HDR footage with the GeForce Experience™ ShadowPlay™ feature and play back smoothly with AV1 decode.',
     explore: {
