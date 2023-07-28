@@ -18,7 +18,7 @@ const SpecModal = () => {
                         onClick={() => setShowModal(false)}
                     ></div>
                     <div className="specs-modal-grid grid grid-cols-8 py-5 min-h-screen items-stretch" >
-                        <div className="specs-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-[#1A1A1A] relative">
+                        <div className="specs-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-NVBGGray relative">
                             <span className="padding-div ml-auto inline-flex justify-center items-center px-4"></span>
                             <span className="text-3xl font-bold text-NVWhiteTxt py-16">PeForce RTX 4090</span>
                             <button type="button" className="text-gray-400 bg-transparent text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
@@ -29,7 +29,7 @@ const SpecModal = () => {
                             <span className="sr-only">Close modal</span>
                             </button>
                         </div>
-                        <div className="specs-modal-table col-start-2 col-span-6 row-start-2 row-span-1 relative w-full bg-[#1A1A1A] rounded-md text-center">
+                        <div className="specs-modal-table col-start-2 col-span-6 row-start-2 row-span-1 relative w-full bg-NVBGGray text-center">
                             <table className="table-fixed w-fit">
                             <tbody>
                             <tr className="specs-row">
@@ -290,6 +290,24 @@ const SpecModal = () => {
                             </tbody>
                         </table>                                       
                             
+                        </div>
+                        <div className="specs_modal-footnotes col-start-2 col-span-6 row-start-3 row-span-1 relative w-full bg-NVBGGray rounded-md text-NVDropDownGray text-xs p-2.5">
+                             
+                            <p className="p-2.5">1 - Up to 4K 12-bit HDR at 240Hz with DP 1.4a + DSC or HDMI 2.1a + DSC. Up to 8K 12-bit HDR at 60Hz with DP 1.4a + DSC or HDMI 2.1a + DSC.</p> 
+                            <p className="p-2.5">2 - As specified in HDMI 2.1a: up to 4K 240Hz or 8K 60Hz with DSC, Gaming VRR, HDR</p> 
+                            <p className="p-2.5">3 - DisplayPort 1.4a</p> 
+                            <p className="px-2.5 pt-2.5 pb-0 ">4 - Multi Monitor:</p> 
+                            <ul className="list-disc"> 
+                            <li className="mx-14">4 independent displays at 4K 120Hz using DP or HDMI</li> 
+                            <li className="mx-14">2 independent displays at 4K 240Hz or 8K 60Hz with DSC using DP or HDMI</li> 
+                            <li className="mx-14">Other display configurations may be possible based on available bandwidth</li> 
+                            </ul> 
+                            <p className="p-2.5">5 - Idle power measured with GPU running at idle at the Windows desktop for 10 minutes</p> 
+                            <p className="p-2.5">6 - Video playback power measured using AV1 codec</p> 
+                            <p className="p-2.5">7 - Average gaming power is measured across 22 games at 4K, 1440p, and 1080p</p> 
+                            <p className="p-2.5">8 - Minimum is based on a PC configured with a Ryzen 9 5900X processor. Power requirements can be different depending on system configuration.</p> 
+                            <p className="p-2.5">Note: The above specifications represent this GPU as incorporated into VIDIA's Founders Edition or reference graphics card design. Clock specifications apply while gaming with medium to full GPU utilization. Graphics card specifications may vary by add-in-card manufacturer. Please refer to the add-in-card manufacturers' website for actual shipping specifications.</p> 
+
                         </div>
                     </div>
                 </div>
