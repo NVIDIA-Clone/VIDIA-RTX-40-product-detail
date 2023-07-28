@@ -52,11 +52,11 @@ const InnerNavbar = () => {
         setBarLocation(7)
       } else if (window.scrollY > 6850) {
         setBarLocation(6)
-      } else if (window.scrollY > 5790) {
+      } else if (window.scrollY > 5900) {
         setBarLocation(5)
-      } else if (window.scrollY > 4800) {
+      } else if (window.scrollY > 5000) {
         setBarLocation(4)
-      } else if (window.scrollY > 3350) {
+      } else if (window.scrollY > 3600) {
         setBarLocation(3)
       } else if (window.scrollY > 2100) {
         setBarLocation(2)
@@ -204,7 +204,7 @@ const InnerNavbar = () => {
   return (
     <div className={`py-2 bg-NVBGGray sticky top-16 sticky-wrapper z-[70] ${isSticky ? 'sticky-top' : ''}`}>
       <div className="flex justify-center flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
-        <button onClick={() => {handleClick(1, 1170)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
+        <button onClick={() => {handleClick(1, 1200)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
           Architecture
         </button>
         {windowWidth >= 640 ? (
@@ -213,13 +213,13 @@ const InnerNavbar = () => {
             <button onClick={() => {handleClick(2, 2180)}} className="px-2 py-2 text-white border-none bg-inherit">
               Performance
             </button>
-            <button onClick={() => {handleClick(3, 3450)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(3, 3650)}} className="px-2 py-2 text-white border-none bg-inherit">
               Ray Tracing
             </button>
-            <button onClick={() => {handleClick(4, 4850)}}className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(4, 5020)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
-            <button onClick={() => {handleClick(5, 5800)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(5, 5950)}} className="px-2 py-2 text-white border-none bg-inherit">
 
               Reflex
             </button>
