@@ -6,20 +6,20 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"vite\"",
     "server": "nodemon server.js",
-    "build": "npm run build && npm install && vite build",
+    "build": "npm install && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "node server.js"
   },
   "dependencies": {
-    "@fontawesome/react-fontawesome": "^0.2.0",
     "concurrently": "^8.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "pg": "^8.11.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
