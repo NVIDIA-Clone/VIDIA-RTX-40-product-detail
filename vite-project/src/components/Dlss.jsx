@@ -8,11 +8,11 @@ const Dlss = () => {
   return (
     <div className="dlss grid grid-cols-8 grid-rows-none gap-14 bg-local font-Sig text-NVWhiteTxt bg-auto bg-no-repeat bg-[url('/images/nvidia-dlss-video-xlrg-hero-background-bb770-d.jpg')]">
       <div className="dlss-info col-start-3 col-span-4 row-start-1 row-span-1 justify-self-center min-w-[600px]">
-        <h2 className="text-base text-center font-bold p-4">VIDIA DLSS 3</h2>
-        <h1 className="text-2xl text-center font-bold">
+        <h2 className="p-4 text-base font-bold text-center">VIDIA DLSS 3</h2>
+        <h1 className="text-2xl font-bold text-center">
           The Performance Multiplier, Powered by AI
         </h1>
-        <p className="text-sm text-center p-4">
+        <p className="p-4 text-sm text-center">
           DLSS is a revolutionary breakthrough in AI-powered graphics that
           massively boosts performance. Powered by the new fourth-gen Tensor
           Cores and Optical Flow Accelerator on PeForce RTX 40 Series GPUs, DLSS
@@ -58,8 +58,8 @@ const Dlss = () => {
           frameBorder="0"
         ></iframe>
       </div>
-      <div className="col-start-3 col-span-4 row-start-3 row-span-1 justify-self-center">
-        <p className="text-NVDLightGray text-center text-xs self-end">
+      <div className="col-span-4 col-start-3 row-span-1 row-start-3 justify-self-center">
+        <p className="self-end text-xs text-center text-NVDLightGray">
           *Captured with GeForce RTX 4090 at 3840 x 2160
         </p>
       </div>
