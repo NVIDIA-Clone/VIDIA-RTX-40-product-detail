@@ -111,33 +111,33 @@ const InnerNavbar = () => {
   return (
     <div className="py-2 bg-NVBGGray">
       <div className="flex justify-center flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
-        <button onClick={(handleClick(1))} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
+        <button onClick={() => {handleClick(1)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
 
           Architecture
         </button>
         {windowWidth >= 640 ? (
           <div className="flex flex-wrap">
 
-            <button onClick={(handleClick(2))} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
               Performance
             </button>
-            <button onClick={(handleClick(3))} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
               Ray Tracing
             </button>
-            <button onClick={(handleClick(4))} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(1)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
-            <button onClick={(handleClick(5))} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
 
               Reflex
             </button>
             {windowWidth >= 1024 ? (
               <div className="flex flex-wrap">
 
-                <button onClick={(handleClick(6))} className="px-2 py-2 text-white border-none bg-inherit">
+                <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
                   Create
                 </button>
-                <button onClick={(handleClick(7))} className="px-2 py-2 text-white border-none bg-inherit">
+                <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
 
                   Specs
                 </button>
