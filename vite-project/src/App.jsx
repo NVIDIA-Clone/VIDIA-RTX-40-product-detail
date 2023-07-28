@@ -15,6 +15,7 @@ import Creative from './components/Creative/Creative';
 import Specs from './components/Specs/Specs';
 import { ArchitectureProvider } from './components/Architecture/ArchitectureContext';
 import Shop from './components/Shop';
+import Additional from "./components/Additional/Additional"
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Dlss />
         <Reflex />
         <Creative />
+        <Additional />
         <Specs />
         <Shop />
         <Footer />
