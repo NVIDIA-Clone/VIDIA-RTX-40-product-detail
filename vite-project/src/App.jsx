@@ -23,7 +23,7 @@ function App() {
         <Header />
         <OuterNavBar />
         <LandingPage />
-        <InnerNavbar />
+        {/* <InnerNavbar /> */}
         <Accolades />
         <ArchitectureProvider>
           <Architecture />
