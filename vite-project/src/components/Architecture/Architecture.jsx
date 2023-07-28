@@ -6,10 +6,10 @@ const Architecture = () => {
   const {
     isScrolled,
     setisScrolled,
-    isFaded,
+    // isFaded,
     setIsFaded,
     setIsFadedOut,
-    isFadedOut,
+    // isFadedOut,
   } = useContext(ArchitectureContext);
   const architectureRef = useRef(null);
 

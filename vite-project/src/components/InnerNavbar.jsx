@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
 const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -79,19 +79,19 @@ const InnerNavbar = () => {
       return {};
     } else if (windowWidth < 1024) {
       if (
-        currentSection === "landing-page" ||
-        currentSection === "architecture"
+        currentSection === 'landing-page' ||
+        currentSection === 'architecture'
       ) {
         return {
           width: `${labelwidth}px`,
-          position: "relative",
-          left: "245px",
+          position: 'relative',
+          left: '245px',
         };
-      } else if ("performance") {
+      } else if ('performance') {
         return {
           width: `${labelwidth}px`,
-          position: "relative",
-          left: "300px",
+          position: 'relative',
+          left: '300px',
         };
       }
     }
@@ -101,9 +101,9 @@ const InnerNavbar = () => {
     return {
       width: 0,
       height: 0,
-      borderLeft: "8px solid transparent",
-      borderRight: "8px solid transparent",
-      borderTop: "8px solid white",
+      borderLeft: '8px solid transparent',
+      borderRight: '8px solid transparent',
+      borderTop: '8px solid white',
     };
   };
 

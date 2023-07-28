@@ -1,11 +1,11 @@
-import ProductDropdown from "./ProductDropdown";
-import GamesDropdown from "./GamesDropdown";
-import MoreDropdown from "./MoreDropdown";
+import ProductDropdown from './ProductDropdown';
+import GamesDropdown from './GamesDropdown';
+import MoreDropdown from './MoreDropdown';
 
 const OuterNavBar = () => {
   return (
     <>
-      <nav className="absolute h-[66px] w-full bg-black text-NVNavBarGray font-Sig hover:cursor-pointer flex flex-row items-center">
+      <nav className="sticky top-0 z-[100] h-[66px] w-full bg-black text-NVNavBarGray font-Sig hover:cursor-pointer flex flex-row items-center">
         <div className="flex px-8 py-0 sub-brand-nav-container">
           <span className="text-2xl font-semibold sub-brand-name text-NVWhiteTxt ">
             PeForce
