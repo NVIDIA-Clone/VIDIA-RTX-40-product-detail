@@ -51,6 +51,21 @@ const InnerNavbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > breakpoint);
+      if (window.scrollY > 8000) {
+        setBarLocation(7)
+      } else if (window.scrollY > 6850) {
+        setBarLocation(6)
+      } else if (window.scrollY > 5900) {
+        setBarLocation(5)
+      } else if (window.scrollY > 5000) {
+        setBarLocation(4)
+      } else if (window.scrollY > 3650) {
+        setBarLocation(3)
+      } else if (window.scrollY > 2100) {
+        setBarLocation(2)
+      } else {
+        setBarLocation(1)
+      }
     }
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
@@ -278,7 +293,7 @@ const InnerNavbar = () => {
         </button>
       </div>
       <div
-        className="absolute bottom-0 right-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
+        className="absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
         style={isgreenbar()}
       ></div>
     </div>
