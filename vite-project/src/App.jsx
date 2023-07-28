@@ -1,4 +1,3 @@
-
 import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage';
 import OuterNavBar from './components/OuterNavBar/OuterNavBar';
@@ -23,7 +22,7 @@ function App() {
         <Header />
         <OuterNavBar />
         <LandingPage />
-        <InnerNavbar />
+        {/* <InnerNavbar /> */}
         <Accolades />
         <ArchitectureProvider>
           <Architecture />
