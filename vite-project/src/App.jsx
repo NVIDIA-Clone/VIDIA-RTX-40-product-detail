@@ -12,6 +12,7 @@ import Reflex from "./components/Reflex";
 import Dlss from "./components/Dlss";
 import Creative from "./components/Creative/Creative";
 import Specs from "./components/Specs/Specs";
+import { ArchitectureProvider } from "./components/Architecture/ArchitectureContext";
 import Shop from "./components/Shop";
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
         <LandingPage />
         <InnerNavbar />
         <Accolades />
-        <Architecture />
+        <ArchitectureProvider>
+          <Architecture />
+        </ArchitectureProvider>
         <Performance />
         <RayTracing />
         <Dlss />
