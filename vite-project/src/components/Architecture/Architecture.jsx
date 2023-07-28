@@ -3,8 +3,14 @@ import { useEffect, useRef, useContext } from 'react';
 import ArchitectureContext from './ArchitectureContext';
 
 const Architecture = () => {
-  const { isScrolled, setisScrolled, setIsFaded, setIsFadedOut } =
-    useContext(ArchitectureContext);
+  const {
+    isScrolled,
+    setisScrolled,
+    isFaded,
+    setIsFaded,
+    setIsFadedOut,
+    isFadedOut,
+  } = useContext(ArchitectureContext);
   const architectureRef = useRef(null);
 
   useEffect(() => {
@@ -21,8 +27,8 @@ const Architecture = () => {
 
     const handleScrollTimeout = () => {
       setTimeout(() => {
-        setIsFaded(isScrolled);
-        setIsFadedOut(isScrolled);
+        setIsFaded(!isFaded);
+        setIsFadedOut(!isFadedOut);
       }, 500);
     };
 
