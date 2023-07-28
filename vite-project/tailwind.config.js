@@ -22,8 +22,8 @@ export default {
         },
       },
       animation: {
-        fadeIn: 'fadeIn 1s ease-in', // Here, we link the keyframes to the animation with a duration, easing, and animation name
-        fadeOut: 'fadeOut 1s ease-out',
+        fadeIn: 'fadeIn 2s ease-in', // Here, we link the keyframes to the animation with a duration, easing, and animation name
+        fadeOut: 'fadeOut 2.5s ease-out',
       },
       fontFamily: {
         Sig: ['Signika', 'sans-serif'],
