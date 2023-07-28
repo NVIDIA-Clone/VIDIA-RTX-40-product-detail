@@ -38,9 +38,8 @@ const CompatibilityModal = () => {
                         className="fixed inset-0 w-full h-full bg-black"
                         onClick={() => setShowModal(false)}
                     ></div>
-                    <div className="specs-modal-grid grid grid-cols-8 py-5 min-h-screen items-stretch" >
-                        <div className="specs-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-NVBGGray relative">
-                            <span className="padding-div ml-auto inline-flex justify-center items-center px-4"></span>
+                    <div className="compatibility-modal-grid grid grid-cols-8 py-5 min-h-screen items-stretch" >
+                        <div className="compatibility-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-NVBGGray relative">
                             <span className="text-3xl font-bold text-NVWhiteTxt py-16 text-center">Prepare your system for the PeForce RTX® 4090 Founders Edition </span>
                             <button type="button" className="text-gray-400 bg-transparent text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
                                 <span onClick={() => setShowModal(false) } onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -50,7 +49,10 @@ const CompatibilityModal = () => {
                             <span className="sr-only">Close modal</span>
                             </button>
                         </div>
-                        
+                        <div className="compatibility-modal-topnotes col-start-2 col-span-6 row-start-2 row-span-1 bg-NVBGGray relative">
+                            <p>Graphics card specifications vary by add-in-card manufacturer. Please refer to manufacturer specifications for add-in-card models.</p> 
+                            <p>The following steps require some knowledge of PC component specifications, in addition to physical installation.</p>
+                        </div>                     
                     </div>
                 </div>
             </>
