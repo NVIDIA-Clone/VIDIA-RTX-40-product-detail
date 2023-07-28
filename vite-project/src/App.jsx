@@ -14,6 +14,8 @@ import Creative from "./components/Creative/Creative";
 import Specs from "./components/Specs/Specs";
 import { ArchitectureProvider } from "./components/Architecture/ArchitectureContext";
 import Shop from "./components/Shop/Shop";
+import Additional from "./components/Additional/Additional";
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
@@ -32,7 +34,9 @@ function App() {
         <Dlss />
         <Reflex />
         <Creative />
+        <Additional />
         <Specs />
+        <Gallery />
         <Shop />
         <Footer />
       </LandingPageProvider>
