@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage';
 import OuterNavBar from './components/OuterNavBar/OuterNavBar';
@@ -11,7 +15,12 @@ import Accolades from './components/Accolades/Accolades';
 import Reflex from './components/Reflex';
 import Dlss from './components/Dlss';
 import Creative from './components/Creative/Creative';
+<<<<<<< HEAD
 import Specs from './components/Specs';
+=======
+import Specs from './components/Specs/Specs';
+import { ArchitectureProvider } from './components/Architecture/ArchitectureContext';
+>>>>>>> origin/main
 import Shop from './components/Shop';
 
 function App() {
@@ -23,7 +32,9 @@ function App() {
         <LandingPage />
         <InnerNavbar />
         <Accolades />
-        <Architecture />
+        <ArchitectureProvider>
+          <Architecture />
+        </ArchitectureProvider>
         <Performance />
         <RayTracing />
         <Dlss />
