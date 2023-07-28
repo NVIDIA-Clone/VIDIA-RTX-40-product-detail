@@ -1,8 +1,8 @@
 //IMPORTING THE USE CONTEXT HOOK TO BECOME UTILIZED
-import { useContext } from 'react';
+import { useContext } from "react";
 //IMPORTING THE CONTEXT TO BE USED IN THIS PARTICULAR COMPONENT
-import ArchitectureContext from './ArchitectureContext';
-import LandingPageContext from '../LandingPageContext.jsx';
+import ArchitectureContext from "./ArchitectureContext";
+import LandingPageContext from "../LandingPageContext.jsx";
 
 const ArchitectureListItems = () => {
   const {
@@ -22,8 +22,8 @@ const ArchitectureListItems = () => {
         <div
           className={` ${
             isFadedOut
-              ? 'transition-opacity duration-1000 ease-out opacity-100'
-              : 'transition-opacity duration-1000 ease-in opacity-100'
+              ? "transition-opacity duration-1000 ease-out opacity-100"
+              : "transition-opacity duration-1000 ease-in opacity-100"
           }`}
         >
           <div className="mx-[78px] pt-[120px] pb-[90px] flex flex-col items-center">
@@ -51,7 +51,7 @@ const ArchitectureListItems = () => {
 
               <span
                 className={`flex text-[1.3rem] text-[white] transition-transform duration-500 ease-in-out transform translate-x-0 ${
-                  isHovered ? 'translate-x-2' : ''
+                  isHovered ? "translate-x-2" : ""
                 }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -65,7 +65,7 @@ const ArchitectureListItems = () => {
                     }
                     stroke={
                       isHovered
-                        ? 'white'
+                        ? "white"
                         : architectureListVer2.current[3].learn.symbol.stroke
                     }
                     strokeWidth={
@@ -91,8 +91,8 @@ const ArchitectureListItems = () => {
         <div
           className={`${
             isFaded
-              ? 'transition-opacity duration-1000 ease-out opacity-100'
-              : 'transition-opacity duration-1000 ease-out opacity-100'
+              ? "transition-opacity duration-1000 ease-out opacity-100"
+              : "transition-opacity duration-1000 ease-out opacity-100"
           }`}
         >
           {/* This is the Title */}
