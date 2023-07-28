@@ -45,6 +45,7 @@ const LandingPageContext = createContext();
 export const LandingPageProvider = ({ children }) => {
   //ESTABLISH STATES
   const [data, setData] = useState({});
+  const [specs, setSpecs] = useState({});
   const accoladesList = useRef(items);
 
   //Added Hovers for arrowcarrots..
@@ -66,6 +67,9 @@ export const LandingPageProvider = ({ children }) => {
       const productRes = await fetch('http://localhost:8000/product');
       const productData = await productRes.json();
       setData(productData[0]);
+      const specsRes = await fetch("http://localhost:8000/product/1");
+      const specsData = await specsRes.json();
+      setSpecs(specsData);
     };
     getProductData();
   }, []);
@@ -74,6 +78,7 @@ export const LandingPageProvider = ({ children }) => {
     <LandingPageContext.Provider
       value={{
         data,
+        specs,
         accoladesList,
         isHovered,
         setIsHovered,
