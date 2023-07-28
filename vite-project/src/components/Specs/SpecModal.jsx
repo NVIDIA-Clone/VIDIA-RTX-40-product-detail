@@ -12,7 +12,7 @@ const SpecModal = () => {
 
         {showModal ? (
             <>
-                <div className="fixed inset-0 z-50 overflow-y-auto">
+                <div className="fixed inset-0 z-[75] overflow-y-auto">
                     <div
                         className="fixed inset-0 w-full h-full bg-black"
                         onClick={() => setShowModal(false)}

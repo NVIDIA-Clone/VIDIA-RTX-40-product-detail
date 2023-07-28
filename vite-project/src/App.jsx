@@ -4,7 +4,7 @@ import LandingPage from './components/LandingPage';
 import OuterNavBar from './components/OuterNavBar/OuterNavBar';
 import { LandingPageProvider } from './components/LandingPageContext';
 import Footer from './components/Footer';
-// import InnerNavbar from './components/InnerNavbar';
+import InnerNavbar from './components/InnerNavbar';
 import Architecture from './components/Architecture/Architecture';
 import Performance from './components/Performance';
 import RayTracing from './components/RayTracing/RayTracing';
@@ -26,7 +26,7 @@ function App() {
         <Header />
         <OuterNavBar />
         <LandingPage />
-        {/* <InnerNavbar /> */}
+        <InnerNavbar /> 
         <Accolades />
         <ArchitectureProvider>
           <Architecture />
