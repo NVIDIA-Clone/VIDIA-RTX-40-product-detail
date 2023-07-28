@@ -22,7 +22,7 @@ const ArchitectureListItems = () => {
         <div
           className={` ${
             isFadedOut
-              ? 'hidden'
+              ? 'transition-opacity duration-1000 ease-out opacity-100'
               : 'transition-opacity duration-1000 ease-in opacity-100'
           }`}
         >
@@ -92,7 +92,7 @@ const ArchitectureListItems = () => {
           className={`${
             isFaded
               ? 'transition-opacity duration-1000 ease-out opacity-100'
-              : console.log('This is faded')
+              : 'transition-opacity duration-1000 ease-out opacity-100'
           }`}
         >
           {/* This is the Title */}

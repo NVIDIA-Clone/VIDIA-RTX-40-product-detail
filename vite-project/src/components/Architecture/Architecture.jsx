@@ -27,8 +27,8 @@ const Architecture = () => {
 
     const handleScrollTimeout = () => {
       setTimeout(() => {
-        setIsFaded(!isFaded);
-        setIsFadedOut(!isFadedOut);
+        setIsFaded(isScrolled);
+        setIsFadedOut(isScrolled);
       }, 500);
     };
 
