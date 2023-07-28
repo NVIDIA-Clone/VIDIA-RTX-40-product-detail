@@ -6,6 +6,8 @@ const InnerNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showing, setShowing] = useState(false);
   const [currentSection, setCurrentSection] = useState("");
+  const [isSticky, setIsSticky] = useState(false);
+  const breakpoint = 200;
 
   const [barLocation, setBarLocation] = useState(1)
   //const landingPageRef = useRef(null);
@@ -47,12 +49,14 @@ const InnerNavbar = () => {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > breakpoint);
+    }
     window.addEventListener("resize", handleResize);
-
-    //window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
-     // window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
 
     };
   }, []);
@@ -96,12 +100,85 @@ const InnerNavbar = () => {
     if (windowWidth < 640) {
       return {};
     }
+    if (windowWidth < 1020) {
+      if (barLocation === 1) {
+        return {
+          width: `${labelwidth}px`,
+          position: "relative",
+          left: "350px",
+      } 
+    } else if (barLocation === 2) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "455px",
+      } 
+    } else if (barLocation === 3) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "560px",
+        } 
+    } else if (barLocation === 4) {
+      return {
+        width: `60px`,
+        position: "relative",
+        left: "660px",
+        } 
+    } else if (barLocation === 5) {
+      return {
+        width: `60px`,
+        position: "relative",
+        left: "725px",
+        } 
+    } else if (barLocation === 6 || barLocation === 7) {
+      {}
+    }
+  } else {
+    if (barLocation === 1) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "595px",
+    };
+  } else if (barLocation === 2) {
     return {
       width: `${labelwidth}px`,
       position: "relative",
-
-      left: "595px",
-    };
+      left: "700px",
+    } 
+  } else if (barLocation === 3) {
+    return {
+      width: `${labelwidth}px`,
+      position: "relative",
+      left: "800px",
+    } 
+  } else if (barLocation === 4) {
+    return {
+      width: `60px`,
+      position: "relative",
+      left: "900px",
+    } 
+  } else if (barLocation === 5) {
+    return {
+      width: `60px`,
+      position: "relative",
+      left: "970px",
+    } 
+  } else if (barLocation === 6) {
+    return {
+      width: `60px`,
+      position: "relative",
+      left: "1030px",
+    } 
+  } else if (barLocation === 7) {
+    return {
+      width: `60px`,
+      position: "relative",
+      left: "1090px",
+    } 
+  }
+  }
   };
 
   const handleClick = (num) => {
@@ -109,35 +186,34 @@ const InnerNavbar = () => {
   }
 
   return (
-    <div className="py-2 bg-NVBGGray">
+    <div className={`py-2 bg-NVBGGray sticky top-0 sticky-wrapper z-10 ${isSticky ? 'sticky-top' : ''}`}>
       <div className="flex justify-center flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
         <button onClick={() => {handleClick(1)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
-
           Architecture
         </button>
         {windowWidth >= 640 ? (
           <div className="flex flex-wrap">
 
-            <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(2)}} className="px-2 py-2 text-white border-none bg-inherit">
               Performance
             </button>
-            <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(3)}} className="px-2 py-2 text-white border-none bg-inherit">
               Ray Tracing
             </button>
-            <button onClick={() => {handleClick(1)}}className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(4)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
-            <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(5)}} className="px-2 py-2 text-white border-none bg-inherit">
 
               Reflex
             </button>
             {windowWidth >= 1024 ? (
               <div className="flex flex-wrap">
 
-                <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
+                <button onClick={() => {handleClick(6)}} className="px-2 py-2 text-white border-none bg-inherit">
                   Create
                 </button>
-                <button onClick={() => {handleClick(1)}} className="px-2 py-2 text-white border-none bg-inherit">
+                <button onClick={() => {handleClick(7)}} className="px-2 py-2 text-white border-none bg-inherit">
 
                   Specs
                 </button>
@@ -197,12 +273,12 @@ const InnerNavbar = () => {
             )}
           </div>
         )}
-        <button className="h-10 bg-BHGreen w-14 hover:bg-NVGreen ml-80">
+        <button className="h-11 bg-BHGreen w-20 hover:bg-NVGreen ml-80">
           Shop
         </button>
       </div>
       <div
-        className="absolute bottom-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
+        className="absolute bottom-0 right-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
         style={isgreenbar()}
       ></div>
     </div>
