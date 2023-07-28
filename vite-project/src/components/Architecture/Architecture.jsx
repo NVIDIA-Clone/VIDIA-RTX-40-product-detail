@@ -1,6 +1,6 @@
-import ArchitectureList from "./ArchitectureList";
-import { useEffect, useRef, useContext, useState } from "react";
-import ArchitectureContext from "./ArchitectureContext";
+import ArchitectureList from './ArchitectureList';
+import { useEffect, useRef, useContext } from 'react';
+import ArchitectureContext from './ArchitectureContext';
 
 const Architecture = () => {
   const { isScrolled, setisScrolled, setIsFaded, setIsFadedOut } =
@@ -15,7 +15,6 @@ const Architecture = () => {
         const architectureBottom =
           architectureRect.top + architectureRect.height;
         const windowBottom = window.innerHeight - 50;
-
         setisScrolled(architectureBottom <= windowBottom);
       }
     };
@@ -27,17 +26,13 @@ const Architecture = () => {
       }, 500);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", handleScrollTimeout);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollTimeout);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.addEventListener("scroll", handleScrollTimeout);
+      window.removeEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScrollTimeout);
     };
   }, [setisScrolled, setIsFaded, setIsFadedOut, isScrolled]);
-
-  // useEffect(() => {
-
-  //     },[isScrolled]);
 
   return (
     <div

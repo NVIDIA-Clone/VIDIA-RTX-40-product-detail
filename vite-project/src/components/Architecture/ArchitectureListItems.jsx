@@ -1,8 +1,8 @@
 //IMPORTING THE USE CONTEXT HOOK TO BECOME UTILIZED
-import { useContext } from "react";
+import { useContext } from 'react';
 //IMPORTING THE CONTEXT TO BE USED IN THIS PARTICULAR COMPONENT
-import ArchitectureContext from "./ArchitectureContext";
-import LandingPageContext from "../LandingPageContext.jsx";
+import ArchitectureContext from './ArchitectureContext';
+import LandingPageContext from '../LandingPageContext.jsx';
 
 const ArchitectureListItems = () => {
   const {
@@ -20,8 +20,8 @@ const ArchitectureListItems = () => {
       <div
         className={`transition-opacity duration-[1500ms] ${
           isFadedOut
-            ? "opacity-0 pointer-events-none"
-            : "opacity-100 pointer-events-none"
+            ? 'opacity-0 pointer-events-none animate-fadeOut'
+            : 'opacity-100 pointer-events-none animate-fadeIn'
         }`}
       >
         <div className="mx-[78px] pt-[120px] pb-[90px] flex flex-col items-center">
@@ -45,7 +45,9 @@ const ArchitectureListItems = () => {
             ))}
 
             <span
-              className=" text-white text-[1rem] flex font-bold items-center cursor-pointer"
+              className={`flex text-[1.3rem] text-[white] transition-transform duration-500 ease-in-out transform translate-x-0 ${
+                isHovered ? 'translate-x-2' : ''
+              }`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -58,7 +60,7 @@ const ArchitectureListItems = () => {
                   }
                   stroke={
                     isHovered
-                      ? "white"
+                      ? 'white'
                       : architectureListVer2.current[3].learn.symbol.stroke
                   }
                   strokeWidth={
@@ -79,9 +81,11 @@ const ArchitectureListItems = () => {
   const afterScroll = () => {
     return (
       <div
-      className={`transition-opacity duration-[1500ms] ${
-        isFaded ? "opacity-100 pointer-events-none" : "opacity-0 pointer-events-none"
-      }`}
+        className={`transition-opacity duration-[1500ms] ${
+          isFaded
+            ? 'opacity-100 pointer-events-none animate-fadeIn'
+            : 'opacity-0 pointer-events-none animate-fadeOut'
+        }`}
       >
         <div className="flex flex-col pt-[120px] pb-[30px] items-center justify-center">
           <h2 className="text-white mb-[25px] text-xl font-bold">

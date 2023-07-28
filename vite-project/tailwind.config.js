@@ -5,25 +5,25 @@ export default {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": {
+          '0%': {
             opacity: 0,
           },
-          "100%": {
+          '100%': {
             opacity: 1,
           },
         },
         fadeOut: {
-          "0%": {
+          '0%': {
             opacity: 1,
           },
-          "100%": {
+          '100%': {
             opacity: 0,
           },
         },
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-in", // Here, we link the keyframes to the animation with a duration, easing, and animation name
-        fadeOut: "fadeOut 1s ease-out",      
+        fadeIn: 'fadeIn 1s ease-in', // Here, we link the keyframes to the animation with a duration, easing, and animation name
+        fadeOut: 'fadeOut 1s ease-out',
       },
       fontFamily: {
         Sig: ['Signika', 'sans-serif'],
