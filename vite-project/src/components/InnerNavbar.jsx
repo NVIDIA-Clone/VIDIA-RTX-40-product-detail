@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const InnerNavbar = () => {
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
   const [showing, setShowing] = useState(false);
@@ -9,7 +8,7 @@ const InnerNavbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const breakpoint = 200;
 
-  const [barLocation, setBarLocation] = useState(1)
+  const [barLocation, setBarLocation] = useState(1);
   //const landingPageRef = useRef(null);
   //const architectureRef = useRef(null);
   //const performanceRef = useRef(null);
@@ -17,7 +16,6 @@ const InnerNavbar = () => {
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
-
 
   // const handleScroll = () => {
   //   const sections = [
@@ -34,7 +32,6 @@ const InnerNavbar = () => {
   //     }
   //   }
   // };
-
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -197,8 +194,8 @@ const InnerNavbar = () => {
   };
 
   const handleClick = (num) => {
-    setBarLocation(num)
-  }
+    setBarLocation(num);
+  };
 
   return (
     <div className={`py-2 bg-NVBGGray sticky top-0 sticky-wrapper z-10 ${isSticky ? 'sticky-top' : ''}`}>
@@ -270,9 +267,7 @@ const InnerNavbar = () => {
             ) : (
               <div>
                 <button
-                  text-black
-                  bg-white
-                  className="inline-block"
+                  className="inline-block text-black bg-white"
                   style={arrow()}
                 ></button>
                 <button className="h-10 border-none bg-inherit">
