@@ -93,7 +93,7 @@ const InnerNavbar = () => {
     return {
       width: `${labelwidth}px`,
       position: "relative",
-      left: "245px",
+      left: "595px",
     };
   };
 
@@ -103,7 +103,7 @@ const InnerNavbar = () => {
 
   return (
     <div className="py-2 bg-NVBGGray">
-      <div className="flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
+      <div className="flex justify-center flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
         <button onClick={(handleClick(1))} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
           Architecture
         </button>
