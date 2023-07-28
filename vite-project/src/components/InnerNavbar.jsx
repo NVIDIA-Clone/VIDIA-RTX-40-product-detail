@@ -47,6 +47,7 @@ const InnerNavbar = () => {
     window.addEventListener('resize', handleResize);
     //window.addEventListener("scroll", handleScroll);
     return () => {
+
       window.removeEventListener('resize', handleResize);
       // window.removeEventListener("scroll", handleScroll);
     };
@@ -105,7 +106,9 @@ const InnerNavbar = () => {
 
   return (
     <div className="py-2 bg-NVBGGray">
+
       <div className="flex justify-center flex flex-wrap h-11 font-Sig bg-NVBGGray ml-50">
+
         <button
           onClick={handleClick(1)}
           className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60"
@@ -190,9 +193,7 @@ const InnerNavbar = () => {
             ) : (
               <div>
                 <button
-                  text-black
-                  bg-white
-                  className="inline-block"
+                  className="inline-block text-black bg-white"
                   style={arrow()}
                 ></button>
                 <button className="h-10 border-none bg-inherit">

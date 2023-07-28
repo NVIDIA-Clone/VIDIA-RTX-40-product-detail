@@ -1,3 +1,4 @@
+
 import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage';
 import OuterNavBar from './components/OuterNavBar/OuterNavBar';
@@ -16,6 +17,7 @@ import { ArchitectureProvider } from './components/Architecture/ArchitectureCont
 import Shop from './components/Shop';
 import Additional from './components/Additional/Additional';
 import Gallery from './components/Gallery/Gallery';
+
 
 function App() {
   return (
