@@ -6,7 +6,6 @@ const AdditionalList = () => {
   const { list } = useContext(AdditionalContext);
   const { isHovered, handleMouseEnter, handleMouseLeave } =
     useContext(LandingPageContext);
-  console.log(list[1]);
   return (
     <div className="flex flex-col items-center">
       <div className="py-[8px] px-[15px]">
