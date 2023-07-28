@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import LandingPageContext from "../LandingPageContext.jsx";
 import SpecModal from "./SpecModal";
 
@@ -13,6 +13,7 @@ const Specs = () => {
             </div>
             <div className="spec-table col-start-3 col-span-4 row-start-2 row-span-2 justify-self-center">
                 <table className="table-fixed">
+                    <tbody>
                     <tr className="specs-row border-t border-NVDropDownGray">
                         <td className="w-72 py-4">VIDIA CUDA Cores</td>
                         <td className="w-40 py-4"><h5 className="text-base font-bold">16384</h5></td>
@@ -29,12 +30,12 @@ const Specs = () => {
                         <td className="py-4">Memory Type</td>
                         <td className="py-4"><h5 className="text-base font-bold">GDDR6X</h5></td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
             <div className="full-specs-btn col-start-3 col-span-4 row-start-4 row-span-1 justify-self-center flex flex-col">
                 
                 <SpecModal />
-
 
                 <div className="text-center font-bold py-6 m-0.5" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <span className="object-center">Check Your System Compatibility</span>
