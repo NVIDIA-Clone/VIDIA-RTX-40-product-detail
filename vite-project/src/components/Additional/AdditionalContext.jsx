@@ -104,7 +104,7 @@ const additional = [
     ],
   },
   {
-    picture: './../../../public/images/nvidia-resizable-bar.jpeg',
+    picture: './../../../images/nvidia-resizable-bar.jpeg',
     title: 'Resizable BAR',
     info: `Resizable BAR is an advanced PCI Express feature that enables the CPU to access the entire GPU frame buffer at once, improving performance in many games.`,
   },
