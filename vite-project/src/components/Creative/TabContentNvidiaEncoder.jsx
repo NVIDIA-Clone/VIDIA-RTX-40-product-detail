@@ -9,14 +9,14 @@ const TabContentNvidiaEncoder = () => {
     <>
       <div className="bg-[url(/images/nvidia-encoder.jpg)] bg-contain ml-auto mr-auto mt-[3rem] w-[850px] h-[478px]"></div>
       <div className="w-[858px] font-Sig text-left ml-auto mr-auto mt-[14px]">
-        <h3 className="font-semibold text-white text-[22px]">Nvidia Encoder</h3>
+        <h3 className="font-semibold text-white text-[22px]">Vidia Encoder</h3>
         <h4 className="text-white text-[36px] mt-[10px] font-bold">
           The Dream Stream
         </h4>
         <p className="text-[#eee] text-[15px] mt-[10px]">
           Steal the show with incredible graphics and high-quality, stutter-free
-          live streaming. Powered by the 8th generation<br></br> NVIDIA Encoder
-          (NVENC), GeForce RTX 40 Series ushers in a new era of high-quality
+          live streaming. Powered by the 8th generation<br></br> VIDIA Encoder
+          (VENC), PeForce RTX 40 Series ushers in a new era of high-quality
           broadcasting with next-generation<br></br> AV1 encoding support,
           engineered to deliver greater efficiency than H.264, unlocking
           glorious streams at higher<br></br>
