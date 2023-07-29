@@ -9,7 +9,7 @@ const Gallery = () => {
         id="main content"
         className="font-Sig w-full h-fit text-[white] bg-[#1A1A1A] flex flex-col items-center justify-center py-[75px]"
       >
-        <div className='h-[70%] w-1/2'>
+        <div className='h-[70%] w-[924px] w-max-[924px] flex flex-col items-center'>
         <GallerySelected />
         <GallerySelection />
         </div>

@@ -10,8 +10,8 @@ const GallerySelected = () => {
         <div className="py-[8px] px-[15px]">
           <h1 className="text-[2.25rem] font-bold font-Sig py-[8px] px-[15px] pb-[50px]">Gallery</h1>
         </div>
-        <div id="img-container">
-          <img src={picture.source} alt="" className='w-fit' />
+        <div id="img-container" className='flex justify-center'>
+          <img src={picture.source} alt="" className='w-[90%]' />
         </div>
       </div>
     </>
