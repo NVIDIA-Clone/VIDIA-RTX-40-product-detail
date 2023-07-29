@@ -2,12 +2,23 @@ import { useContext } from "react";
 import GalleryContext from "./GalleryContext";
 
 const GallerySelection = () => {
-  const { galleryPictures, setPicture } = useContext(GalleryContext);
-
+  const { galleryPictures, setPicture, picture } = useContext(GalleryContext);
+  // console.log(galleryPictures);
   //Handle Click event
   function handleClick(e) {
     let index = e.currentTarget.id;
     setPicture(galleryPictures[index]);
+
+    //color is moving one behind?? Its 1am I will revisit
+    for (let i = 0; i < galleryPictures.length; i++) {
+      const elem = galleryPictures[i];
+      if (elem.id !== picture.id + 1) {
+        elem.selected = false;
+      }
+    }
+    console.log(picture.id );
+
+    picture.selected = true;
   }
   //On Hover event
 
@@ -22,14 +33,17 @@ const GallerySelection = () => {
         <img src="" alt="" />
         {/* insert fullscreen icon above  */}
       </div>
-      <div id="picture-carousel" className="flex items-center justify-around w-full">
+      <div
+        id="picture-carousel"
+        className="flex items-center justify-around w-full"
+      >
         <svg
           width="20px"
           height="20px"
           viewBox="1 -2 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="rotate-180 "
+          className="rotate-180 opacity-50 hover:opacity-100"
         >
           <path
             d="M10 7L15 12L10 17"
@@ -42,13 +56,14 @@ const GallerySelection = () => {
         {galleryPictures.map((elem, index) => (
           <div
             key={index}
-            className="border border-black hover:border-solid hover:border-[#76B900] overflow-x-hidden"
+            // className="border border-black hover:border-solid hover:border-[#76B900]"
+            className={!elem.selected ? "border border-black border-solid opacity-75 hover:opacity-100" : "border border-[#76B900] border-solid opacity-100"}
+            
           >
             <img
               id={index}
               onClick={handleClick}
               src={elem.source}
-              alt=""
               height={150}
               width={256}
             />
@@ -60,7 +75,7 @@ const GallerySelection = () => {
           viewBox="1 -2 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className=""
+          className="opacity-50 hover:opacity-100"
         >
           <path
             d="M10 7L15 12L10 17"

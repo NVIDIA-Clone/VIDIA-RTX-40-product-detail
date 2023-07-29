@@ -5,15 +5,18 @@ import { useState, useRef, createContext } from 'react';
 const GalleryPictures = [
   {
     source: '/images/geforce-rtx-4090-product-gallery-full-screen-3840-1.jpg',
-    id: 1,
+    id: 0,
+    selected : false
   },
   {
     source: '/images/geforce-rtx-4090-product-gallery-full-screen-3840-2.jpg',
-    id: 2,
+    id: 1,
+    selected : false
   },
   {
     source: '/images/geforce-rtx-4090-product-gallery-full-screen-3840-3.jpg',
-    id: 3,
+    id: 2,
+    selected : false
   },
 ];
 
