@@ -43,7 +43,7 @@ const Creative = () => {
       return {
         width: `${menuWidth}px`,
         position: "relative",
-        left: "880px",
+        left: "872px",
       };
     }
   };
