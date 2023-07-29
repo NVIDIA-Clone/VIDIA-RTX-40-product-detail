@@ -24,10 +24,7 @@ const Oem = () => {
           <img src="images/ibuypower.png"></img>
         </li>
         <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
-          <img
-            className="w-[140.5px] h-[77.5px]"
-            src="images/nzxt-logo.png"
-          ></img>
+          <img className="w-[150px] h-[50px]" src="images/nzxt-logo.png"></img>
         </li>
         <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
           <img src="images/originpc.png"></img>
