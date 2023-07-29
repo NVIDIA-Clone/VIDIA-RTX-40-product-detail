@@ -4,7 +4,7 @@ import TabContentNvidiaBroadcast from "./TabContentNvidiaBroadcast";
 import TabContentNvidiaEncoder from "./TabContentNvidiaEncoder";
 import TabContentNvidiaOmniverse from "./TabContentNvidiaOmniverse";
 import TabContentNvidiaCanvas from "./TabContentNvidiaCanvas";
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom";
 
 const Creative = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -57,35 +57,40 @@ const Creative = () => {
           </h2>
           <div className="space-x-16 w-[1080px] mt-[40px] ml-auto mr-auto items-center font-semibold text-[18px] text-[#ffffff] ">
             <div
-              className="relative bottom-[-36px] block h-[5px] mt-[-3px] bg-[#76b900] z-[500px]"
+              className="relative bottom-[-33px] block h-[5px] mt-[-3px] bg-[#76b900] z-[500px]"
               style={sliderStyle()}
             ></div>
-            <Link to="/"
+            <Link
+              to="/"
               className={`tab-btn ${activeTab === 1 ? "active" : ""}`}
               onClick={() => handleTabClick(1)}
             >
               NVIDIA Studio
             </Link>
 
-            <Link to="/encoder"
+            <Link
+              to="/encoder"
               className={`tab-btn ${activeTab === 2 ? "active" : ""}`}
               onClick={() => handleTabClick(2)}
             >
               NVIDIA Encoder
             </Link>
-            <Link to="/broadcast"
+            <Link
+              to="/broadcast"
               className={`tab-btn ${activeTab === 3 ? "active" : ""}`}
               onClick={() => handleTabClick(3)}
             >
               NVIDIA Broadcast
             </Link>
-            <Link to="/omniverse"
+            <Link
+              to="/omniverse"
               className={`tab-btn ${activeTab === 4 ? "active" : ""}`}
               onClick={() => handleTabClick(4)}
             >
               NVIDIA Omniverse
             </Link>
-            <Link to="/canvas"
+            <Link
+              to="/canvas"
               className={`tab-btn ${activeTab === 5 ? "active" : ""}`}
               onClick={() => handleTabClick(5)}
             >
@@ -97,11 +102,11 @@ const Creative = () => {
           </div>
           <div className="absolute slider" style={sliderStyle()}></div>
           <Routes>
-          <Route path="/" element={<TabContentNvidiaStudio />} />
-          <Route path="/encoder" element={<TabContentNvidiaEncoder />} />
-          <Route path="/broadcast" element={<TabContentNvidiaBroadcast />} />
-          <Route path="/omniverse" element={<TabContentNvidiaOmniverse />} />
-          <Route path="/canvas" element={<TabContentNvidiaCanvas />} />
+            <Route path="/" element={<TabContentNvidiaStudio />} />
+            <Route path="/encoder" element={<TabContentNvidiaEncoder />} />
+            <Route path="/broadcast" element={<TabContentNvidiaBroadcast />} />
+            <Route path="/omniverse" element={<TabContentNvidiaOmniverse />} />
+            <Route path="/canvas" element={<TabContentNvidiaCanvas />} />
           </Routes>
         </div>
       </div>
