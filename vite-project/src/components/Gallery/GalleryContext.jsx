@@ -27,7 +27,7 @@ export const GalleryProvider = ({ children }) => {
   let galleryPictures = useRef(GalleryPictures);
   galleryPictures = galleryPictures.current;
   //ALLOW STATE CHANGE FOR WHEN A PICTURE IS TOGGLED
-  const [picture, setPicture] = useState(galleryPictures[0]);
+  let [picture, setPicture] = useState(galleryPictures[0]);
   //FUNCTIONS IF NEED BE
 
   //RETURN PROVIDER WITH PROPERTIES TO BE PROVIDED
