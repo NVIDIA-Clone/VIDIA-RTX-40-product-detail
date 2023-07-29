@@ -7,10 +7,12 @@ const Gallery = () => {
     <GalleryProvider>
       <div
         id="main content"
-        className="font-Sig w-full h-[100vh] text-[white] bg-[#1A1A1A] flex flex-col items-center justify-center"
+        className="font-Sig w-full h-fit text-[white] bg-[#1A1A1A] flex flex-col items-center justify-center py-[75px]"
       >
+        <div className='h-[70%] w-1/2'>
         <GallerySelected />
         <GallerySelection />
+        </div>
       </div>
     </GalleryProvider>
   );

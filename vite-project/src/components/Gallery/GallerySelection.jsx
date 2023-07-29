@@ -17,8 +17,9 @@ const GallerySelection = () => {
         <h1 className="text-[white] z-50 opacity-100 pl-[20px]">
           PeForce RTX 4090
         </h1>
+        <img src="" alt="" />
       </div>
-      <div id="picture-carousel" className="w-full flex justify-center">
+      <div id="picture-carousel" className="w-full flex justify-evenly">
         {galleryPictures.map((elem, index) => (
           <div
             key={index}
