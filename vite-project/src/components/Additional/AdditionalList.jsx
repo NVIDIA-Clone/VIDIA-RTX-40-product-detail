@@ -7,66 +7,63 @@ const AdditionalList = () => {
   const { isHovered, handleMouseEnter, handleMouseLeave } =
     useContext(LandingPageContext);
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-[80vw] max-w-[1230px]">
       <div className="py-[8px] px-[15px]">
         <h2 className="text-[2.25rem] m-[2vh_0] font-Sig font-bold">
           {list[0].mainTitle}
         </h2>
       </div>
       {/* 8K Container */}
-      <img
-        src={list[1].pic}
-        alt=""
-        className="absolute w-fit h-[300px] mt-[5.5%]"
-      />
-      <div
-        id="8k-container"
-        className="flex justify-start z-0 h-full py-[30px] w-full"
-      >
-        <div
-          id="text-container"
-          className="p-[15px] z-50 inset-0 flex flex-col left-[20%] w-1/4 items-start ml-[16%]"
-        >
-          <h1 className="pb-[10px] font-bold text-[1.5rem] font-Sig">
-            {list[1].hdrTitle}
-          </h1>
-          <p className="pt-[10px] pb-[30px] text-[15px] font-Sig">
-            {list[1].text}
-          </p>
-          <div className="flex items-center pb-[30px]"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
-            <p className="font-bold text-[18px]">
-              Explore the pinnacle of Gaming
+      <div className="w-full mt-[5.5%]">
+        <img src={list[1].pic} alt="" className=" absolute z-0 w-[80vw] max-w-[1230px] h-[300px]" />
+        
+          <div
+            id="text-container"
+            className="relative py-[45px] px-[15px] pl-[30px] flex flex-col w-full items-start h-fit"
+          >
+            <h1 className="z-50 pb-[10px] font-bold text-[1.5rem] font-Sig text-white">
+              {list[1].hdrTitle}
+            </h1>
+            <p className="pt-[10px] pb-[30px] text-[15px] font-Sig text-white w-1/2">
+              {list[1].text}
             </p>
-            <svg
-              width="30px"
-              height="30px"
-              viewBox="0 -3 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
-                isHovered ? "translate-x-1" : ""
-              }`}
+
+            <div
+              className="flex items-center pb-[30px]"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
-              <path
-                d="M10 7L15 12L10 17"
-                stroke={isHovered ? "white" : "#76b900"}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              <p className="font-bold text-[18px]">
+                Explore the pinnacle of Gaming
+              </p>
+              <svg
+                width="30px"
+                height="30px"
+                viewBox="0 -3 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`transition-transform duration-500 ease-in-out transform translate-x-0 ${
+                  isHovered ? "translate-x-1" : ""
+                }`}
+              >
+                <path
+                  d="M10 7L15 12L10 17"
+                  stroke={isHovered ? "white" : "#76b900"}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
-        </div>
       </div>
       {/* Cards */}
       <div
         id="cards-container"
-        className="grid grid-cols-3 place-content-between gap-[2vw] m-[4vh_15vw]"
+        className="grid grid-cols-3 place-content-evenly gap-[2vw] pt-[30px]"
       >
         {list[2].cards.map((elem, index) => (
-          <div key={index} className="bg-[black] pb-[45px] h-full">
+          <div key={index} className="bg-[black] pb-[45px] h-full w-full">
             <div id="card-image-container" className="">
               <img src={elem.picture} alt={elem.title} width={800} />
             </div>
