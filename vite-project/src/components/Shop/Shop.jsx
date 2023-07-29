@@ -31,7 +31,7 @@ const Shop = () => {
       <div className="bg-black float-left block h-[390px] w-full text-center justify-center">
         <h1 className="text-white text-[36px] mt-[70px] font-bold">Shop</h1>
         <h3 className="text-white text-[36px] mt-[50px] font-bold">
-          GeForce RTX 4090
+          PeForce RTX 4090
         </h3>
         <h2 className="text-white text-[26px] mt-[20px] font-bold">
           Starting at $1599.00
