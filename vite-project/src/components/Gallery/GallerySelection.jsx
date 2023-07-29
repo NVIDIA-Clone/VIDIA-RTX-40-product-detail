@@ -45,7 +45,6 @@ const GallerySelection = () => {
         </svg>
         {galleryPictures.map(
           (elem, index) => (
-            console.log(picture, elem),
             (
               <div
                 key={index}
