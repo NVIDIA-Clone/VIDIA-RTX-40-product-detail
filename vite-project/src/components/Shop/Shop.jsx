@@ -15,7 +15,7 @@ const Shop = () => {
       return {
         width: `${menuWidth + 50}px`,
         position: "absolute",
-        left: "107px",
+        left: "101px",
       };
     } else if (activeTab === 2) {
       return {
@@ -28,16 +28,16 @@ const Shop = () => {
 
   return (
     <>
-      <div className="bg-black float-left block h-[390px] w-full text-center justify-center">
+      <div className="bg-black float-left block h-[386px] w-full text-center justify-center">
         <h1 className="text-white text-[36px] mt-[70px] font-bold">Shop</h1>
-        <h3 className="text-white text-[36px] mt-[50px] font-bold">
+        <h3 className="text-white text-[38px] mt-[50px] font-bold">
           PeForce RTX 4090
         </h3>
-        <h2 className="text-white text-[26px] mt-[20px] font-bold">
+        <h2 className="text-white text-[24px] mt-[10px] font-bold">
           Starting at $1599.00
         </h2>
         <button
-          className="text-[18px] mt-[20px] p-[13px_15px] bg-[#76b900] text-[black] font-bold text-base hover:bg-[#91c733]"
+          className="text-[23px] mt-[20px] p-3 bg-[#76b900] text-[black] font-bold text-base hover:bg-[#91c733]"
           type="button"
         >
           See All Buying Options
@@ -52,18 +52,18 @@ const Shop = () => {
           style={{ width: "500px" }} // Adjust the width of the container
         >
           <div
-            className="absolute bottom-[-4px] w-[80px] block h-[2px] mt-[-1px] bg-[#76b900] overflow-hidden"
+            className="absolute bottom-[-10px] w-[80px] block h-[2px] mt-[-1px] bg-[#76b900] overflow-hidden"
             style={sliderStyle()}
           ></div>
 
           <button
-            className={`tab-btn ${activeTab === 1 ? "active" : ""}`}
+            className={`tab-btn text-[16px] ${activeTab === 1 ? "active" : ""}`}
             onClick={() => handleTabClick(1)}
           >
             R/Etail
           </button>
           <button
-            className={`tab-btn ${activeTab === 2 ? "active" : ""}`}
+            className={`tab-btn text-[16px] ${activeTab === 2 ? "active" : ""}`}
             onClick={() => handleTabClick(2)}
           >
             OEM/System Builder Partners
