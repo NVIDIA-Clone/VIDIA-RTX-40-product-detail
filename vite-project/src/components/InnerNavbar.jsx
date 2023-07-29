@@ -4,34 +4,14 @@ const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
   const [showing, setShowing] = useState(false);
-  const [currentSection, setCurrentSection] = useState("");
   const [isSticky, setIsSticky] = useState(false);
   const breakpoint = 200;
 
   const [barLocation, setBarLocation] = useState(1);
-  //const landingPageRef = useRef(null);
-  //const architectureRef = useRef(null);
-  //const performanceRef = useRef(null);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
-
-  // const handleScroll = () => {
-  //   const sections = [
-  //     { ref: landingPageRef, id: "landing-page" },
-  //     { ref: architectureRef, id: "architecture" },
-  //     { ref: performanceRef, id: "performance" },
-  //   ];
-  //   for (let i = sections.length - 1; i >= 0; i--) {
-  //     const { ref, id } = sections[i];
-  //     const section = ref.current;
-  //     if (section.getBoundingClientRect().top <= window.innerHeight * 0.5) {
-  //       setCurrentSection(id);
-  //       break;
-  //     }
-  //   }
-  // };
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -72,30 +52,6 @@ const InnerNavbar = () => {
 
     };
   }, []);
-
-  const greenbar = () => {
-    const labelwidth = 88;
-    if (windowWidth < 640) {
-      return {};
-    } else if (windowWidth < 1024) {
-      if (
-        currentSection === 'landing-page' ||
-        currentSection === 'architecture'
-      ) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '245px',
-        };
-      } else if ('performance') {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '300px',
-        };
-      }
-    }
-  };
 
   const arrow = () => {
     return {
