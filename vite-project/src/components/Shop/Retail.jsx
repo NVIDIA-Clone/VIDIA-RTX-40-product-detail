@@ -1,59 +1,35 @@
 const Retail = () => {
   return (
     <>
-      <ul className="flex flex-wrap float-left w-[1100px] pt-[40px] ml-[6rem] pl-[20%] justify-between gap-20">
-        <li>
-          <img src="src/assets/retailer-asus.png"></img>
+      <div className="flex flex-wrap float-left w-[1280px] h-[448.5] bg-black pt-[40px] ml-auto mr-auto justify-center ">
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/Amazon.png"></img>
         </li>
-        <li>
-          <img src="src/assets/ava-direct.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/retailer-antonline-white.png"></img>
         </li>
-        <li>
-          <img src="src/assets/cyberpowerpc.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/retailer-b-and-h.png"></img>
         </li>
-        <li>
-          <img src="src/assets/digital-storm.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/retailers_bestbuy_new.png"></img>
         </li>
-        <li>
-          <img src="src/assets/retailer-flacon-nw.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/retailer-canada-computers.png"></img>
         </li>
-        <li>
-          <img src="src/assets/retailer-aorus.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/memory-express-retailer-logo.png"></img>
         </li>
-        <li>
-          <img src="src/assets/ibuypower.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/Micro-Center.png"></img>
         </li>
-        <li>
-          <img src="src/assets/nzxt-logo.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/retailer-newegg.png"></img>
         </li>
-        <li>
-          <img src="src/assets/originpc.png"></img>
+        <li className="w-[384px] h-[109.5px] p-[15px] flex justify-center">
+          <img src="images/retailer-newegg-ca.png"></img>
         </li>
-        <li>
-          <img src="src/assets/steiger-dynamics.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/maingear.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/msi-logo.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/retailer-pny-white.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/retailer-zotac.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/xotic-pc.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/velocity-micro.png"></img>
-        </li>
-        <li>
-          <img src="src/assets/clxgaming-retailer.png"></img>
-        </li>
-      </ul>
+      </div>
     </>
   );
 };
