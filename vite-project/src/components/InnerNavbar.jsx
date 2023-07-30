@@ -1,37 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, } from 'react';
 
 const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
   const [showing, setShowing] = useState(false);
-  const [currentSection, setCurrentSection] = useState("");
   const [isSticky, setIsSticky] = useState(false);
   const breakpoint = 200;
 
   const [barLocation, setBarLocation] = useState(1);
-  //const landingPageRef = useRef(null);
-  //const architectureRef = useRef(null);
-  //const performanceRef = useRef(null);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
-
-  // const handleScroll = () => {
-  //   const sections = [
-  //     { ref: landingPageRef, id: "landing-page" },
-  //     { ref: architectureRef, id: "architecture" },
-  //     { ref: performanceRef, id: "performance" },
-  //   ];
-  //   for (let i = sections.length - 1; i >= 0; i--) {
-  //     const { ref, id } = sections[i];
-  //     const section = ref.current;
-  //     if (section.getBoundingClientRect().top <= window.innerHeight * 0.5) {
-  //       setCurrentSection(id);
-  //       break;
-  //     }
-  //   }
-  // };
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -56,7 +36,7 @@ const InnerNavbar = () => {
         setBarLocation(5)
       } else if (window.scrollY > 5000) {
         setBarLocation(4)
-      } else if (window.scrollY > 3650) {
+      } else if (window.scrollY > 3600) {
         setBarLocation(3)
       } else if (window.scrollY > 2100) {
         setBarLocation(2)
@@ -72,30 +52,6 @@ const InnerNavbar = () => {
 
     };
   }, []);
-
-  const greenbar = () => {
-    const labelwidth = 88;
-    if (windowWidth < 640) {
-      return {};
-    } else if (windowWidth < 1024) {
-      if (
-        currentSection === 'landing-page' ||
-        currentSection === 'architecture'
-      ) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '245px',
-        };
-      } else if ('performance') {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '300px',
-        };
-      }
-    }
-  };
 
   const arrow = () => {
     return {
@@ -155,46 +111,50 @@ const InnerNavbar = () => {
     };
   } else if (barLocation === 2) {
     return {
-      width: `${labelwidth}px`,
+      width: `95px`,
       position: "relative",
-      left: "700px",
+      left: "695px",
     } 
   } else if (barLocation === 3) {
     return {
       width: `${labelwidth}px`,
       position: "relative",
-      left: "800px",
+      left: "803px",
     } 
   } else if (barLocation === 4) {
     return {
       width: `60px`,
       position: "relative",
-      left: "900px",
+      left: "905px",
     } 
   } else if (barLocation === 5) {
     return {
-      width: `60px`,
+      width: `50px`,
       position: "relative",
-      left: "970px",
+      left: "975px",
     } 
   } else if (barLocation === 6) {
     return {
-      width: `60px`,
+      width: `55px`,
       position: "relative",
-      left: "1030px",
+      left: "1035px",
     } 
   } else if (barLocation === 7) {
     return {
-      width: `60px`,
+      width: `50px`,
       position: "relative",
-      left: "1090px",
+      left: "1102px",
     } 
   }
   }
   };
 
-  const handleClick = (num) => {
+  const handleClick = (num, num2) => {
     setBarLocation(num);
+    window.scrollTo({
+      top: num2,
+      behavior: "smooth",
+    })
   };
 
   return (
@@ -206,26 +166,26 @@ const InnerNavbar = () => {
         {windowWidth >= 640 ? (
           <div className="flex flex-wrap">
 
-            <button onClick={() => {handleClick(2)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(2, 2180)}} className="px-2 py-2 text-white border-none bg-inherit">
               Performance
             </button>
-            <button onClick={() => {handleClick(3)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(3, 3650)}} className="px-2 py-2 text-white border-none bg-inherit">
               Ray Tracing
             </button>
-            <button onClick={() => {handleClick(4)}}className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(4, 5020)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
-            <button onClick={() => {handleClick(5)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(5, 5950)}} className="px-2 py-2 text-white border-none bg-inherit">
 
               Reflex
             </button>
             {windowWidth >= 1024 ? (
               <div className="flex flex-wrap">
 
-                <button onClick={() => {handleClick(6)}} className="px-2 py-2 text-white border-none bg-inherit">
+                <button onClick={() => {handleClick(6, 6900)}} className="px-2 py-2 text-white border-none bg-inherit">
                   Create
                 </button>
-                <button onClick={() => {handleClick(7)}} className="px-2 py-2 text-white border-none bg-inherit">
+                <button onClick={() => {handleClick(7, 9900)}} className="px-2 py-2 text-white border-none bg-inherit">
 
                   Specs
                 </button>
