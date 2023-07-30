@@ -43,7 +43,7 @@ const SearchBar = () => {
         )}
       </div>
       {isSearchVisible && (
-        <div className="absolute left-[-350px] flex items-center w-[400px] p-2 bg-white border border-gray-300 shadow-md top-12">
+        <div className="absolute left-[-350px] flex items-center w-[400px] p-2 bg-white border border-gray-300 shadow-md top-12 z-[552]">
           <input
             type="text"
             placeholder="       Search Vidia"

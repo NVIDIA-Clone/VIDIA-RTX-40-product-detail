@@ -9,7 +9,7 @@ const TabContentNvidiaCanvas = () => {
     <>
       <div className="bg-[url(/images/nvidia-canvas.jpg)] bg-contain ml-auto mr-auto mt-[3rem] w-[850px] h-[478px]"></div>
       <div className="w-[858px] font-Sig text-left ml-auto mr-auto mt-[14px]">
-        <h3 className="font-semibold text-white text-[22px]">Nvidia Canvas</h3>
+        <h3 className="font-semibold text-white text-[22px]">Vidia Canvas</h3>
         <h4 className="text-white text-[36px] mt-[10px] font-bold">
           The App That Puts the AI in Painting
         </h4>
