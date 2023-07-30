@@ -161,6 +161,7 @@ const InnerNavbar = () => {
     <div className={`py-2 bg-NVBGGray sticky top-16 sticky-wrapper z-[70] ${isSticky ? 'sticky-top' : ''}`}>
       <div className="flex flex-wrap justify-center h-11 font-Sig bg-NVBGGray ml-50">
         <button onClick={() => {handleClick(1)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
+
           Architecture
         </button>
         {windowWidth >= 640 ? (
