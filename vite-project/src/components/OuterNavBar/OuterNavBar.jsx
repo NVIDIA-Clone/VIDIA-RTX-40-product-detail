@@ -5,8 +5,8 @@ import MoreDropdown from './MoreDropdown';
 const OuterNavBar = () => {
   return (
     <>
-      <nav className="sticky top-0 z-[71] h-[66px] w-full bg-black text-NVNavBarGray font-Sig hover:cursor-pointer flex flex-row items-center">
-        <div className="flex px-8 py-0 sub-brand-nav-container">
+      <nav className="sticky z-[71] h-[66px] w-full bg-black text-NVNavBarGray font-Sig hover:cursor-pointer flex flex-row items-center">
+        <div className="flex mr-auto ml-auto py-0 sub-brand-nav-container">
           <span className="text-2xl font-semibold sub-brand-name text-NVWhiteTxt ">
             PeForce
           </span>
