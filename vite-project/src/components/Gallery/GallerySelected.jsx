@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import GalleryContext from './GalleryContext';
 
 const GallerySelected = () => {
-  const { picture } = useContext(GalleryContext);
+  const { picture, isFullscreen } = useContext(GalleryContext);
 
   return (
     <>
@@ -11,7 +11,11 @@ const GallerySelected = () => {
           <h1 className="text-[2.25rem] font-bold font-Sig py-[8px] px-[15px] pb-[50px]">Gallery</h1>
         </div>
         <div id="img-container" className='flex justify-center'>
-          <img src={picture.source} alt="" className='w-[90%]' />
+          <img src={picture.source} alt="" 
+          className='w-[90%]'
+          // className = {isFullscreen ? ""}
+          
+          />
         </div>
       </div>
     </>
