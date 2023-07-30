@@ -319,7 +319,7 @@ const SpecModal = () => {
                             <p className="p-2.5">6 - Video playback power measured using AV1 codec</p> 
                             <p className="p-2.5">7 - Average gaming power is measured across 22 games at 4K, 1440p, and 1080p</p> 
                             <p className="p-2.5">8 - Minimum is based on a PC configured with a Ryzen 9 5900X processor. Power requirements can be different depending on system configuration.</p> 
-                            <p className="p-2.5">Note: The above specifications represent this GPU as incorporated into VIDIA's Founders Edition or reference graphics card design. Clock specifications apply while gaming with medium to full GPU utilization. Graphics card specifications may vary by add-in-card manufacturer. Please refer to the add-in-card manufacturers's website for actual shipping specifications.</p> 
+                            <p className="p-2.5">Note: The above specifications represent this GPU as incorporated into VIDIA's Founders Edition or reference graphics card design. Clock specifications apply while gaming with medium to full GPU utilization. Graphics card specifications may vary by add-in-card manufacturer. Please refer to the add-in-card manufacturer's website for actual shipping specifications.</p> 
 
                         </div>
                     </div>
