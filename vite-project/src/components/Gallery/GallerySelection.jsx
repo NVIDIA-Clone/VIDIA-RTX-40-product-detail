@@ -11,20 +11,18 @@ const GallerySelection = () => {
     makeFullScreen,
     notFullScreen,
   } = useContext(GalleryContext);
-  // console.log(galleryPictures);
+
   //Handle Click event
   function handleClick(e) {
     let index = e.currentTarget.id;
     setPicture(galleryPictures[index]);
 
-    //color is moving one behind?? Its 1am I will revisit
     for (let i = 0; i < galleryPictures.length; i++) {
       const elem = galleryPictures[i];
       if (elem.id !== picture.id) {
         elem.selected = false;
       }
     }
-    console.log(picture.id);
 
     picture.selected = true;
   }
