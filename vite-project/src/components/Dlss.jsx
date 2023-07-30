@@ -6,8 +6,8 @@ const Dlss = () => {
     useContext(LandingPageContext);
 
   return (
-    <div className="dlss grid grid-cols-8 grid-rows-none gap-14 bg-local font-Sig text-NVWhiteTxt bg-auto bg-no-repeat bg-[url('/images/nvidia-dlss-video-xlrg-hero-background-bb770-d.jpg')]">
-      <div className="dlss-info col-start-3 col-span-4 row-start-1 row-span-1 justify-self-center min-w-[600px]">
+    <div className="dlss grid grid-cols-8 grid-rows-none gap-14 bg-local font-Sig text-NVWhiterTxt bg-auto bg-no-repeat bg-[url('/images/nvidia-dlss-video-xlrg-hero-background-bb770-d.jpg')]">
+      <div className="dlss-info col-start-3 col-span-4 row-start-1 row-span-1 justify-self-center min-w-[600px] pt-16 tracking-tight">
         <h2 className="p-4 text-base font-bold text-center">VIDIA DLSS 3</h2>
         <h1 className="text-2xl font-bold text-center">
           The Performance Multiplier, Powered by AI
