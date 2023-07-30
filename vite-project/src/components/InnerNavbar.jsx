@@ -111,39 +111,39 @@ const InnerNavbar = () => {
     };
   } else if (barLocation === 2) {
     return {
-      width: `${labelwidth}px`,
+      width: `95px`,
       position: "relative",
-      left: "700px",
+      left: "695px",
     } 
   } else if (barLocation === 3) {
     return {
       width: `${labelwidth}px`,
       position: "relative",
-      left: "800px",
+      left: "803px",
     } 
   } else if (barLocation === 4) {
     return {
       width: `60px`,
       position: "relative",
-      left: "900px",
+      left: "905px",
     } 
   } else if (barLocation === 5) {
     return {
-      width: `60px`,
+      width: `50px`,
       position: "relative",
-      left: "970px",
+      left: "975px",
     } 
   } else if (barLocation === 6) {
     return {
-      width: `60px`,
+      width: `55px`,
       position: "relative",
-      left: "1030px",
+      left: "1035px",
     } 
   } else if (barLocation === 7) {
     return {
-      width: `60px`,
+      width: `50px`,
       position: "relative",
-      left: "1090px",
+      left: "1102px",
     } 
   }
   }
