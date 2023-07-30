@@ -47,20 +47,20 @@ const GallerySelection = () => {
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 384.97 384.97"
-            xml:space="preserve"
+            xmlSpace="preserve"
             stroke="#f8f7f7"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
 
-            <g id="SVGRepo_iconCarrier" stroke-width="3">
+            <g id="SVGRepo_iconCarrier" strokeWidth="3">
               {" "}
               <g>
                 {" "}

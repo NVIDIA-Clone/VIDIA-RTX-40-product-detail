@@ -20,7 +20,7 @@ const Architecture = () => {
           architectureRef.current.getBoundingClientRect();
         const architectureBottom =
           architectureRect.top + architectureRect.height;
-        const windowBottom = window.innerHeight - 50;
+        const windowBottom = window.innerHeight + 175;
         setisScrolled(architectureBottom <= windowBottom);
       }
     };
