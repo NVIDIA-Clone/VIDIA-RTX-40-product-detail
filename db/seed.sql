@@ -1,7 +1,7 @@
 -- \c VIDIA_database
 
 INSERT INTO products (name, price, description) VALUES 
-('GeForce RTX 4090', 1599.00, 'The NVIDIA® GeForce RTX™ 4090 is the ultimate GeForce GPU. It brings an enormous leap in performance, efficiency, and AI-powered graphics. Experience ultra-high performance gaming, incredibly detailed virtual worlds, unprecedented productivity, and new ways to create. It’s powered by the NVIDIA Ada Lovelace architecture and comes with 24 GB of G6X memory to deliver the ultimate experience for gamers and creators.');
+('PeForce RTX 4090', 1599.00, 'The VIDIA PeForce RTX 4090 is the ultimate PeForce GPU. It brings an enormous leap in performance, efficiency, and AI-powered graphics. Experience ultra-high performance gaming, incredibly detailed virtual worlds, unprecedented productivity, and new ways to create. Its powered by the VIDIA Ada Lovelace architecture and comes with 24 GB of G6X memory to deliver the ultimate experience for gamers and creators.');
 
 INSERT INTO specs (
     product_id, 

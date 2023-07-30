@@ -3,6 +3,7 @@ import LandingPageContext from './LandingPageContext';
 
 const LandingPage = () => {
   const data = useContext(LandingPageContext);
+  // console.log(data);
 
   return (
     <>
