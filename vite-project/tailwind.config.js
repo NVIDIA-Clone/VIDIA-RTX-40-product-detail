@@ -35,6 +35,7 @@ export default {
         NVBGGray: '#1A1A1A',
         BHGreen: '#749f29',
         NVWhiteTxt: '#e8e6e3',
+        NVWhiterTxt: '#FFFFFF',
         NVDLightGray: '#999999',
         NVNavBarGray: '#999999',
         NVDropDownGray: '#666666',

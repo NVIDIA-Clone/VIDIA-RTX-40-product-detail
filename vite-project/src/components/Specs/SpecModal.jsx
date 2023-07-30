@@ -20,7 +20,7 @@ const SpecModal = () => {
 
     return (
         <>
-        <button className="text-[18px] mt-2.5 ml-[15px] p-[13px_15px] bg-[#76b900] text-[black] font-bold text-base hover:bg-[#91c733]" type="button" onClick={handleOpenClick}>View Full Specs
+        <button className="text-[14px] py-2 px-3 w-fit bg-[#76b900] text-[black] font-bold tracking-tight text-base hover:bg-[#91c733]" type="button" onClick={handleOpenClick}>View Full Specs
         </button>
 
         {showModal ? (
@@ -33,7 +33,7 @@ const SpecModal = () => {
                     <div className="specs-modal-grid grid grid-cols-8 py-5 min-h-screen items-stretch" >
                         <div className="specs-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-NVBGGray relative">
                             <span className="padding-div ml-auto inline-flex justify-center items-center px-4"></span>
-                            <span className="text-3xl font-bold text-NVWhiteTxt py-16">PeForce RTX 4090</span>
+                            <span className="text-3xl font-bold text-NVWhiterTxt py-16">PeForce RTX 4090</span>
                             <button type="button" className="text-gray-400 bg-transparent text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
                                 <span onClick={handleCloseClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-3 2 24 24"><path className= "transition-transform duration-500 ease-in-out transform"  
@@ -304,7 +304,7 @@ const SpecModal = () => {
                         </table>                                       
                             
                         </div>
-                        <div className="specs_modal-footnotes col-start-2 col-span-6 row-start-3 row-span-1 relative w-full bg-NVBGGray rounded-md text-NVDropDownGray text-xs p-2.5">
+                        <div className="specs_modal-footnotes col-start-2 col-span-6 row-start-3 row-span-1 relative w-full bg-NVBGGray rounded-md text-NVDropDownGray text-[11px] tracking-tighter p-2.5">
                              
                             <p className="p-2.5">1 - Up to 4K 12-bit HDR at 240Hz with DP 1.4a + DSC or HDMI 2.1a + DSC. Up to 8K 12-bit HDR at 60Hz with DP 1.4a + DSC or HDMI 2.1a + DSC.</p> 
                             <p className="p-2.5">2 - As specified in HDMI 2.1a: up to 4K 240Hz or 8K 60Hz with DSC, Gaming VRR, HDR</p> 

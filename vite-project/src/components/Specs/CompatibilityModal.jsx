@@ -21,7 +21,7 @@ const CompatibilityModal = () => {
 
     return (
         <>
-         <div className="text-center font-bold py-6 m-0.5" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleOpenClick}>
+         <div className="text-center text-base font-bold py-6 m-0.5" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleOpenClick}>
                 <span className="object-center">Check Your System Compatibility</span>
                 <button>
                     <svg
@@ -55,12 +55,12 @@ const CompatibilityModal = () => {
                 <div className="compatibility-modal-grid grid grid-cols-8 py-5 min-h-screen items-stretch" >
                     <div className="compatibility-modal-header col-start-2 col-span-6 row-start-1 row-span-1 flex items-start bg-NVBGGray relative">
                         <div className="py-16 px-16 text-center flex flex-col items-center">
-                            <h1 className="text-3xl font-bold text-NVWhiteTxt pb-10">Prepare your system for the PeForce RTX® 4090 Founders Edition</h1>
+                            <h1 className="text-[26px] font-bold text-NVWhiterTxt tracking-tight pb-10">Prepare your system for the PeForce RTX® 4090 Founders Edition</h1>
                             <br></br>
                             <p className="text-sm pb-1">Graphics card specifications vary by add-in-card manufacturer. Please refer to manufacturer specifications for add-in-card models.</p> 
                             
                             <p className="text-sm pb-6">The following steps require some knowledge of PC component specifications, in addition to physical installation.</p> 
-                            <h1 className="text-3xl font-bold py-5">1. Check your power supply</h1>
+                            <h1 className="text-[26px] tracking-tight font-bold py-5">1. Check your power supply</h1>
                             <img className="px-24" src="/public/images/850W_minimum.png" alt="image of 850W power supply"></img>
                             <h4 className="font-bold text-sm py-4">850W Minimum</h4>
                             <p className="text-sm">A higher power rating may be required depending on your system configuration</p>
@@ -77,7 +77,7 @@ const CompatibilityModal = () => {
                                     <p className="text-sm">1x 450W or greater PCIe Gen 5 power cable from power supply.</p>
                                 </div>
                             </div>
-                            <h1 className="text-3xl font-bold py-5">2. Check your case</h1>
+                            <h1 className="text-[26px] tracking-tight font-bold py-7">2. Check your case</h1>
                             <div className="check-case-row flex">
                                 <div className="expansion-slot-card flex flex-col w-1/2">
                                     <img src="/public/images/expansion-slots.png"></img>
