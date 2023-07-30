@@ -29,7 +29,7 @@ const TestArchitecture = () => {
       >
         <div
           id="titleDiv"
-          className="absolute top-[120px] flex flex-col items-center z-5 pb-[20px]"
+          className="absolute top-[100px] flex flex-col items-center z-5 pb-[20px]"
         >
           <h2 className="text-white mb-[25px] text-[1.25rem] font-bold font-Sig">
             {architectureListVer2.current[0]}
@@ -43,7 +43,7 @@ const TestArchitecture = () => {
             <img
               src="/images/architecture.png"
               alt=""
-              className="absolute top-[250px] left-[350px] z-0"
+              className="absolute top-[230px] left-[350px] z-0"
             />
           </div>
           <div
