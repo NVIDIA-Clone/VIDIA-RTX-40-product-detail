@@ -29,7 +29,7 @@ const Architecture = () => {
       setTimeout(() => {
         setIsFaded(isScrolled);
         setIsFadedOut(isScrolled);
-      }, 500);
+      }, 200);
     };
 
     window.addEventListener('scroll', handleScroll);

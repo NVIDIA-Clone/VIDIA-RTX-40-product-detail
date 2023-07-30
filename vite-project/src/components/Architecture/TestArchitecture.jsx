@@ -21,14 +21,15 @@ const TestArchitecture = () => {
         className={`
           ${
             isScrolled
-              ? "flex-col items-center justify-center hidden"
-              : "flex flex-col items-center justify-center"
+              ? "flex flex-col items-center justify-center animate-fadeOut duration-500"
+              : "flex flex-col items-center justify-center opacity-100"
           }
+          ${isFadedOut ? "opacity-0" : "opacity-100"}
         `}
       >
         <div
           id="titleDiv"
-          className="pt-[50px] flex flex-col items-center z-5 pb-[20px]"
+          className="absolute top-[120px] flex flex-col items-center z-5 pb-[20px]"
         >
           <h2 className="text-white mb-[25px] text-[1.25rem] font-bold font-Sig">
             {architectureListVer2.current[0]}
@@ -42,15 +43,15 @@ const TestArchitecture = () => {
             <img
               src="/images/architecture.png"
               alt=""
-              className="absolute top-[300px] left-[350px] z-0"
+              className="absolute top-[250px] left-[350px] z-0"
             />
           </div>
           <div
-            className="relative flex flex-col justify-between left-[200px] mt-[30px]"
+            className="absolute flex flex-col justify-between right-[550px] mt-[30px] top-[250px]"
             id="list"
           >
             {architectureListVer2.current[2].content.map((item, index) => (
-              <div key={index} className="py-[15px]">
+              <div key={index} className="py-[15px] ">
                 <h3 className="text-white font-Sig text-[1.5rem] font-bold">
                   {item.title}
                 </h3>
@@ -94,10 +95,12 @@ const TestArchitecture = () => {
       {/* stage 2 */}
       <div
         id="stage2container"
-        className={isScrolled ? "flex flex-col" : "hidden"}
+        className={
+          isScrolled ? "flex flex-col animate-fadeIn duration-500" : "opacity-0"
+        }
       >
         {/* This is the Title */}
-        <div className="flex flex-col pt-[160px] pb-[30px] items-center justify-center">
+        <div className="flex flex-col pt-[90px] pb-[30px] items-center justify-center">
           <h2 className="text-white mb-[25px] text-xl font-bold">
             The Ultimate Platform for Gamers and Creators
           </h2>

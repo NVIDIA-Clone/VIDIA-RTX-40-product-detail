@@ -3,7 +3,7 @@ import TestArchitecture from "./TestArchitecture";
 const ArchitectureList = () => {
   return (
     <>
-      <div className="mx-[296.5px] flex flex-col justify-center h-[960px]">
+      <div className="mx-[296.5px] flex flex-col justify-center h-[960px] overflow-hidden">
         <TestArchitecture />
       </div>
     </>
