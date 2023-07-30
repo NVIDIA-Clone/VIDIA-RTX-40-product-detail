@@ -3,13 +3,11 @@ import LandingPageContext from './LandingPageContext';
 
 const LandingPage = () => {
   const data = useContext(LandingPageContext);
-  // console.log(data);
-
   return (
     <>
       <div
         id="landing-page-container"
-        className="flex h-[90vh] w-full justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-[length:100vw_120vh] bg-[position:center]"
+        className="h-[90vh] w-full justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-cover bg-[position:center]"
       >
         <div
           id="landing-page"
