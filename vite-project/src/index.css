@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#twitch:hover path {
+  fill: #747474;
+}
+
+#youtube:hover path {
+  fill: #747474;
+}
+
+#insta:hover path {
+  fill: #747474;
+}
+
+#twitter:hover path {
+  fill: #747474;
+}
+
+#facebook:hover path {
+  fill: #747474;
+}

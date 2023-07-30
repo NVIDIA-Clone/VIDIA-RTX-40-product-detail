@@ -10,7 +10,7 @@ const TabContentNvidiaBroadcast = () => {
       <div className="bg-[url(/images/geforce-broadcast-app.jpg)] bg-contain ml-auto mr-auto mt-[3rem] w-[850px] h-[478px]"></div>
       <div className="w-[858px] font-Sig text-left ml-auto mr-auto mt-[14px]">
         <h3 className="font-semibold text-white text-[22px]">
-          Nvidia Broadcast
+          Vidia Broadcast
         </h3>
         <h4 className="text-white text-[36px] mt-[10px] font-bold">
           Your AI-Powered Home Studio
@@ -18,7 +18,7 @@ const TabContentNvidiaBroadcast = () => {
         <p className="text-[#eee] text-[15px] mt-[10px]">
           The{" "}
           <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
-            NVIDIA Broadcast
+            VIDIA Broadcast
           </a>{" "}
           app transforms any room into a home studio—taking your live streams,
           voice chats, and video<br></br> calls to the next level with powerful
