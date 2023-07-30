@@ -6,8 +6,8 @@ const LandingPage = () => {
   return (
     <>
       <div
-        id="landing-page-container"
-        className="h-[90vh] w-full justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-no-repeat bg-cover bg-[position:center]"
+        id="landing-page-container" 
+        className="h-[90vh] w-screen justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-cover bg-no-repeat bg-[position:center]"
       >
         <div
           id="landing-page"
