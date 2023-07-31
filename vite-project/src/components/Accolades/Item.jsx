@@ -1,5 +1,5 @@
-import { useContext, useState, useEffect } from "react";
-import LandingPageContext from "./../LandingPageContext";
+import { useContext, useState, useEffect } from 'react';
+import LandingPageContext from './../LandingPageContext';
 
 const Item = () => {
   let { accoladesList } = useContext(LandingPageContext); //Array of Objects
@@ -36,7 +36,7 @@ const Item = () => {
       <blockquote className="text-[36px] mb-[42px] mt-[3px]">
         <span
           className={`block ${
-            isFadingIn ? "animate-fadeIn" : "" // Conditionally apply the animation class
+            isFadingIn ? 'animate-fadeIn' : '' // Conditionally apply the animation class
           }`}
         >
           <q>{selected.comment}</q>
@@ -49,8 +49,8 @@ const Item = () => {
             <div
               className={
                 elem.id === selected.id
-                  ? "flex p-[0_auto] w-3 h-3 rounded-full bg-NVGreen m-[0_5px] hover:bg-[#00661f] cursor-pointer"
-                  : "flex p-[0_auto] w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer"
+                  ? 'flex p-[0_auto] w-3 h-3 rounded-full bg-NVGreen m-[0_5px] hover:bg-[#00661f] cursor-pointer'
+                  : 'flex p-[0_auto] w-3 h-3 rounded-full bg-[#eeeeee] m-[0_5px] hover:bg-[#cccccc] cursor-pointer'
               }
               id={elem.id}
               key={index}

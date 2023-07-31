@@ -1,8 +1,6 @@
 import { useContext } from 'react';
 import LandingPageContext from './LandingPageContext';
-
 const LandingPage = () => {
-  //Product Data and Spec data being brought in from the API
   const data = useContext(LandingPageContext);
   return (
     <>
@@ -30,7 +28,7 @@ const LandingPage = () => {
                 {' '}
                 <a
                   href="#"
-                  className="bg-[#76b900]  text-[black] p-[8px_15px] font-bold hover:bg-[#91c733]"
+                  className="bg-[#76b900] text-[black] p-[8px_15px] font-bold hover:bg-[#91c733]"
                 >
                   See All Buying Options
                 </a>
@@ -42,5 +40,4 @@ const LandingPage = () => {
     </>
   );
 };
-
 export default LandingPage;
