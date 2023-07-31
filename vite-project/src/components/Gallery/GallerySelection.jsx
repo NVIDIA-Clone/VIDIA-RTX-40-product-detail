@@ -43,7 +43,7 @@ const GallerySelection = () => {
           >
             <svg
               // fill="#f8f7f7"
-              fill={isHovered ? "#FFF" : "#f8f7f7"}
+              fill={isHovered ? "white" : "#f8f7f7"}
               height="18px"
               width="18px"
               version="1.1"
@@ -52,7 +52,7 @@ const GallerySelection = () => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 384.97 384.97"
               xmlSpace="preserve"
-              stroke={isHovered ? "#NVGreen" : "#f8f7f7 "}
+              stroke={isHovered ? "white" : "#f8f7f7 "}
             >
               {/* #f8f7f7 */}
               <g id="SVGRepo_bgCarrier" strokeWidth="0" />
