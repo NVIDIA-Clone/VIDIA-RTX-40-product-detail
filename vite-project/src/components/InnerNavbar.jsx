@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -44,11 +44,11 @@ const InnerNavbar = () => {
         setBarLocation(1);
       }
     };
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -56,93 +56,56 @@ const InnerNavbar = () => {
     return {
       width: 0,
       height: 0,
-      borderLeft: '8px solid transparent',
-      borderRight: '8px solid transparent',
-      borderTop: '8px solid white',
+      borderLeft: "8px solid transparent",
+      borderRight: "8px solid transparent",
+      borderTop: "8px solid white",
     };
   };
 
   const isgreenbar = () => {
     const labelwidth = 88;
-    if (windowWidth < 640) {
-      return {};
-    }
-    if (windowWidth < 1020) {
-      if (barLocation === 1) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '350px',
-        };
-      } else if (barLocation === 2) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '455px',
-        };
-      } else if (barLocation === 3) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '560px',
-        };
-      } else if (barLocation === 4) {
-        return {
-          width: `60px`,
-          position: 'relative',
-          left: '660px',
-        };
-      } else if (barLocation === 5) {
-        return {
-          width: `60px`,
-          position: 'relative',
-          left: '725px',
-        };
-      }
-    } else {
-      if (barLocation === 1) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '595px',
-        };
-      } else if (barLocation === 2) {
-        return {
-          width: `95px`,
-          position: 'relative',
-          left: '695px',
-        };
-      } else if (barLocation === 3) {
-        return {
-          width: `${labelwidth}px`,
-          position: 'relative',
-          left: '803px',
-        };
-      } else if (barLocation === 4) {
-        return {
-          width: `60px`,
-          position: 'relative',
-          left: '905px',
-        };
-      } else if (barLocation === 5) {
-        return {
-          width: `50px`,
-          position: 'relative',
-          left: '975px',
-        };
-      } else if (barLocation === 6) {
-        return {
-          width: `55px`,
-          position: 'relative',
-          left: '1035px',
-        };
-      } else if (barLocation === 7) {
-        return {
-          width: `50px`,
-          position: 'relative',
-          left: '1102px',
-        };
-      }
+    if (barLocation === 1) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "395px",
+      };
+    } else if (barLocation === 2) {
+      return {
+        width: `95px`,
+        position: "relative",
+        left: "499px",
+      };
+    } else if (barLocation === 3) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "610px",
+      };
+    } else if (barLocation === 4) {
+      return {
+        width: `60px`,
+        position: "relative",
+        left: "710px",
+      };
+    } else if (barLocation === 5) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "779px",
+      };
+    } else if (barLocation === 6) {
+      return {
+        width: `55px`,
+        position: "relative",
+        left: "841px",
+      };
+    } else if (barLocation === 7) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "906px",
+      };
     }
   };
 
@@ -150,22 +113,24 @@ const InnerNavbar = () => {
     setBarLocation(num);
     window.scrollTo({
       top: num2,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   return (
     <div
       className={`py-2 bg-NVBGGray sticky top-16 sticky-wrapper z-[70] ${
-        isSticky ? 'sticky-top' : ''
+
+        isSticky ? "sticky-top" : ""
       }`}
     >
-      <div className="flex flex-wrap justify-center h-11 font-Sig bg-NVBGGray ml-50">
+      <div className="mr-auto ml-auto static w-[1260px] max-w-[100rem] flex flex-row items-center">
         <button
           onClick={() => {
-            handleClick(1);
+            handleClick(1, 1300);
           }}
-          className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60"
+          className="h-10 px-2 py-2 text-white border-none bg-inherit"
+
         >
           Architecture
         </button>
@@ -173,7 +138,8 @@ const InnerNavbar = () => {
           <div className="flex flex-wrap">
             <button
               onClick={() => {
-                handleClick(2, 2180);
+
+                handleClick(2, 2680);
               }}
               className="px-2 py-2 text-white border-none bg-inherit"
             >
@@ -189,7 +155,9 @@ const InnerNavbar = () => {
             </button>
             <button
               onClick={() => {
-                handleClick(4, 5020);
+
+                handleClick(4, 5520);
+
               }}
               className="px-2 py-2 text-white border-none bg-inherit"
             >
@@ -197,7 +165,9 @@ const InnerNavbar = () => {
             </button>
             <button
               onClick={() => {
-                handleClick(5, 5950);
+
+                handleClick(5, 6450);
+
               }}
               className="px-2 py-2 text-white border-none bg-inherit"
             >
@@ -207,7 +177,8 @@ const InnerNavbar = () => {
               <div className="flex flex-wrap">
                 <button
                   onClick={() => {
-                    handleClick(6, 6900);
+                    handleClick(6, 7380);
+
                   }}
                   className="px-2 py-2 text-white border-none bg-inherit"
                 >
@@ -215,7 +186,9 @@ const InnerNavbar = () => {
                 </button>
                 <button
                   onClick={() => {
-                    handleClick(7, 9900);
+
+                    handleClick(7, 10000);
+
                   }}
                   className="px-2 py-2 text-white border-none bg-inherit"
                 >
@@ -275,12 +248,12 @@ const InnerNavbar = () => {
             )}
           </div>
         )}
-        <button className="w-20 h-11 bg-NVGreen hover:bg-[#91c733] ml-80 font-bold font-Sig">
+        <button className="w-20 h-12 bg-NVGreen hover:bg-[#91c733] ml-[36rem] text-[18px] font-bold font-Sig">
           Shop
         </button>
       </div>
       <div
-        className="absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
+        className="absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-300 ease-linear"
         style={isgreenbar()}
       ></div>
     </div>
