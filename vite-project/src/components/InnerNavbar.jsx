@@ -170,7 +170,7 @@ const InnerNavbar = () => {
               <div className="flex flex-wrap">
                 <button
                   onClick={() => {
-                    handleClick(6, 7580);
+                    handleClick(6, 7380);
                   }}
                   className="px-2 py-2 text-white border-none bg-inherit"
                 >
@@ -178,7 +178,7 @@ const InnerNavbar = () => {
                 </button>
                 <button
                   onClick={() => {
-                    handleClick(7, 10400);
+                    handleClick(7, 10000);
                   }}
                   className="px-2 py-2 text-white border-none bg-inherit"
                 >
