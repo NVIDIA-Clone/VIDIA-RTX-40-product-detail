@@ -278,7 +278,7 @@ const InnerNavbar = () => {
             )}
           </div>
         )}
-        <button className="w-20 h-11 bg-NVGreen hover:bg-[#91c733] ml-80 font-bold font-Sig">
+        <button className="w-20 h-12 bg-NVGreen hover:bg-[#91c733] ml-[36rem] text-[18px] font-bold font-Sig">
           Shop
         </button>
       </div>
