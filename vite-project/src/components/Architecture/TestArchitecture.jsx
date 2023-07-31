@@ -18,10 +18,10 @@ const TestArchitecture = () => {
     <>
       <div
         id="containerDiv"
-        className={`
+        className={`max-w-[1250px] w-[1200px]
           ${
             isScrolled
-              ? "flex flex-col items-center justify-center animate-fadeOut duration-500"
+              ? "flex flex-col items-center justify-center animate-fadeOut duration-700"
               : "flex flex-col items-center justify-center opacity-100"
           }
           ${isFadedOut ? "opacity-0" : "opacity-100"}
@@ -43,7 +43,9 @@ const TestArchitecture = () => {
             <img
               src="/images/architecture.png"
               alt=""
-              className="absolute top-[230px] left-[350px] z-0"
+              className={`absolute top-[230px] left-[350px] z-0 ${
+                isScrolled ? "translate-x-[16vw]  duration-1000" : null
+              }`}
             />
           </div>
           <div
@@ -95,12 +97,17 @@ const TestArchitecture = () => {
       {/* stage 2 */}
       <div
         id="stage2container"
-        className={
-          isScrolled ? "flex flex-col animate-fadeIn duration-500" : "opacity-0"
-        }
+        className={`
+        max-w-1250px w-[1200px]
+          ${
+            isScrolled
+              ? "flex flex-col animate-fadeIn duration-500"
+              : "opacity-0"
+          }
+        `}
       >
         {/* This is the Title */}
-        <div className="flex flex-col pt-[90px] pb-[30px] items-center justify-center">
+        <div className="flex flex-col pb-[30px] items-center justify-center">
           <h2 className="text-white mb-[25px] text-xl font-bold">
             The Ultimate Platform for Gamers and Creators
           </h2>
@@ -110,7 +117,9 @@ const TestArchitecture = () => {
         </div>
         <div className="flex flex-col items-center ">
           <img
-            className="absolute z-0 opacity-30 "
+            className={`absolute z-0 opacity-30 ${
+              !isScrolled ? "translate-x-[-16vw]  duration-1000" : null
+            }`}
             src="/images/architecture.png"
             alt="Microchip made by Vidia with a rainbow color scheme"
           />
