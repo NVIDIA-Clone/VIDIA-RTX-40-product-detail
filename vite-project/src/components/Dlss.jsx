@@ -7,16 +7,16 @@ const Dlss = () => {
 
   return (
     <div className="dlss grid grid-cols-8 grid-rows-none gap-14 bg-local font-Sig text-NVWhiterTxt bg-auto bg-no-repeat bg-[url('/images/nvidia-dlss-video-xlrg-hero-background-bb770-d.jpg')]">
-      <div className="dlss-info col-start-3 col-span-4 row-start-1 row-span-1 justify-self-center min-w-[600px] pt-14 tracking-tight">
+      <div className="dlss-info col-start-1 col-span-8 row-start-1 row-span-1 justify-self-center min-w-[600px] pt-14 tracking-tight">
         <h2 className="p-4 text-xl lg:text-base font-bold text-center">VIDIA DLSS 3</h2>
         <h1 className="text-3xl lg:text-2xl font-bold text-center">
           The Performance Multiplier, Powered by AI
         </h1>
         <p className="p-3 text-sm text-center">
           DLSS is a revolutionary breakthrough in AI-powered graphics that
-          massively boosts performance. Powered by the new fourth-gen Tensor
+          massively boosts performance. Powered by the new <br></br>fourth-gen Tensor
           Cores and Optical Flow Accelerator on PeForce RTX 40 Series GPUs, DLSS
-          3 uses AI to create additional high-quality frames.
+          3 uses AI to create<br></br> additional high-quality frames.
         </p>
         <div
           className="text-lg lg:text-base text-center font-bold m-0.5"
