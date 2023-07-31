@@ -71,14 +71,14 @@ const AdditionalList = () => {
               id="card-image-text-container"
               className="flex flex-col items-start px-[24px] h-3/5"
             >
-              <h1 className="text-[1.5rem] font-Sig font-bold pt-[10px] pb-[10px]">
+              <h1 className="text-[1.5rem] font-Sig font-bold pt-[10px] pb-[10px] text-white">
                 {elem.title}
               </h1>
               <div
                 id="test"
                 className="flex flex-col justify-between flex-grow px-30px"
               >
-                <p className="text-[15px] font-Sig pt-[10px] pb-[30px] font-medium">
+                <p className="text-[15px] font-Sig pt-[10px] pb-[30px] font-medium text-[#EEE]">
                   {elem.info}
                 </p>
                 <div
