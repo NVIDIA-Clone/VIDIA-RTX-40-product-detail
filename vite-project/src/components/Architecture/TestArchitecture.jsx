@@ -7,10 +7,8 @@ const TestArchitecture = () => {
     architectureList,
     architectureListVer2,
     isScrolled,
-    isFaded,
-    setIsFaded,
     isFadedOut,
-    setIsFadedOut,
+    isScrolledUp,
   } = useContext(ArchitectureContext);
   const { isHovered, handleMouseEnter, handleMouseLeave } =
     useContext(LandingPageContext);
@@ -21,10 +19,10 @@ const TestArchitecture = () => {
         className={`max-w-[1250px] w-[1200px]
           ${
             isScrolled
-              ? "flex flex-col items-center justify-center animate-fadeOut duration-700"
+              ? "flex flex-col items-center justify-center animate-fadeOut duration-500"
               : "flex flex-col items-center justify-center opacity-100"
           }
-          ${isFadedOut ? "opacity-0" : "opacity-100"}
+           ${isFadedOut ? "opacity-0" : "opacity-100"}
         `}
       >
         <div
@@ -44,7 +42,7 @@ const TestArchitecture = () => {
               src="/images/architecture.png"
               alt=""
               className={`absolute top-[230px] left-[350px] z-0 ${
-                isScrolled ? "translate-x-[16vw]  duration-1000" : null
+                isScrolled ? "translate-x-[16vw]  duration-700" : null
               }`}
             />
           </div>
@@ -117,15 +115,13 @@ const TestArchitecture = () => {
         </div>
         <div className="flex flex-col items-center ">
           <img
-            className={`absolute z-0 opacity-30 ${
-              !isScrolled ? "translate-x-[-16vw]  duration-1000" : null
-            }`}
+            className={`absolute z-0 opacity-30`}
             src="/images/architecture.png"
             alt="Microchip made by Vidia with a rainbow color scheme"
           />
         </div>
         {/* This is the Items */}
-        <div className="flex flex-wrap w-full justify-evenly over">
+        <div className="flex flex-wrap w-full justify-evenly">
           {architectureList.current.map((item, index) => (
             <div
               key={index}

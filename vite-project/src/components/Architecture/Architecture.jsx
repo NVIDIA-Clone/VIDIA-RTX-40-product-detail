@@ -1,15 +1,12 @@
-import ArchitectureList from './ArchitectureList';
-import { useEffect, useRef, useContext } from 'react';
-import ArchitectureContext from './ArchitectureContext';
+import ArchitectureList from "./ArchitectureList";
+import { useEffect, useRef, useContext } from "react";
+import ArchitectureContext from "./ArchitectureContext";
 
 const Architecture = () => {
   const {
     isScrolled,
     setisScrolled,
-    // isFaded,
-    setIsFaded,
     setIsFadedOut,
-    // isFadedOut,
   } = useContext(ArchitectureContext);
   const architectureRef = useRef(null);
 
@@ -27,18 +24,17 @@ const Architecture = () => {
 
     const handleScrollTimeout = () => {
       setTimeout(() => {
-        setIsFaded(isScrolled);
         setIsFadedOut(isScrolled);
       }, 200);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('scroll', handleScrollTimeout);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScrollTimeout);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.addEventListener('scroll', handleScrollTimeout);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScrollTimeout);
     };
-  }, [setisScrolled, setIsFaded, setIsFadedOut, isScrolled]);
+  }, [setisScrolled, setIsFadedOut, isScrolled]);
 
   return (
     <div
