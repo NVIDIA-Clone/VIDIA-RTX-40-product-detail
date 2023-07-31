@@ -34,9 +34,9 @@ const InnerNavbar = () => {
         setBarLocation(6)
       } else if (window.scrollY > 5900) {
         setBarLocation(5)
-      } else if (window.scrollY > 5000) {
+      } else if (window.scrollY >4800) {
         setBarLocation(4)
-      } else if (window.scrollY > 3600) {
+      } else if (window.scrollY > 3000) {
         setBarLocation(3)
       } else if (window.scrollY > 2100) {
         setBarLocation(2)
@@ -67,8 +67,53 @@ const InnerNavbar = () => {
     const labelwidth = 88;
     if (windowWidth < 640) {
       return {};
+    } 
+    if (windowWidth > 1060 && windowWidth < 2000) {
+      if (barLocation === 1) {
+        return {
+          width: `${labelwidth}px`,
+          position: "relative",
+          left: "54px",
+      };
+    } else if (barLocation === 2) {
+      return {
+        width: `95px`,
+        position: "relative",
+        left: "155px",
+      } 
+    } else if (barLocation === 3) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "265px",
+      } 
+    } else if (barLocation === 4) {
+      return {
+        width: `60px`,
+        position: "relative",
+        left: "364px",
+      } 
+    } else if (barLocation === 5) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "435px",
+      } 
+    } else if (barLocation === 6) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "498x",
+      } 
+    } else if (barLocation === 7) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "560px",
+      } 
     }
-    if (windowWidth < 1020) {
+    }
+     else if (windowWidth < 1020) {
       if (barLocation === 1) {
         return {
           width: `${labelwidth}px`,
@@ -107,43 +152,43 @@ const InnerNavbar = () => {
       return {
         width: `${labelwidth}px`,
         position: "relative",
-        left: "595px",
+        left: "475px",
     };
   } else if (barLocation === 2) {
     return {
       width: `95px`,
       position: "relative",
-      left: "695px",
+      left: "575px",
     } 
   } else if (barLocation === 3) {
     return {
       width: `${labelwidth}px`,
       position: "relative",
-      left: "803px",
+      left: "683px",
     } 
   } else if (barLocation === 4) {
     return {
       width: `60px`,
       position: "relative",
-      left: "905px",
+      left: "783px",
     } 
   } else if (barLocation === 5) {
     return {
       width: `50px`,
       position: "relative",
-      left: "975px",
+      left: "855px",
     } 
   } else if (barLocation === 6) {
     return {
-      width: `55px`,
+      width: `50px`,
       position: "relative",
-      left: "1035px",
+      left: "917x",
     } 
   } else if (barLocation === 7) {
     return {
       width: `50px`,
       position: "relative",
-      left: "1102px",
+      left: "980px",
     } 
   }
   }
@@ -160,7 +205,7 @@ const InnerNavbar = () => {
   return (
     <div className={`py-2 bg-NVBGGray sticky top-16 sticky-wrapper z-[70] ${isSticky ? 'sticky-top' : ''}`}>
       <div className="flex flex-wrap justify-center h-11 font-Sig bg-NVBGGray ml-50">
-        <button onClick={() => {handleClick(1)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
+        <button onClick={() => {handleClick(1, 1170)}} className="h-10 px-2 py-2 text-white border-none bg-inherit">
 
           Architecture
         </button>
@@ -170,10 +215,10 @@ const InnerNavbar = () => {
             <button onClick={() => {handleClick(2, 2180)}} className="px-2 py-2 text-white border-none bg-inherit">
               Performance
             </button>
-            <button onClick={() => {handleClick(3, 3650)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(3, 3500)}} className="px-2 py-2 text-white border-none bg-inherit">
               Ray Tracing
             </button>
-            <button onClick={() => {handleClick(4, 5020)}}className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(4, 4890)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
             <button onClick={() => {handleClick(5, 5950)}} className="px-2 py-2 text-white border-none bg-inherit">
@@ -249,7 +294,7 @@ const InnerNavbar = () => {
         </button>
       </div>
       <div
-        className="absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
+        className="pb-0 absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
         style={isgreenbar()}
       ></div>
     </div>
