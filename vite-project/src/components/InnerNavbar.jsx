@@ -1,4 +1,4 @@
-import React, { useState, useEffect, } from 'react';
+import { useState, useEffect } from "react";
 
 const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,9 +29,9 @@ const InnerNavbar = () => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > breakpoint);
       if (window.scrollY > 9800) {
-        setBarLocation(7)
+        setBarLocation(7);
       } else if (window.scrollY > 6850) {
-        setBarLocation(6)
+        setBarLocation(6);
       } else if (window.scrollY > 5900) {
         setBarLocation(5)
       } else if (window.scrollY >4800) {
@@ -39,17 +39,16 @@ const InnerNavbar = () => {
       } else if (window.scrollY > 3000) {
         setBarLocation(3)
       } else if (window.scrollY > 2100) {
-        setBarLocation(2)
+        setBarLocation(2);
       } else {
-        setBarLocation(1)
+        setBarLocation(1);
       }
-    }
+    };
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
-
     };
   }, []);
 
@@ -57,9 +56,9 @@ const InnerNavbar = () => {
     return {
       width: 0,
       height: 0,
-      borderLeft: '8px solid transparent',
-      borderRight: '8px solid transparent',
-      borderTop: '8px solid white',
+      borderLeft: "8px solid transparent",
+      borderRight: "8px solid transparent",
+      borderTop: "8px solid white",
     };
   };
 
@@ -122,25 +121,25 @@ const InnerNavbar = () => {
       } 
     } else if (barLocation === 2) {
       return {
-        width: `${labelwidth}px`,
+        width: `95px`,
         position: "relative",
-        left: "455px",
-      } 
+        left: "499px",
+      };
     } else if (barLocation === 3) {
       return {
         width: `${labelwidth}px`,
         position: "relative",
-        left: "560px",
-        } 
+        left: "610px",
+      };
     } else if (barLocation === 4) {
       return {
         width: `60px`,
         position: "relative",
-        left: "660px",
-        } 
+        left: "710px",
+      };
     } else if (barLocation === 5) {
       return {
-        width: `60px`,
+        width: `50px`,
         position: "relative",
         left: "725px",
         } 
@@ -199,7 +198,7 @@ const InnerNavbar = () => {
     window.scrollTo({
       top: num2,
       behavior: "smooth",
-    })
+    });
   };
 
   return (
@@ -207,12 +206,18 @@ const InnerNavbar = () => {
       <div className="flex flex-wrap justify-center h-11 font-Sig bg-NVBGGray ml-50">
         <button onClick={() => {handleClick(1, 1170)}} className="h-10 px-2 py-2 text-white border-none bg-inherit">
 
+        >
           Architecture
         </button>
         {windowWidth >= 640 ? (
           <div className="flex flex-wrap">
+            <button
+              onClick={() => {
 
-            <button onClick={() => {handleClick(2, 2180)}} className="px-2 py-2 text-white border-none bg-inherit">
+                handleClick(2, 2680);
+              }}
+              className="px-2 py-2 text-white border-none bg-inherit"
+            >
               Performance
             </button>
             <button onClick={() => {handleClick(3, 3500)}} className="px-2 py-2 text-white border-none bg-inherit">
@@ -221,18 +226,35 @@ const InnerNavbar = () => {
             <button onClick={() => {handleClick(4, 4890)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
-            <button onClick={() => {handleClick(5, 5950)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button
+              onClick={() => {
 
+                handleClick(5, 6450);
+
+              }}
+              className="px-2 py-2 text-white border-none bg-inherit"
+            >
               Reflex
             </button>
             {windowWidth >= 1024 ? (
               <div className="flex flex-wrap">
+                <button
+                  onClick={() => {
+                    handleClick(6, 7380);
 
-                <button onClick={() => {handleClick(6, 6900)}} className="px-2 py-2 text-white border-none bg-inherit">
+                  }}
+                  className="px-2 py-2 text-white border-none bg-inherit"
+                >
                   Create
                 </button>
-                <button onClick={() => {handleClick(7, 9900)}} className="px-2 py-2 text-white border-none bg-inherit">
+                <button
+                  onClick={() => {
 
+                    handleClick(7, 10000);
+
+                  }}
+                  className="px-2 py-2 text-white border-none bg-inherit"
+                >
                   Specs
                 </button>
               </div>
@@ -289,7 +311,7 @@ const InnerNavbar = () => {
             )}
           </div>
         )}
-        <button className="w-20 h-11 bg-NVGreen hover:bg-[#91c733] ml-80 font-bold font-Sig">
+        <button className="w-20 h-12 bg-NVGreen hover:bg-[#91c733] ml-[36rem] text-[18px] font-bold font-Sig">
           Shop
         </button>
       </div>

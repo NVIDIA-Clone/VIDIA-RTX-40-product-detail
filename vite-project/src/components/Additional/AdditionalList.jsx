@@ -60,10 +60,10 @@ const AdditionalList = () => {
       {/* Cards */}
       <div
         id="cards-container"
-        className="grid grid-cols-3 place-content-evenly gap-[2vw] pt-[30px]"
+        className="grid grid-cols-3 place-content-between gap-[2%] pt-[30px]"
       >
         {list[2].cards.map((elem, index) => (
-          <div key={index} className="bg-[black] pb-[45px] h-full w-full">
+          <div key={index} className="bg-[black] pb-[15px] w-[100%]">
             <div id="card-image-container" className="">
               <img src={elem.picture} alt={elem.title} width={800} />
             </div>
@@ -71,14 +71,14 @@ const AdditionalList = () => {
               id="card-image-text-container"
               className="flex flex-col items-start px-[24px] h-3/5"
             >
-              <h1 className="text-[1.5rem] font-Sig font-bold pt-[10px] pb-[10px]">
+              <h1 className="text-[1.5rem] font-Sig font-bold pt-[30px] pb-[10px] text-white">
                 {elem.title}
               </h1>
               <div
                 id="test"
                 className="flex flex-col justify-between flex-grow px-30px"
               >
-                <p className="text-[15px] font-Sig pt-[10px] pb-[30px] font-medium">
+                <p className="text-[15px] font-Sig pt-[10px] pb-[30px] font-medium text-[#EEE]">
                   {elem.info}
                 </p>
                 <div

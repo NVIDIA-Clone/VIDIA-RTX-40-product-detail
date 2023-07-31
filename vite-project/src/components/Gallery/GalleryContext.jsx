@@ -35,6 +35,7 @@ export const GalleryProvider = ({ children }) => {
   //FUNCTIONS IF NEED BE
   const makeFullScreen = () => {
     setIsFullscreen(true)
+    
   }
 
   const notFullScreen = ()  => {
@@ -51,7 +52,8 @@ export const GalleryProvider = ({ children }) => {
         isFullscreen,
         setIsFullscreen,
         makeFullScreen,
-        notFullScreen
+        notFullScreen,
+
       }}
     >
       {children}

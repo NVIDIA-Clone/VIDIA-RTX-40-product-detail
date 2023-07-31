@@ -20,7 +20,7 @@ const Architecture = () => {
           architectureRef.current.getBoundingClientRect();
         const architectureBottom =
           architectureRect.top + architectureRect.height;
-        const windowBottom = window.innerHeight + 175;
+        const windowBottom = window.innerHeight + 50;
         setisScrolled(architectureBottom <= windowBottom);
       }
     };
@@ -43,7 +43,7 @@ const Architecture = () => {
   return (
     <div
       ref={architectureRef}
-      className="bg-black w-full flex flex-col items-center pb-[10%] relative h-[1000px]"
+      className="bg-black w-full flex flex-col items-center pb-[10%] relative h-[1100px]"
     >
       <ArchitectureList />
     </div>
