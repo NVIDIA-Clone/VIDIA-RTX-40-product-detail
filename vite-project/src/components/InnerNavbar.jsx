@@ -32,7 +32,7 @@ const InnerNavbar = () => {
         setBarLocation(7);
       } else if (window.scrollY > 6850) {
         setBarLocation(6);
-      } else if (window.scrollY > 5900) {
+      } else if (window.scrollY > 5800) {
         setBarLocation(5)
       } else if (window.scrollY >4800) {
         setBarLocation(4)
@@ -72,43 +72,43 @@ const InnerNavbar = () => {
         return {
           width: `${labelwidth}px`,
           position: "relative",
-          left: "54px",
+          left: "255px",
       };
     } else if (barLocation === 2) {
       return {
         width: `95px`,
         position: "relative",
-        left: "155px",
+        left: "355px",
       } 
     } else if (barLocation === 3) {
       return {
         width: `${labelwidth}px`,
         position: "relative",
-        left: "265px",
+        left: "465px",
       } 
     } else if (barLocation === 4) {
       return {
         width: `60px`,
         position: "relative",
-        left: "364px",
+        left: "563px",
       } 
     } else if (barLocation === 5) {
       return {
         width: `50px`,
         position: "relative",
-        left: "435px",
+        left: "635px",
       } 
     } else if (barLocation === 6) {
       return {
         width: `50px`,
         position: "relative",
-        left: "498x",
+        left: "698x",
       } 
     } else if (barLocation === 7) {
       return {
         width: `50px`,
         position: "relative",
-        left: "560px",
+        left: "760px", 
       } 
     }
     }
@@ -212,22 +212,22 @@ const InnerNavbar = () => {
             <button
               onClick={() => {
 
-                handleClick(2, 2680);
+                handleClick(2, 2280);
               }}
               className="px-2 py-2 text-white border-none bg-inherit"
             >
               Performance
             </button>
-            <button onClick={() => {handleClick(3, 3500)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(3, 3555)}} className="px-2 py-2 text-white border-none bg-inherit">
               Ray Tracing
             </button>
-            <button onClick={() => {handleClick(4, 4890)}}className="px-2 py-2 text-white border-none bg-inherit">
+            <button onClick={() => {handleClick(4, 4990)}}className="px-2 py-2 text-white border-none bg-inherit">
               DLSS 3
             </button>
             <button
               onClick={() => {
 
-                handleClick(5, 6450);
+                handleClick(5, 5900);
 
               }}
               className="px-2 py-2 text-white border-none bg-inherit"
@@ -238,7 +238,7 @@ const InnerNavbar = () => {
               <div className="flex flex-wrap">
                 <button
                   onClick={() => {
-                    handleClick(6, 7380);
+                    handleClick(6, 6880);
 
                   }}
                   className="px-2 py-2 text-white border-none bg-inherit"
@@ -248,7 +248,7 @@ const InnerNavbar = () => {
                 <button
                   onClick={() => {
 
-                    handleClick(7, 10000);
+                    handleClick(7, 9870);
 
                   }}
                   className="px-2 py-2 text-white border-none bg-inherit"
