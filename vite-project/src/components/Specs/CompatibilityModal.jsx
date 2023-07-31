@@ -85,7 +85,7 @@ const CompatibilityModal = () => {
                   </h1>
                   <img
                     className="px-24"
-                    src="/public/images/850W_minimum.png"
+                    src="/images/850W_minimum.png"
                     alt="image of 850W power supply"
                   ></img>
                   <h4 className="py-4 text-sm font-bold">850W Minimum</h4>
@@ -98,7 +98,7 @@ const CompatibilityModal = () => {
                   </p>
                   <div className="flex power-compatibility-row">
                     <div className="flex flex-col w-1/2 compatibility-option1-card">
-                      <img src="/public/images/compatibility-8pin.png"></img>
+                      <img src="/images/compatibility-8pin.png"></img>
                       <h4 className="py-4 text-sm font-bold">
                         Power Compatibility Option 1.
                       </h4>
@@ -109,7 +109,7 @@ const CompatibilityModal = () => {
                       </p>
                     </div>
                     <div className="flex flex-col w-1/2 compatibility-option2-card">
-                      <img src="/public/images/compatibility-16pin.png"></img>
+                      <img src="/images/compatibility-16pin.png"></img>
                       <h4 className="py-4 text-sm font-bold">
                         Power Compatibility Option 2.
                       </h4>
@@ -124,7 +124,7 @@ const CompatibilityModal = () => {
                   </h1>
                   <div className="flex check-case-row">
                     <div className="flex flex-col w-1/2 expansion-slot-card">
-                      <img src="/public/images/expansion-slots.png"></img>
+                      <img src="/images/expansion-slots.png"></img>
                       <h4 className="py-4 text-sm font-bold">
                         Three unused expansion slots
                       </h4>
@@ -135,7 +135,7 @@ const CompatibilityModal = () => {
                       </p>
                     </div>
                     <div className="flex flex-col w-1/2 clearance-card">
-                      <img src="/public/images/case-size.png"></img>
+                      <img src="/images/case-size.png"></img>
                       <p className="py-4 text-sm">
                         Clearance: Must have space for 12" (304mm) x 5.4"
                         (137mm) x 3-slot card (61mm). Plan 1.4" (36mm)
