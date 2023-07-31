@@ -74,7 +74,7 @@ const additional = [
         title: 'VIDIA P-SYNC',
         info: `Get smooth, tear-free gameplay at high refresh rates, plus HDR and more. This is the ultimate gaming display and the go-to equipment for enthusiast gamers.`,
         explore: {
-          explore: `Experience super Smooth Gameplay`,
+          explore: `Experience Super Smooth Gameplay`,
           symbol: [
             {
               d: 'M10 7L15 12L10 17',
