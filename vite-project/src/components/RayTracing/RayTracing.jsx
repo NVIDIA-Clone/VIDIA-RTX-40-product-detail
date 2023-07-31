@@ -10,12 +10,12 @@ const RayTracing = () => {
     <>
       <div className="w-full bg-black h-[450px] pt-[75px] pb-[75px]">
         <div className="text-center mt-[8px] mb-[8px] mr-[15px] ml-[15px]">
-          <h2 className="font-bold text-[34px] text-center text-white">
+          <h2 className="font-bold lg:text-[28px] text-4xl text-center text-white">
             Fraction of the Power Consumption
           </h2>
         </div>
         <div className="text-center mt-[8px] mb-[8px] mr-[15px] ml-[15px]">
-          <h3 className="font-bold text-[20px] text-center text-white">
+          <h3 className="font-bold lg:text-lg text-xl text-center text-white">
             Lower Is Better
           </h3>
         </div>
@@ -28,12 +28,12 @@ const RayTracing = () => {
       <div className="w-full bg-black h-[410px] pt-[75px] pb-[75px]">
         <hr className="bg-[#999999] box-content w-[100%] max-w-[1290px] h-[1px] m-auto"></hr>
         <div className="text-center mt-[8px] mb-[8px] mr-[15px] ml-[15px]">
-          <h3 className="font-bold text-[20px] text-center text-white mt-[75px]">
+          <h3 className="font-bold lg:text-lg text-xl text-center text-white mt-[75px]">
             Ray Tracing
           </h3>
         </div>
         <div className="text-center mt-[8px] mb-[8px] mr-[15px] ml-[15px]">
-          <h2 className="font-bold text-[34px] text-center text-white">
+          <h2 className="font-bold lg:text-[28px] text-4xl py-4 text-center text-white">
             Hyperrealistic. Hyperfast.
           </h2>
         </div>
@@ -46,7 +46,7 @@ const RayTracing = () => {
           </p>
         </div>
         <div
-          className="cursor-pointer float-left w-[100%] text-center mt-[24px] font-bold text-[17px]"
+          className="cursor-pointer float-left w-[100%] text-center mt-[24px] font-bold lg:text-base text-lg"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
