@@ -19,7 +19,7 @@ const LandingPage = () => {
               {data.data.name}
             </h1>
             <h2 className="text-[36px] font-bold p-[8px_0]">BEYOND FAST</h2>
-            <p className="text-[15px] leading-[1.666em] p-[8px_0] mr-[42vw] ">
+            <p className="text-[15px] leading-[1.666em] p-[8px_0] mr-[43vw] ">
               {data.data.description}
             </p>
             <h3 className="text-[26px] font-bold p-[8px_0]">
