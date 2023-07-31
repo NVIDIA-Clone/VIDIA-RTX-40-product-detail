@@ -39,6 +39,7 @@ const GallerySelection = () => {
             onClick={makeFullScreen}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            className="cursor-pointer hover:"
           >
             <svg
               // fill="#f8f7f7"
@@ -51,8 +52,9 @@ const GallerySelection = () => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 384.97 384.97"
               xmlSpace="preserve"
-              stroke="#f8f7f7"
+              stroke={isHovered ? "#NVGreen" : "#f8f7f7 "}
             >
+              {/* #f8f7f7 */}
               <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
               <g
