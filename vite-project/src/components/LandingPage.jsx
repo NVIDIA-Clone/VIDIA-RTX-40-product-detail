@@ -2,41 +2,40 @@ import { useContext } from 'react';
 import LandingPageContext from './LandingPageContext';
 
 const LandingPage = () => {
+  //Product Data and Spec data being brought in from the API
   const data = useContext(LandingPageContext);
   return (
     <>
       <div
-        id="landing-page-container" 
-        className="h-[90vh] w-screen justify-center items-center bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-cover bg-no-repeat bg-[position:center]"
+        id="landing-page-container"
+        className="flex justify-center items-center h-[90vh] w-full bg-[url('/images/geforce-rtx-4090-100vp-d.jpg')] bg-cover bg-no-repeat bg-[position:center]"
       >
-        <div
-          id="landing-page"
-          className="flex w-full h-100% justify-center pr-[40vw] pl-[15vw] "
-        >
+        <div id="landing-page" className="flex max-w-[100rem] p-[0_11rem]">
           <div
             id="product-text-container"
-            className="text-[#ffffff] font-Sig text-left pb-[5rem] mb-[3rem]"
+            className="text-[#ffffff] font-Sig text-left"
           >
-            <h1 className="text-[3.75rem] font-bold p-[8px_15px]">
+            <h1 className="text-[3.75rem] font-bold p-[8px_0]">
               {data.data.name}
             </h1>
-            <h2 className="text-[36px] font-bold p-[8px_15px]">BEYOND FAST</h2>
-            <p className=" text-[15px] leading-[1.666em] pr-[22vw] p-[8px_15px]">
+            <h2 className="text-[36px] font-bold p-[8px_0]">BEYOND FAST</h2>
+            <p className="text-[15px] leading-[1.666em] p-[8px_0] mr-[42vw] ">
               {data.data.description}
             </p>
-            <h3 className="text-[26px] font-bold p-[8px_15px]">
+            <h3 className="text-[26px] font-bold p-[8px_0]">
               Starting at ${data.data.price}
             </h3>
-
-            <button className="text-[18px] mt-[10px]">
-              {' '}
-              <a
-                href="#"
-                className="ml-[15px] p-[13px_15px] bg-[#76b900] text-[black] font-bold hover:bg-[#91c733]"
-              >
-                See All Buying Options
-              </a>
-            </button>
+            <div className="p-[8px_0] mb-[8rem]">
+              <button className="text-[18px]">
+                {' '}
+                <a
+                  href="#"
+                  className="bg-[#76b900]  text-[black] p-[8px_15px] font-bold hover:bg-[#91c733]"
+                >
+                  See All Buying Options
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
