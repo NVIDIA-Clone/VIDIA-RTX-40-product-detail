@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -64,88 +64,48 @@ const InnerNavbar = () => {
 
   const isgreenbar = () => {
     const labelwidth = 88;
-    if (windowWidth < 640) {
-      return {};
-    }
-    if (windowWidth < 1020) {
-      if (barLocation === 1) {
-        return {
-          width: `${labelwidth}px`,
-          position: "relative",
-          left: "350px",
-        };
-      } else if (barLocation === 2) {
-        return {
-          width: `${labelwidth}px`,
-          position: "relative",
-          left: "455px",
-        };
-      } else if (barLocation === 3) {
-        return {
-          width: `${labelwidth}px`,
-          position: "relative",
-          left: "560px",
-        };
-      } else if (barLocation === 4) {
-        return {
-          width: `60px`,
-          position: "relative",
-          left: "660px",
-        };
-      } else if (barLocation === 5) {
-        return {
-          width: `60px`,
-          position: "relative",
-          left: "725px",
-        };
-      } else if (barLocation === 6 || barLocation === 7) {
-        {
-        }
-      }
-    } else {
-      if (barLocation === 1) {
-        return {
-          width: `${labelwidth}px`,
-          position: "relative",
-          left: "395px",
-        };
-      } else if (barLocation === 2) {
-        return {
-          width: `95px`,
-          position: "relative",
-          left: "499px",
-        };
-      } else if (barLocation === 3) {
-        return {
-          width: `${labelwidth}px`,
-          position: "relative",
-          left: "610px",
-        };
-      } else if (barLocation === 4) {
-        return {
-          width: `60px`,
-          position: "relative",
-          left: "710px",
-        };
-      } else if (barLocation === 5) {
-        return {
-          width: `50px`,
-          position: "relative",
-          left: "779px",
-        };
-      } else if (barLocation === 6) {
-        return {
-          width: `55px`,
-          position: "relative",
-          left: "841px",
-        };
-      } else if (barLocation === 7) {
-        return {
-          width: `50px`,
-          position: "relative",
-          left: "906px",
-        };
-      }
+    if (barLocation === 1) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "395px",
+      };
+    } else if (barLocation === 2) {
+      return {
+        width: `95px`,
+        position: "relative",
+        left: "499px",
+      };
+    } else if (barLocation === 3) {
+      return {
+        width: `${labelwidth}px`,
+        position: "relative",
+        left: "610px",
+      };
+    } else if (barLocation === 4) {
+      return {
+        width: `60px`,
+        position: "relative",
+        left: "710px",
+      };
+    } else if (barLocation === 5) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "779px",
+      };
+    } else if (barLocation === 6) {
+      return {
+        width: `55px`,
+        position: "relative",
+        left: "841px",
+      };
+    } else if (barLocation === 7) {
+      return {
+        width: `50px`,
+        position: "relative",
+        left: "906px",
+      };
     }
   };
 
@@ -283,7 +243,7 @@ const InnerNavbar = () => {
         </button>
       </div>
       <div
-        className="absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-[.5s] ease-linear delay-0"
+        className="absolute bottom-0 insert-x-0 block h-[3px] mt-[-3px] bg-[#76b900] transition-all duration-300 ease-linear"
         style={isgreenbar()}
       ></div>
     </div>
