@@ -1,4 +1,4 @@
-import React, { useState, useEffect, } from 'react';
+import { useState, useEffect } from 'react';
 
 const InnerNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,27 +29,26 @@ const InnerNavbar = () => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > breakpoint);
       if (window.scrollY > 9800) {
-        setBarLocation(7)
+        setBarLocation(7);
       } else if (window.scrollY > 6850) {
-        setBarLocation(6)
+        setBarLocation(6);
       } else if (window.scrollY > 5900) {
-        setBarLocation(5)
+        setBarLocation(5);
       } else if (window.scrollY > 5000) {
-        setBarLocation(4)
+        setBarLocation(4);
       } else if (window.scrollY > 3600) {
-        setBarLocation(3)
+        setBarLocation(3);
       } else if (window.scrollY > 2100) {
-        setBarLocation(2)
+        setBarLocation(2);
       } else {
-        setBarLocation(1)
+        setBarLocation(1);
       }
-    }
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
+    };
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
-
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -72,122 +71,154 @@ const InnerNavbar = () => {
       if (barLocation === 1) {
         return {
           width: `${labelwidth}px`,
-          position: "relative",
-          left: "350px",
-      } 
-    } else if (barLocation === 2) {
-      return {
-        width: `${labelwidth}px`,
-        position: "relative",
-        left: "455px",
-      } 
-    } else if (barLocation === 3) {
-      return {
-        width: `${labelwidth}px`,
-        position: "relative",
-        left: "560px",
-        } 
-    } else if (barLocation === 4) {
-      return {
-        width: `60px`,
-        position: "relative",
-        left: "660px",
-        } 
-    } else if (barLocation === 5) {
-      return {
-        width: `60px`,
-        position: "relative",
-        left: "725px",
-        } 
-    } else if (barLocation === 6 || barLocation === 7) {
-      {}
+          position: 'relative',
+          left: '350px',
+        };
+      } else if (barLocation === 2) {
+        return {
+          width: `${labelwidth}px`,
+          position: 'relative',
+          left: '455px',
+        };
+      } else if (barLocation === 3) {
+        return {
+          width: `${labelwidth}px`,
+          position: 'relative',
+          left: '560px',
+        };
+      } else if (barLocation === 4) {
+        return {
+          width: `60px`,
+          position: 'relative',
+          left: '660px',
+        };
+      } else if (barLocation === 5) {
+        return {
+          width: `60px`,
+          position: 'relative',
+          left: '725px',
+        };
+      }
+    } else {
+      if (barLocation === 1) {
+        return {
+          width: `${labelwidth}px`,
+          position: 'relative',
+          left: '595px',
+        };
+      } else if (barLocation === 2) {
+        return {
+          width: `95px`,
+          position: 'relative',
+          left: '695px',
+        };
+      } else if (barLocation === 3) {
+        return {
+          width: `${labelwidth}px`,
+          position: 'relative',
+          left: '803px',
+        };
+      } else if (barLocation === 4) {
+        return {
+          width: `60px`,
+          position: 'relative',
+          left: '905px',
+        };
+      } else if (barLocation === 5) {
+        return {
+          width: `50px`,
+          position: 'relative',
+          left: '975px',
+        };
+      } else if (barLocation === 6) {
+        return {
+          width: `55px`,
+          position: 'relative',
+          left: '1035px',
+        };
+      } else if (barLocation === 7) {
+        return {
+          width: `50px`,
+          position: 'relative',
+          left: '1102px',
+        };
+      }
     }
-  } else {
-    if (barLocation === 1) {
-      return {
-        width: `${labelwidth}px`,
-        position: "relative",
-        left: "595px",
-    };
-  } else if (barLocation === 2) {
-    return {
-      width: `95px`,
-      position: "relative",
-      left: "695px",
-    } 
-  } else if (barLocation === 3) {
-    return {
-      width: `${labelwidth}px`,
-      position: "relative",
-      left: "803px",
-    } 
-  } else if (barLocation === 4) {
-    return {
-      width: `60px`,
-      position: "relative",
-      left: "905px",
-    } 
-  } else if (barLocation === 5) {
-    return {
-      width: `50px`,
-      position: "relative",
-      left: "975px",
-    } 
-  } else if (barLocation === 6) {
-    return {
-      width: `55px`,
-      position: "relative",
-      left: "1035px",
-    } 
-  } else if (barLocation === 7) {
-    return {
-      width: `50px`,
-      position: "relative",
-      left: "1102px",
-    } 
-  }
-  }
   };
 
   const handleClick = (num, num2) => {
     setBarLocation(num);
     window.scrollTo({
       top: num2,
-      behavior: "smooth",
-    })
+      behavior: 'smooth',
+    });
   };
 
   return (
-    <div className={`py-2 bg-NVBGGray sticky top-16 sticky-wrapper z-[70] ${isSticky ? 'sticky-top' : ''}`}>
+    <div
+      className={`py-2 bg-NVBGGray sticky top-16 sticky-wrapper z-[70] ${
+        isSticky ? 'sticky-top' : ''
+      }`}
+    >
       <div className="flex flex-wrap justify-center h-11 font-Sig bg-NVBGGray ml-50">
-        <button onClick={() => {handleClick(1)}} className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60">
-
+        <button
+          onClick={() => {
+            handleClick(1);
+          }}
+          className="h-10 px-2 py-2 text-white border-none bg-inherit ml-60"
+        >
           Architecture
         </button>
         {windowWidth >= 640 ? (
           <div className="flex flex-wrap">
-
-            <button onClick={() => {handleClick(2, 2180)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button
+              onClick={() => {
+                handleClick(2, 2180);
+              }}
+              className="px-2 py-2 text-white border-none bg-inherit"
+            >
               Performance
             </button>
-            <button onClick={() => {handleClick(3, 3650)}} className="px-2 py-2 text-white border-none bg-inherit">
+            <button
+              onClick={() => {
+                handleClick(3, 3650);
+              }}
+              className="px-2 py-2 text-white border-none bg-inherit"
+            >
               Ray Tracing
             </button>
-            <button onClick={() => {handleClick(4, 5020)}}className="px-2 py-2 text-white border-none bg-inherit">
+            <button
+              onClick={() => {
+                handleClick(4, 5020);
+              }}
+              className="px-2 py-2 text-white border-none bg-inherit"
+            >
               DLSS 3
             </button>
-            <button onClick={() => {handleClick(5, 5950)}} className="px-2 py-2 text-white border-none bg-inherit">
-
+            <button
+              onClick={() => {
+                handleClick(5, 5950);
+              }}
+              className="px-2 py-2 text-white border-none bg-inherit"
+            >
               Reflex
             </button>
             {windowWidth >= 1024 ? (
               <div className="flex flex-wrap">
-
-                <button onClick={() => {handleClick(6, 6900)}} className="px-2 py-2 text-white border-none bg-inherit">
+                <button
+                  onClick={() => {
+                    handleClick(6, 6900);
+                  }}
+                  className="px-2 py-2 text-white border-none bg-inherit"
+                >
                   Create
                 </button>
-                <button onClick={() => {handleClick(7, 9900)}} className="px-2 py-2 text-white border-none bg-inherit">
-
+                <button
+                  onClick={() => {
+                    handleClick(7, 9900);
+                  }}
+                  className="px-2 py-2 text-white border-none bg-inherit"
+                >
                   Specs
                 </button>
               </div>

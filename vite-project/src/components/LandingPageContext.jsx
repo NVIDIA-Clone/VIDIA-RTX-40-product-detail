@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, createContext, useRef } from 'react';
-//DATA BEING USED FOR REFERENCE
+const dataURL = `https://vidia-copy.onrender.com/product`;
 const items = [
   {
     id: 1,
@@ -39,41 +39,29 @@ const items = [
     clicked: false,
   },
 ];
-//CREATING THE CONTEXT TO BE USED
 const LandingPageContext = createContext();
-
 export const LandingPageProvider = ({ children }) => {
-  //ESTABLISH STATES
   const [data, setData] = useState({});
   const [specs, setSpecs] = useState({});
   const accoladesList = useRef(items);
-
-  //Added Hovers for arrowcarrots..
   const [isHovered, setIsHovered] = useState(false);
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
-
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
-  //CREATE FUNCTIONS
-  //FETCHING THE DATA FROM THE DATABASE
   useEffect(() => {
     const getProductData = async () => {
-      // Change to deployed URL
-      const productRes = await fetch('http://localhost:8000/product');
+      const productRes = await fetch(`${dataURL}`);
       const productData = await productRes.json();
       setData(productData[0]);
-      const specsRes = await fetch("http://localhost:8000/product/1");
+      const specsRes = await fetch(`${dataURL}/1`);
       const specsData = await specsRes.json();
       setSpecs(specsData);
     };
     getProductData();
   }, []);
-  // RETURNING THE PROPERTIES NEEDED
   return (
     <LandingPageContext.Provider
       value={{
@@ -90,5 +78,4 @@ export const LandingPageProvider = ({ children }) => {
     </LandingPageContext.Provider>
   );
 };
-
 export default LandingPageContext;
