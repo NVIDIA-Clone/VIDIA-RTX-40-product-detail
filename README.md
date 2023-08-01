@@ -60,7 +60,7 @@ The creative element is a dynamic feature that allows the user to choose what is
 # Tech Stack #
 * [NodeJS](https://nodejs.org/en "Node")
 * [React](https://react.dev/ "React")
-* [Tailwind CSS]
+* [Tailwind CSS](https://tailwindcss.com/)
     * [Tailwind Vite Install Guide](https://tailwindcss.com/docs/guides/vite)
     * [Tailwind Cheatsheet](https://tailwindcomponents.com/cheatsheet/)
 * [Express]<http://expressjs.com/>
