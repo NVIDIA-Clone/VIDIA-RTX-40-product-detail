@@ -46,6 +46,10 @@ A youtube video is embedded showcasing the DLSS (Deep Learning Super Sampling) t
 ## Reflex ##
 Similar to DLSS section, a youtube video is embedded to show the features of the product.
 
+![Creative-screenshot](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/blob/a9bd289dddf6c6c4fa544e18a8fb399de9ef36cc/vite-project/public/images/creative-screenshot.png)
+## Creative ##
+The creative element is a dynamic feature that allows the user to choose what is visible below the navigator selectors. Similar to the inner nav bar at the top of the page, a green line indicates which section within the creative portion is currently in view. 
+
 # Development Setup #
 
 1. Install dependencies: `npm install`
