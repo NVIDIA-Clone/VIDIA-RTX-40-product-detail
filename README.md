@@ -10,8 +10,24 @@ See https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/<br/>
 The motivation for this project stems from our teams interest into the tech world. The NVIDIA website has a high level of interactivity, featuring numerous animations and presenting a challenging environment for web development. By replicating this website, we open ourselves up to a learning opportunity that surpasses what we would gain from working on a less complex site.
 
 # Website features #
+![architecture-screenshot](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/blob/b8b6ef1c53c442215178a9dbb222839ca759c504/vite-project/public/images/architecture-screenshot.png)
 
-##
+## Landing Page ##
+While simple in appearance, the landing page also serves as the React context used for the API queries to gather data required for the rest of the page. 
+## Nav bars ##
+The website features multiple responsive Nav bars.
+#### Header ####
+ At the top, a header with the company logo and multiple links to other pages within the corporate website. The nav bar is hidden after scrolling past the landing page. Currently the links are dead, meaning they do not point to actual URLs. Additionally the login capability is still not implemented.
+#### Outer Nav Bar ####
+Below the header, the outer nav bar features drop downs to navigate within the specific product category being advertised, in this instance the GPU product line and associated technology and information. This outer nav is shown at all times at the top of the page once the landing page is scrolled past.
+#### Inner Nav Bar ####
+The inner nav bar is directly below the landing page, and as the user scrolls down it attaches itself below the outer nav bar and remains visible for the rest of the page. It features clickable links to go to various sections within the page, as well as an animated line indicating which section is currently being viewed which is dynamic with user input.
+
+## Accolades ##
+The accolades section utilizes a fading carousel feature that shows sentence length accolades about the product. 
+
+## Architecture ##
+This section utilizes an animated transform that is responsive to the user scrolling down the page. Upon reaching a breakpoint, the animation kicks off, moving the chip image to the right and then fading in to a set point on the section. In parallel the text changes to a grid of icons that feature the various benefits of the product's architecture. 
 
 
 ## Development Setup ##
@@ -22,11 +38,11 @@ The motivation for this project stems from our teams interest into the tech worl
 4. Open Up Your Dev Environment `npm run dev`
 
 # Tech Stack #
-*[NodeJS]<https://nodejs.org/en>
-*[React]<https://react.dev/>
+*[NodeJS](https://nodejs.org/en "Node")
+*[React](https://react.dev/ "React")
 *[Tailwind CSS]
-    *[Tailwind Vite Install Guide]<https://tailwindcss.com/docs/guides/vite>
-    *[Tailwind Cheatsheet]<https://tailwindcomponents.com/cheatsheet/>
+    *[Tailwind Vite Install Guide](https://tailwindcss.com/docs/guides/vite)
+    *[Tailwind Cheatsheet](https://tailwindcomponents.com/cheatsheet/)
 *[Express]<http://expressjs.com/>
 *[PostgreSQL]<https://www.postgresql.org/>
 
