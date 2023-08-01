@@ -2,7 +2,7 @@
 
 ## Description
 
-This project was based on creating a clone replica of a product detail page for the NVIDIA RTX 4090. <br/>
+A full stack application including database, API server and website detailing a video card product similar to NVIDIA's RTX-40 series.<br/>
 See https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/<br/>
 
 The motivation for this project stems from our teams interest into the tech world. The NVIDIA website has a high level of interactivity, featuring numerous animations and presenting a challenging environment for web development. By replicating this website, we open ourselves up to a learning opportunity that surpasses what we would gain from working on a less complex site.
