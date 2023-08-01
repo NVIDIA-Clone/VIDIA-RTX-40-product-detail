@@ -38,7 +38,13 @@ This section features charts that detail the performance capability of the produ
 ## Raytracing ##
 The raytracing section features an image comparison tool, that allows the user to move a line element left and right that will show the difference between the product's ray tracing RTX feature on or off. 
 
+![DLSS-Reflex-screenshot](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/blob/5659edb825356650e1b6d118cc4f04baf6c347c8/vite-project/public/images/dlss-reflex-screenshot.png)
 
+## DLSS 3 ##
+A youtube video is embedded showcasing the DLSS (Deep Learning Super Sampling) technoloy.
+
+## Reflex ##
+Similar to DLSS section, a youtube video is embedded to show the features of the product.
 
 # Development Setup #
 
