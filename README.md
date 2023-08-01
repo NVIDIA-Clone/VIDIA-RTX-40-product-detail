@@ -33,7 +33,14 @@ This section utilizes an animated transform that is responsive to the user scrol
 ## Performance ##
 This section features charts that detail the performance capability of the product with various technology features enabled as well as comparison to other products the company offers.
 
-## Development Setup ##
+
+![Raytracing-screenshot](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/blob/315884a29f00ad257dabc4f7727c686d10c365e0/vite-project/public/images/raytracing-screenshot.png)
+## Raytracing ##
+The raytracing section features an image comparison tool, that allows the user to move a line element left and right that will show the difference between the product's ray tracing RTX feature on or off. 
+
+
+
+# Development Setup #
 
 1. Install dependencies: `npm install`
 2. Create your `.env` file: `touch .env`
