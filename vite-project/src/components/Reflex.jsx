@@ -8,7 +8,7 @@ const Reflex = () => {
   return (
     <>
       <div className="font-Sig float-left w-[100%] h-[940px] bg-black">
-        <div className="bg-center bg-no-repeat bg-[url(images/geforce-reflex-overwatch2-video-bg-2560-d.jpg)]">
+        <div className="bg-center bg-no-repeat bg-[url(/images/geforce-reflex-overwatch2-video-bg-2560-d.jpg)]">
           <div className="w-[990pt] ml-auto mr-auto pl-0 pr-0 text-center">
             <h2 className="text-[#ffffff] pt-[75px] text-[20px] font-bold text-center">
               NVIDIA Reflex
@@ -65,8 +65,8 @@ const Reflex = () => {
               ></iframe>
             </div>
             <img
-              className="relative h-[106.85px] w-[190px] left-[86%] mt-[4rem]"
-              src="/images/overwatch-logo-.png"
+              className="relative h-[106.85px] w-[190px] left-[86%] mt-[3rem] mb-[1rem]"
+              src="/images/overwatch2-logo.svg"
             ></img>
           </div>
         </div>

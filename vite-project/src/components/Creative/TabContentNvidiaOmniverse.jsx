@@ -10,18 +10,18 @@ const TabContentNvidiaOmniverse = () => {
       <div className="bg-[url(/images/nvidia-omniverse-creators.jpg)] bg-contain ml-auto mr-auto mt-[3rem] w-[850px] h-[478px]"></div>
       <div className="w-[858px] font-Sig text-left ml-auto mr-auto mt-[14px]">
         <h3 className="font-semibold text-white text-[22px]">
-          Nvidia Omniverse
+          Vidia Omniverse
         </h3>
         <h4 className="text-white text-[36px] mt-[10px] font-bold">
           Connect Your Creative Worlds to a Universe of Possibility
         </h4>
         <p className="text-[#eee] text-[15px] mt-[10px]">
           <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
-            NVIDIA Omniverse™
+            VIDIA Omniverse™
           </a>{" "}
           is a 3D design collaboration platform within the{" "}
           <a className="cursor-pointer hover:decoration-white underline decoration-solid decoration-2 decoration-[#76b900]">
-            NVIDIA Studio
+            VIDIA Studio
           </a>{" "}
           suite of tools for creators. Built to<br></br> accelerate workflows
           and unite apps and assets to bring your ideas to life—fast.
