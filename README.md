@@ -50,6 +50,10 @@ Similar to DLSS section, a youtube video is embedded to show the features of the
 ## Creative ##
 The creative element is a dynamic feature that allows the user to choose what is visible below the navigator selectors. Similar to the inner nav bar at the top of the page, a green line indicates which section within the creative portion is currently in view. 
 
+![additional-features-screenshot](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/blob/e35e615c7db8681bd699416c3a79c6314d0339fe/vite-project/public/images/features-screenshot.png)
+## Additional Features ##
+Another section detailing the additional features and benefits of the product. 
+
 # Development Setup #
 
 1. Install dependencies: `npm install`
