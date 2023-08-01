@@ -1,4 +1,6 @@
 # VIDIA-RTX-40-product-detail
+![splash-image](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/main/vite-project/public/images/VIDIA_spash.png)
+
 
 ## Description
 
