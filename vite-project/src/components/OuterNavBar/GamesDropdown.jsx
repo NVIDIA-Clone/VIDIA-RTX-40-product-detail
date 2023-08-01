@@ -9,7 +9,7 @@ const GamesDropdown = () => {
             </a>
             <div className="group-hover/games:block dropdown-menu hidden absolute h-auto ">
                 <ul className="top-0 w-72 space-y-1 bg-white">
-                    <li className="group/dlss py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">DLSS & Raytracing</a>
+                    <li className="group/dlss py-1 mt-1.5 ml-1.5" ><a className="block text-NVDropDownGray hover:text-black">DLSS & Raytracing</a>
                         <div className="group/dlss dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
                                 <div className="group-hover/dlss:block bg-white box-content inset-x-72 top-1.5 dropdown-menu hidden absolute h-fit w-56 space-y-2 p-1 shadow-2xl">
@@ -19,7 +19,7 @@ const GamesDropdown = () => {
                             </ul> 
                         </div>        
                     </li>
-                    <li className="group/architecture py-1 m-2"><a className="block text-NVDropDownGray hover:text-black">Architecture</a>
+                    <li className="group/architecture py-1 ml-2"><a className="block text-NVDropDownGray hover:text-black">Architecture</a>
                         <div className="group-hover/architecture dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
                                 <div className="group-hover/architecture:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
@@ -29,7 +29,7 @@ const GamesDropdown = () => {
                             </ul>
                         </div>
                     </li>
-                    <li className="group/gaming py-1 m-2"><a className="block text-NVDropDownGray hover:text-black">Gaming</a>
+                    <li className="group/gaming py-1 ml-2"><a className="block text-NVDropDownGray hover:text-black">Gaming</a>
                         <div className="group/gaming dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
                                 <div className="group-hover/gaming:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
@@ -41,7 +41,7 @@ const GamesDropdown = () => {
                             </ul>
                         </div>
                     </li>
-                    <li className="group/studiocreatortools py-1 m-2"><a className="block text-NVDropDownGray hover:text-black">Studio Creator Tools</a>
+                    <li className="group/studiocreatortools py-1 ml-2"><a className="block text-NVDropDownGray hover:text-black">Studio Creator Tools</a>
                         <div className="group/studiocreatortools dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
                                 <div className="group-hover/studiocreatortools:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
