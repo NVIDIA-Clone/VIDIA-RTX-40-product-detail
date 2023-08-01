@@ -29,6 +29,9 @@ The accolades section utilizes a fading carousel feature that shows sentence len
 ## Architecture ##
 This section utilizes an animated transform that is responsive to the user scrolling down the page. Upon reaching a breakpoint, the animation kicks off, moving the chip image to the right and then fading in to a set point on the section. In parallel the text changes to a grid of icons that feature the various benefits of the product's architecture. 
 
+![Performance-screenshot](https://github.com/NVIDIA-Clone/VIDIA-RTX-40-product-detail/blob/8f81285bb3247b4b7b6d26a2d2945c8ccda6cfe9/vite-project/public/images/performance-screenshot.png)
+## Performance ##
+This section features charts that detail the performance capability of the product with various technology features enabled as well as comparison to other products the company offers.
 
 ## Development Setup ##
 
@@ -38,20 +41,20 @@ This section utilizes an animated transform that is responsive to the user scrol
 4. Open Up Your Dev Environment `npm run dev`
 
 # Tech Stack #
-*[NodeJS](https://nodejs.org/en "Node")
-*[React](https://react.dev/ "React")
-*[Tailwind CSS]
-    *[Tailwind Vite Install Guide](https://tailwindcss.com/docs/guides/vite)
-    *[Tailwind Cheatsheet](https://tailwindcomponents.com/cheatsheet/)
-*[Express]<http://expressjs.com/>
-*[PostgreSQL]<https://www.postgresql.org/>
+* [NodeJS](https://nodejs.org/en "Node")
+* [React](https://react.dev/ "React")
+* [Tailwind CSS]
+    * [Tailwind Vite Install Guide](https://tailwindcss.com/docs/guides/vite)
+    * [Tailwind Cheatsheet](https://tailwindcomponents.com/cheatsheet/)
+* [Express]<http://expressjs.com/>
+* [PostgreSQL]<https://www.postgresql.org/>
 
 ## Why use Tailwind CSS? ##
 There are many benefits of using a CSS framework like Tailwind. Below are the major ones.
-*_You write less custom CSS_. With Tailwind, you style elements by applying pre-existing classes directly in your HTML. By using utility classes in this way, you can build custom designs without writing CSS.
-*_You keep CSS files small_. Without a framework like Tailwind, you have to keep writing CSS as you add new features and components. As a result, your CSS files continue to grow and get heavier. By using utilities like Tailwind’s flexbox and padding utilities, most styles are reusable so you rarely need to write new CSS.
-*_You don’t have to invent class names_. When Tailwind, you’re choosing classes from a pre-defined design system. That means you don’t need to agonize over picking the “perfect” class names for certain styles and components, or remember complicated ones like sidebar-inner-wrapper.
-*_You can make safer changes_. With the traditional approach, if you make changes to CSS, you may break something across your site. Unlike CSS, utility classes in your HTML are local. That means you can change them without worrying about breaking something else on your site.
+* _You write less custom CSS_. With Tailwind, you style elements by applying pre-existing classes directly in your HTML. By using utility classes in this way, you can build custom designs without writing CSS.
+* _You keep CSS files small_. Without a framework like Tailwind, you have to keep writing CSS as you add new features and components. As a result, your CSS files continue to grow and get heavier. By using utilities like Tailwind’s flexbox and padding utilities, most styles are reusable so you rarely need to write new CSS.
+* _You don’t have to invent class names_. When Tailwind, you’re choosing classes from a pre-defined design system. That means you don’t need to agonize over picking the “perfect” class names for certain styles and components, or remember complicated ones like sidebar-inner-wrapper.
+* _You can make safer changes_. With the traditional approach, if you make changes to CSS, you may break something across your site. Unlike CSS, utility classes in your HTML are local. That means you can change them without worrying about breaking something else on your site.
 
 ##Contributors
 
