@@ -10,7 +10,7 @@ const ProductDropdown = () => {
             </a>
             <div className="group-hover/product:block dropdown-menu hidden absolute h-auto ">
                 <ul className="top-0 w-72 space-y-1 bg-white">
-                    <li className="group/graphicscardsdesktops py-1 m-1.5" ><a className="block text-NVDropDownGray hover:text-black">Graphics Cards & Desktops</a>
+                    <li className="group/graphicscardsdesktops py-1 ml-1.5 mt-1.5" ><a className="block text-NVDropDownGray hover:text-black">Graphics Cards & Desktops</a>
                         <div className="group/graphicscardsdesktops dropdown px-4 hover:text-black tracking-wide">
                             <ul>
                                 <div className="group-hover/graphicscardsdesktops:block bg-white box-content inset-x-72 top-1.5 dropdown-menu hidden absolute h-fit w-56 space-y-2 p-1 shadow-2xl">
@@ -30,7 +30,7 @@ const ProductDropdown = () => {
                             </ul> 
                         </div>        
                     </li>
-                    <li className="group/laptops py-1 m-2"><a className="block text-NVDropDownGray hover:text-black">Laptops</a>
+                    <li className="group/laptops py-1 ml-2"><a className="block text-NVDropDownGray hover:text-black">Laptops</a>
                         <div className="group/laptops dropdown px-4 hover:text-black tracking-wide">
                             <ul className="flex">
                                 <div className="group-hover/laptops:block bg-white box-content inset-x-72 inset-y-12 dropdown-menu hidden absolute h-fit w-56 space-y-1.5 p-1 shadow-2xl">
