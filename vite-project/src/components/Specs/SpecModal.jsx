@@ -78,7 +78,7 @@ const SpecModal = () => {
                 </button>
               </div>
               <div className="relative w-full col-span-6 col-start-2 row-span-1 row-start-2 text-center specs-modal-table bg-NVBGGray">
-                <table className="table-fixed w-fit">
+                <table className="table-auto w-full">
                   <tbody>
                     <tr className="specs-row">
                       <td className="py-4 text-sm font-bold w-44">

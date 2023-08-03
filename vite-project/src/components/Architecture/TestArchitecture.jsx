@@ -7,10 +7,8 @@ const TestArchitecture = () => {
     architectureList,
     architectureListVer2,
     isScrolled,
-    isFaded,
-    setIsFaded,
     isFadedOut,
-    setIsFadedOut,
+    isScrolledUp,
   } = useContext(ArchitectureContext);
   const { isHovered, handleMouseEnter, handleMouseLeave } =
     useContext(LandingPageContext);
@@ -18,18 +16,18 @@ const TestArchitecture = () => {
     <>
       <div
         id="containerDiv"
-        className={`
+        className={`max-w-[1250px] w-[1200px]
           ${
             isScrolled
               ? "flex flex-col items-center justify-center animate-fadeOut duration-500"
               : "flex flex-col items-center justify-center opacity-100"
           }
-          ${isFadedOut ? "opacity-0" : "opacity-100"}
+           ${isFadedOut ? "opacity-0" : "opacity-100"}
         `}
       >
         <div
           id="titleDiv"
-          className="absolute top-[100px] flex flex-col items-center z-5 pb-[20px]"
+          className="absolute top-[100px] flex flex-col items-center z-5 mb-[120px]"
         >
           <h2 className="text-white mb-[25px] text-[1.25rem] font-bold font-Sig">
             {architectureListVer2.current[0]}
@@ -38,12 +36,14 @@ const TestArchitecture = () => {
             {architectureListVer2.current[1]}
           </h2>
         </div>
-        <div id="notTitle" className="">
+        <div id="notTitle" className="pt-[120px]">
           <div id="forImage">
             <img
               src="/images/architecture.png"
               alt=""
-              className="absolute top-[230px] left-[350px] z-0"
+              className={`absolute top-[300px] left-[350px] z-0 ${
+                isScrolled ? "translate-x-[17vw]  duration-700" : null
+              }`}
             />
           </div>
           <div
@@ -51,7 +51,7 @@ const TestArchitecture = () => {
             id="list"
           >
             {architectureListVer2.current[2].content.map((item, index) => (
-              <div key={index} className="py-[15px] ">
+              <div key={index} className="py-[30px] ">
                 <h3 className="text-white font-Sig text-[1.5rem] font-bold">
                   {item.title}
                 </h3>
@@ -95,12 +95,17 @@ const TestArchitecture = () => {
       {/* stage 2 */}
       <div
         id="stage2container"
-        className={
-          isScrolled ? "flex flex-col animate-fadeIn duration-500" : "opacity-0"
-        }
+        className={`
+        max-w-1250px w-[1200px]
+          ${
+            isScrolled
+              ? "flex flex-col animate-fadeIn duration-500"
+              : "opacity-0"
+          }
+        `}
       >
         {/* This is the Title */}
-        <div className="flex flex-col pt-[90px] pb-[30px] items-center justify-center">
+        <div className="flex flex-col pb-[70px] items-center justify-center">
           <h2 className="text-white mb-[25px] text-xl font-bold">
             The Ultimate Platform for Gamers and Creators
           </h2>
@@ -110,13 +115,13 @@ const TestArchitecture = () => {
         </div>
         <div className="flex flex-col items-center ">
           <img
-            className="absolute z-0 opacity-30 "
+            className={`absolute z-0 opacity-30`}
             src="/images/architecture.png"
             alt="Microchip made by Vidia with a rainbow color scheme"
           />
         </div>
         {/* This is the Items */}
-        <div className="flex flex-wrap w-full justify-evenly over">
+        <div className="flex flex-wrap w-full justify-evenly">
           {architectureList.current.map((item, index) => (
             <div
               key={index}

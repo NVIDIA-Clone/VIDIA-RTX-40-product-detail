@@ -136,7 +136,6 @@ export const ArchitectureProvider = ({ children }) => {
   const architectureList = useRef(architectureListItems);
   const architectureListVer2 = useRef(architectureListItemsVer2);
   const [isScrolled, setisScrolled] = useState(false);
-  const [isFaded, setIsFaded] = useState(false);
   const [isFadedOut, setIsFadedOut] = useState(true);
   //FUNCTIONS IF NEED BE
 
@@ -148,8 +147,6 @@ export const ArchitectureProvider = ({ children }) => {
         architectureListVer2,
         isScrolled,
         setisScrolled,
-        isFaded,
-        setIsFaded,
         isFadedOut,
         setIsFadedOut,
       }}

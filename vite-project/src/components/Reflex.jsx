@@ -65,8 +65,8 @@ const Reflex = () => {
               ></iframe>
             </div>
             <img
-              className="relative h-[106.85px] w-[190px] left-[86%] mt-[4rem]"
-              src="/images/overwatch-logo-.png"
+              className="relative h-[106.85px] w-[190px] left-[86%] mt-[3rem] mb-[1rem]"
+              src="/images/overwatch2-logo.svg"
             ></img>
           </div>
         </div>
