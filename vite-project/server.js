@@ -13,7 +13,8 @@ const pool = new Pool({
 
 app.use(express.static('dist'));
 app.use(express.json());
-app.use(cors({ origin: '*' }));
+
+app.use(cors({ origin: '*' })); 
 
 app.get('/product', async (req, res) => {
   try {
