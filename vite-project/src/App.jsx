@@ -17,16 +17,21 @@ import Shop from "./components/Shop/Shop";
 import Additional from "./components/Additional/Additional";
 import Gallery from "./components/Gallery/Gallery";
 
+import store from "./redux/store";
+import { Provider } from 'react-redux'
+
+
 function App() {
   return (
     <>
-      <LandingPageProvider>
-        <Header />
-        <OuterNavBar />
+      {/* <LandingPageProvider> */}
+      <Provider store={store}>
+        {/* <Header />
+        <OuterNavBar /> */}
         <LandingPage />
-        <InnerNavbar />
-        <Accolades />
-        <ArchitectureProvider>
+        {/* <InnerNavbar />
+        <Accolades /> */}
+        {/* <ArchitectureProvider>
           <Architecture />
         </ArchitectureProvider>
         <Performance />
@@ -38,8 +43,9 @@ function App() {
         <Specs />
         <Gallery />
         <Shop />
-        <Footer />
-      </LandingPageProvider>
+        <Footer /> */}
+      {/* </LandingPageProvider> */}
+      </Provider>
     </>
   );
 }

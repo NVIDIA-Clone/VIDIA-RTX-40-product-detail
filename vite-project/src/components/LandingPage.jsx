@@ -1,7 +1,25 @@
-import { useContext } from 'react';
-import LandingPageContext from './LandingPageContext';
+// import { useContext } from 'react';
+// import LandingPageContext from './LandingPageContext';
+import { useSelector, useDispatch } from 'react-redux';
+import React, {useEffect} from 'react'
+import { fetchProductsData } from '../redux/slices/productSlice';
+
 const LandingPage = () => {
-  const data = useContext(LandingPageContext);
+  const dispatch = useDispatch();
+
+  const landPageURL = `https://vidia-copy.onrender.com/product`
+
+  useEffect( () => {
+    dispatch(fetchProductsData(landPageURL))
+  }, [dispatch, landPageURL])
+
+  const data = useSelector((state) => {
+    return state.product.data
+  })
+
+  if (!data) {
+    return <div>Loading...</div>
+  }
   return (
     <>
       <div
@@ -14,14 +32,14 @@ const LandingPage = () => {
             className="text-[#ffffff] font-Sig text-left"
           >
             <h1 className="text-[3.75rem] font-bold p-[8px_0]">
-              {data.data.name}
+              {data?.name || "Loading"}
             </h1>
             <h2 className="text-[36px] font-bold p-[8px_0]">BEYOND FAST</h2>
             <p className="text-[15px] leading-[1.666em] p-[8px_0] mr-[43vw] ">
-              {data.data.description}
+              {data?.description || "Loading"}
             </p>
             <h3 className="text-[26px] font-bold p-[8px_0]">
-              Starting at ${data.data.price}
+              Starting at ${data?.price || "...Loading"}
             </h3>
             <div className="p-[8px_0] mb-[8rem]">
               <button className="text-[18px]">
