@@ -15,15 +15,15 @@ app.use(express.static('dist'));
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 
-app.get('/product', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM products');
-    res.status(200).send(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status.send('Internal server error.');
-  }
-});
+// app.get('/product', async (req, res) => {
+//   try {
+//     const result = await pool.query('SELECT * FROM products');
+//     res.status(200).send(result.rows);
+//   } catch (err) {
+//     console.error(err);
+//     res.status.send('Internal server error.');
+//   }
+// });
 
 app.get('/product/:id', async (req, res) => {
   const { id } = req.params;
