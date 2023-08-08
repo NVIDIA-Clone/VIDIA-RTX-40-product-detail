@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.static("dist"));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5175']
+}));
 
 if (cluster.isMaster) {
   const cpuCount = os.cpus().length;
@@ -43,6 +45,7 @@ if (cluster.isMaster) {
 
       // Get all from specs
       app.get("/VIDIA_database/specs", logWorkerAndMemory, (req, res) => {
+
         db.collection("specs")
           .find()
           .sort({ name: 1 })
