@@ -45,9 +45,10 @@ export const LandingPageProvider = ({ children }) => {
   const [specs, setSpecs] = useState({});
   const accoladesList = useRef(items);
   const [isHovered, setIsHovered] = useState(false);
-  const [dataUrl, setDataUrl] = useState('https://vidia-product-page.onrender.com/VIDIA_database')
+  ///VIDIA_database/products
+  const [dataUrl, setDataUrl] = useState('https://vidia.onrender.com/VIDIA_database')
   // const dataURL = `http://localhost:5175/VIDIA_database`;
-//http://localhost:5175/VIDIA_database
+//http://localhost:3000/VIDIA_database
 //https://vidia-product-page.onrender.com/VIDIA_database
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -56,11 +57,9 @@ export const LandingPageProvider = ({ children }) => {
     setIsHovered(false);
   };
   useEffect(() => {
-    console.log('working')
     const getProductData = async () => {
       const productRes = await fetch(`${dataUrl}/products`);
       const productData = await productRes.json();
-      console.log(productData)
       setData(productData[0]);
       const specsRes = await fetch(`${dataUrl}/specs`);
       const specsData = await specsRes.json();
