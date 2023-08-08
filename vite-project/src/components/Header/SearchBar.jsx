@@ -8,7 +8,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="flex">
       <div className="flex items-center">
         {isSearchVisible ? (
           <svg
