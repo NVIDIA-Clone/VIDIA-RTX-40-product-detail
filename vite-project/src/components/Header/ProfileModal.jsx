@@ -9,8 +9,20 @@ const ProfileModal = () => {
     verify: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const options = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    };
+
+    // const response = await(fetch)("/VIDIA_database/users", options);
+
     if (validateData(formData));
   };
 
@@ -45,7 +57,7 @@ const ProfileModal = () => {
     } else if (data.username.length < 8) {
       setMessage("Please enter a username of 8 letters or longer");
     } else {
-      username === true;
+      username = true;
     }
     if (data.password === "") {
       setMessage("Please enter a valid password");
