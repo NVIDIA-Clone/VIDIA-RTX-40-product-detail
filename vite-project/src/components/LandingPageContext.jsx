@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, createContext, useRef } from 'react';
-const dataURL = `https://vidia-copy.onrender.com/product`;
+const dataURL = `https://vidia-product-page.onrender.com/VIDIA_database`;
 const items = [
   {
     id: 1,
