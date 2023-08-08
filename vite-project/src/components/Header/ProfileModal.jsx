@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ProfileModal = () => {
+const ProfileModal = ({ handleClick, handleReg }) => {
   const [message, setMessage] = useState("");
 
   const [formData, setFormData] = useState({
@@ -12,18 +12,25 @@ const ProfileModal = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const options = {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    };
+    if (validateData(formData)) {
+      console.log("validate is working");
+      const options = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      };
 
-    // const response = await(fetch)("/VIDIA_database/users", options);
-
-    if (validateData(formData));
+      const response = await fetch(
+        "http://0.0.0.0:3000/VIDIA_database/users",
+        options
+      );
+      await response.json();
+      clearForm();
+      setMessage("User successfully created!");
+    }
   };
 
   const handleChange = (e) => {
@@ -31,13 +38,13 @@ const ProfileModal = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const clearForm = () => {
+  function clearForm() {
     setFormData({
       username: "",
       password: "",
       verify: "",
     });
-  };
+  }
   const clearPassword = () => {
     setFormData({ ...formData, password: "", verify: "" });
   };
@@ -63,6 +70,7 @@ const ProfileModal = () => {
       setMessage("Please enter a valid password");
     } else if (regExp.test(data.password)) {
       password = true;
+      setMessage("You have entered a valid password");
     } else if (!regExp.test(data.password)) {
       clearPassword();
       setMessage("Password does not meet requirements, please re-enter");
@@ -74,48 +82,70 @@ const ProfileModal = () => {
       clearPassword();
       setMessage("Passwords do not match, try again.");
     }
+
+    if (username && password) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   return (
-    <div
-      id="overlay"
-      className="fixed flex top-0 left-0 h-full w-full bg-[transparent] z-9998 justify-center items-center"
-    >
-      <div className="flex z-60 h-[45rem] w-[30rem] top-1/2 left-1/2 bg-[red]  z-9999 ">
-        <form
-          className="flex flex-col justify-center items-center h-full w-full gap-x-.25rem "
-          onSubmit={handleSubmit}
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+      <div className="bg-[#5c5e5c] p-6 rounded-lg shadow-lg w-[25%] relative">
+        <button
+          onClick={() => {
+            handleReg();
+            handleClick();
+          }}
+          className="absolute top-2 right-2  hover:text-gray-900 focus:outline-none"
         >
-          <h1>Register</h1>
+          X
+        </button>
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+          <h1 className="text-2xl font-semibold mb-4">Register</h1>
           <label>Username</label>
           <input
             id="userName"
+            className="input"
             placeholder="Choose a username"
             onChange={handleChange}
             value={formData.username}
             name="username"
-          ></input>
-          <label>Password</label>
+          />
+          <label className="">Password</label>
           <input
             id="password"
+            className="input"
             placeholder="Choose a password"
             name="password"
             type="password"
             onChange={handleChange}
             value={formData.password}
-          ></input>
+          />
           <label>Re-enter Password</label>
           <input
             id="verifyPassword"
+            className="input"
             placeholder="Re-enter password"
             name="verify"
             type="password"
             onChange={handleChange}
             value={formData.verify}
-          ></input>
-          <div>{message}</div>
-          <button type="submit">Submit</button>
-          <button onClick={resetForm}>Reset Form</button>
+          />
+          <div className="text-red-500">{message}</div>
+          <button
+            type="submit"
+            className="btn-primary  cursor-pointer hover:text-[#76b900]"
+          >
+            Submit
+          </button>
+          <button
+            onClick={resetForm}
+            className="btn-secondary  cursor-pointer hover:text-[#76b900]"
+          >
+            Reset Form
+          </button>
         </form>
       </div>
     </div>

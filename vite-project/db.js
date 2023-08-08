@@ -7,7 +7,7 @@ let dbConnection;
 export function connectToDb(cb) {
   MongoClient.connect(process.env.DB_URI)
     .then((client) => {
-      dbConnection = client.db("fecdb");
+      dbConnection = client.db("VIDIA_database");
       return cb();
     })
     .catch((err) => {

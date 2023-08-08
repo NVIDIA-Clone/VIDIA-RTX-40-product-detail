@@ -10,7 +10,7 @@ const Profile = () => {
   };
 
   const handleReg = () => {
-    setModal(true);
+    setModal(!modal);
   };
 
   return (
@@ -46,7 +46,9 @@ const Profile = () => {
           />
         </svg>
       </div>
-      {modal && <ProfileModal />}
+      {modal && (
+        <ProfileModal handleClick={handleClick} handleReg={handleReg} />
+      )}
       {open && (
         <div>
           <ul className="flex p-[15px] gap-[10px] text-[#696969] text-sm">
