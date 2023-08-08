@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, createContext, useRef } from 'react';
-const dataURL = `https://vidia-product-page.onrender.com/VIDIA_database`;
+const dataURL = `https://vidia.onrender.com/VIDIA_database`;
 const items = [
   {
     id: 1,
@@ -53,10 +53,10 @@ export const LandingPageProvider = ({ children }) => {
   };
   useEffect(() => {
     const getProductData = async () => {
-      const productRes = await fetch(`${dataURL}`);
+      const productRes = await fetch(`${dataURL}/products`);
       const productData = await productRes.json();
       setData(productData[0]);
-      const specsRes = await fetch(`${dataURL}/1`);
+      const specsRes = await fetch(`${dataURL}/specs`);
       const specsData = await specsRes.json();
       setSpecs(specsData);
     };
