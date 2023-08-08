@@ -43,7 +43,7 @@ function Header() {
                 </li>
               </ul>
               {/* Right hand icons */}
-              <div className="flex pl-[3rem] gap-2 cursor-pointer">
+              <div className="flex pl-[3rem] gap-2 cursor-pointer content-end">
                 <SearchBar />
                 <Profile />
               </div>

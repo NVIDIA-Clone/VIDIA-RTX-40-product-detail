@@ -1,6 +1,5 @@
-import { MongoClient } from 'mongodb';
-import dotenv from 'dotenv';
-
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
 dotenv.config();
 let dbConnection;
@@ -8,15 +7,15 @@ let dbConnection;
 export function connectToDb(cb) {
   MongoClient.connect(process.env.DB_URI)
     .then((client) => {
-        dbConnection = client.db();
-        return cb();
+      dbConnection = client.db("VIDIA_database");
+      return cb();
     })
-    .catch(err => {
-        console.log(err);
-        return cb(err);
+    .catch((err) => {
+      console.log(err);
+      return cb(err);
     });
 }
 
 export function getDb() {
   return dbConnection;
-};
+}

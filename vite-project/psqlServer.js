@@ -24,7 +24,6 @@
 //     res.status.send('Internal server error.');
 //   }
 // });
-
 // app.get('/product/:id', async (req, res) => {
 //   const { id } = req.params;
 //   // check if input is a valid integer
@@ -43,6 +42,24 @@
 //   }
 // });
 
-// app.listen(PORT, () => {
-//   console.log('Listening on port', PORT);
-// });
+app.get('/product/:id', async (req, res) => {
+  const { id } = req.params;
+  // check if input is a valid integer
+  if(isNaN(parseInt(id, 10))) {
+    res.status(400).send("Bad Request: The request cannot be fulfilled due to bad syntax.");
+    return;
+  }
+  try {
+    const result = await pool.query('SELECT * FROM specs WHERE spec_id = $1', [
+      id,
+    ]);
+    res.status(200).send(result.rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal server error.');
+  }
+});
+
+app.listen(PORT, () => {
+  console.log('Listening on port', PORT);
+});
