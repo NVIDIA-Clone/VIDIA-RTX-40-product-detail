@@ -24,7 +24,7 @@ const ProfileModal = ({ handleClick, handleReg }) => {
       };
 
       const response = await fetch(
-        "https://vidia-product-page.onrender.com/VIDIA_database/users",
+        "https://vidia.onrender.com/VIDIA_database/users",
         options
       );
       await response.json();
