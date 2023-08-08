@@ -24,7 +24,6 @@
 //     res.status.send('Internal server error.');
 //   }
 // });
-
 // app.get('/product/:id', async (req, res) => {
 //   const { id } = req.params;
 //   // check if input is a valid integer
@@ -46,4 +45,3 @@
 // app.listen(PORT, () => {
 //   console.log('Listening on port', PORT);
 // });
-

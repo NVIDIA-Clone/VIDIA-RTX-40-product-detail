@@ -5,6 +5,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cluster from 'cluster';
 import os from 'os';
+import { check, validationResult } from "express-validator";
+const app = express();
 
 dotenv.config();
 
@@ -13,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.static('dist'));
 app.use(express.json());
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: "*" }));
 
 if (cluster.isMaster) {
   const cpuCount = os.cpus().length;
@@ -135,8 +137,41 @@ app.get('/VIDIA_database/specs', logWorkerAndMemory, (req, res) => {
       freeSystemMemory,
       cpus,
     });
-  });
-  
+  });   
+    
+app.post(
+  "/VIDIA_database/users",
+  [
+    check("username", "Please enter a valid username")
+      .not()
+      .isEmpty()
+      .isLength({ min: 8 }),
+    check("password", "Plese enter a valid password")
+      .not()
+      .isEmpty()
+      .isLength({ min: 10 })
+      .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&]).{10,}$/),
+  ],
+  (req, res) => {
+    const user = req.body;
+    const errors = validationResult(req);
+    console.log(errors.errors);
+    if (errors.errors.length > 0) {
+      res.status(400).send("Invalid password or username.");
+    } else {
+      db.collection("users")
+        .insertOne(user)
+        .then((result) => {
+          res.status(201).json(result);
+        })
+        .catch((err) => {
+          res
+            .status(500)
+            .json({ err: "Could not create user in the Database" });
+        });
+    }
+  }
+);
 
       app.listen(PORT, () => {
         console.log(`listening on port ${PORT}`);
