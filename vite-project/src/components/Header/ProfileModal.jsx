@@ -24,7 +24,7 @@ const ProfileModal = ({ handleClick, handleReg }) => {
       };
 
       const response = await fetch(
-        "http://0.0.0.0:3000/VIDIA_database/users",
+        "https://vidia-product-page.onrender.com/VIDIA_database/users",
         options
       );
       await response.json();
@@ -91,19 +91,19 @@ const ProfileModal = ({ handleClick, handleReg }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
       <div className="bg-[#5c5e5c] p-6 rounded-lg shadow-lg w-[25%] relative">
         <button
           onClick={() => {
             handleReg();
             handleClick();
           }}
-          className="absolute top-2 right-2  hover:text-gray-900 focus:outline-none"
+          className="absolute top-2 right-2 hover:text-gray-900 focus:outline-none"
         >
           X
         </button>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <h1 className="text-2xl font-semibold mb-4">Register</h1>
+          <h1 className="mb-4 text-2xl font-semibold">Register</h1>
           <label>Username</label>
           <input
             id="userName"
