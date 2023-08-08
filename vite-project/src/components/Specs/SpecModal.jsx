@@ -384,7 +384,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {spec[0].vulkan ? "Yes" : "No"}
+                          {specs[0].vulkan ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -444,7 +444,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{spec[0].cuda_capabilities}</h5>
+                        <h5 className="text-sm">{specs[0].cuda_capabilities}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row ">
