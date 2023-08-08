@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.static("dist"));
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors());
 
 if (cluster.isMaster) {
   const cpuCount = os.cpus().length;
