@@ -6,7 +6,6 @@ import cors from 'cors';
 import cluster from 'cluster';
 import os from 'os';
 import { check, validationResult } from "express-validator";
-const app = express();
 
 dotenv.config();
 
