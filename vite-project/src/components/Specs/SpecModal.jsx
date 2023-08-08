@@ -1,11 +1,17 @@
 import { useState, useContext } from "react";
 import LandingPageContext from "../LandingPageContext.jsx";
+//Redux
+import { useSelector, useDispatch } from 'react-redux';
+import {useEffect} from 'react'
+import { fetchSpecsData } from '../../Redux/slice.js';
 
 const SpecModal = () => {
   const [showModal, setShowModal] = useState(false);
   const { isHovered, handleMouseEnter, handleMouseLeave, specs } =
     useContext(LandingPageContext);
   const [fadingOut, setFadingOut] = useState(false);
+  
+
 
   const handleOpenClick = () => {
     setShowModal(true);
@@ -18,7 +24,26 @@ const SpecModal = () => {
       setFadingOut(false);
     }, 600);
   };
+//Redux
+const data = useSelector((state) => state.product.data.specs);
 
+  const dispatch = useDispatch();
+
+  const [landPageURL, setlandPageURL] = useState(`https://vidia.onrender.com/VIDIA_database/specs`)
+  // const landPageURL = `https://vidia.onrender.com/VIDIA_database/specs`
+
+  useEffect( () => {
+    dispatch(fetchSpecsData(landPageURL))
+
+  }, [landPageURL, dispatch])
+
+  
+
+  
+  if (!data) {
+    return <div>Loading...</div>
+  }
+console.log(data.boost_clock)
   return (
     <>
       <button
@@ -88,7 +113,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">VIDIA CUDA Cores</h5>
                       </td>
                       <td className="w-40 py-4">
-                        <h5 className="text-sm">{specs[0].vidia_cuda_cores}</h5>
+                        <h5 className="text-sm">{data.vidia_cuda_cores}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -97,7 +122,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Boost Clock (GHz)</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].boost_clock}</h5>
+                        <h5 className="text-sm">{data.boost_clock}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -106,7 +131,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Base Clock (GHz)</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].base_clock}</h5>
+                        <h5 className="text-sm">{data.base_clock}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row blank-row">
@@ -121,7 +146,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 ">
                         <h5 className="text-sm">
-                          {specs[0].standard_memory_config}
+                          {data.standard_memory_config}
                         </h5>
                       </td>
                     </tr>
@@ -131,7 +156,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Memory Interface Width</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].memory_interface}</h5>
+                        <h5 className="text-sm">{data.memory_interface}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row blank-row">
@@ -147,7 +172,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Ray Tracing Cores</h5>
                       </td>
                       <td className="w-40 py-4">
-                        <h5 className="text-sm">{specs[0].ray_tracing_cores}</h5>
+                        <h5 className="text-sm">{data.ray_tracing_cores}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -156,7 +181,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Tensor Cores</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].tensor_cores}</h5>
+                        <h5 className="text-sm">{data.tensor_cores}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -165,7 +190,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">VIDIA Architecture</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].vidia_architecture}</h5>
+                        <h5 className="text-sm">{data.vidia_architecture}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -176,7 +201,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].vidia_dlss}</h5>
+                        <h5 className="text-sm">{data.vidia_dlss}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -188,7 +213,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_reflex ? "Yes" : "No"}
+                          {data.vidia_reflex ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -201,7 +226,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_broadcast ? "Yes" : "No"}
+                          {data.vidia_broadcast ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -212,7 +237,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].pci_express_gen_4 ? "Yes" : "No"}
+                          {data.pci_express_gen_4 ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -223,7 +248,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].resizeable_bar ? "Yes" : "No"}
+                          {data.resizeable_bar ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -236,7 +261,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_geforce_experience ? "Yes" : "No"}
+                          {data.vidia_geforce_experience ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -249,7 +274,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_ansel ? "Yes" : "No"}
+                          {data.vidia_ansel ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -260,7 +285,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_freestyle ? "Yes" : "No"}
+                          {data.vidia_freestyle ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -273,7 +298,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_shadowplay ? "Yes" : "No"}
+                          {data.vidia_shadowplay ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -284,7 +309,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_highlights ? "Yes" : "No"}
+                          {data.vidia_highlights ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -297,7 +322,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_gsync ? "Yes" : "No"}
+                          {data.vidia_gsync ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -310,7 +335,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].game_ready_drivers ? "Yes" : "No"}
+                          {data.game_ready_drivers ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -323,7 +348,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_studio_drivers ? "Yes" : "No"}
+                          {data.vidia_studio_drivers ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -336,7 +361,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_omniverse ? "Yes" : "No"}
+                          {data.vidia_omniverse ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -349,7 +374,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].directx_12_ultimate ? "Yes" : "No"}
+                          {data.directx_12_ultimate ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -360,7 +385,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vidia_gpu_boost ? "Yes" : "No"}
+                          {data.vidia_gpu_boost ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -373,7 +398,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vlink ? "Yes" : "No"}
+                          {data.vlink ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -384,7 +409,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vulkan ? "Yes" : "No"}
+                          {data.vulkan ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -396,7 +421,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].vidia_encoder}</h5>
+                        <h5 className="text-sm">{data.vidia_encoder}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row ">
@@ -407,7 +432,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].vidia_decoder}</h5>
+                        <h5 className="text-sm">{data.vidia_decoder}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row ">
@@ -419,7 +444,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].av1_encode ? "Yes" : "No"}
+                          {data.av1_encode ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -432,7 +457,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].av1_decode ? "Yes" : "No"}
+                          {data.av1_decode ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -444,7 +469,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].cuda_capabilities}</h5>
+                        <h5 className="text-sm">{data.cuda_capabilities}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row ">
@@ -456,7 +481,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].vr_ready ? "Yes" : "No"}
+                          {data.vr_ready ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
@@ -475,7 +500,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4">
-                        <h5 className="text-sm">{specs[0].maximum_resolution}</h5>
+                        <h5 className="text-sm">{data.maximum_resolution}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -506,7 +531,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">HDCP</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].hdcp}</h5>
+                        <h5 className="text-sm">{data.hdcp}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row blank-row">
@@ -522,7 +547,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Length</h5>
                       </td>
                       <td className="w-40 py-4">
-                        <h5 className="text-sm">{specs[0].length}</h5>
+                        <h5 className="text-sm">{data.length}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -531,7 +556,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Width</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].width}</h5>
+                        <h5 className="text-sm">{data.width}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -540,7 +565,7 @@ const SpecModal = () => {
                         <h5 className="text-sm">Slots</h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs[0].slots}</h5>
+                        <h5 className="text-sm">{data.slots}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row blank-row">
@@ -558,7 +583,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4">
-                        <h5 className="text-sm">{specs[0].maximum_gpu_temp}</h5>
+                        <h5 className="text-sm">{data.maximum_gpu_temp}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row">
@@ -568,7 +593,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].idle_power}
+                          {data.idle_power}
                           <sup>(5)</sup>
                         </h5>
                       </td>
@@ -580,7 +605,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].video_playback_power}
+                          {data.video_playback_power}
                           <sup>(6)</sup>
                         </h5>
                       </td>
@@ -592,7 +617,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].average_gaming_power}
+                          {data.average_gaming_power}
                           <sup>(7)</sup>
                         </h5>
                       </td>
@@ -604,7 +629,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].total_graphics_power}
+                          {data.total_graphics_power}
                         </h5>
                       </td>
                     </tr>
@@ -615,7 +640,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].required_system_power}
+                          {data.required_system_power}
                           <sup>(8)</sup>
                         </h5>
                       </td>
@@ -629,7 +654,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {specs[0].supplementary_power_connector}
+                          {data.supplementary_power_connector}
                         </h5>
                       </td>
                     </tr>
