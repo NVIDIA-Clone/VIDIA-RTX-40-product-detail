@@ -16,7 +16,6 @@ COPY package*.json ./
 
 #layer 4 shell form 
 RUN npm install
-RUN npm build
 
 # layer 5 copy all src files to current working dir. CREATE .dockerignore file for node_modules
 COPY . .
