@@ -15,6 +15,7 @@ COPY package*.json ./
 
 
 #layer 4 shell form 
+RUN npm install
 RUN npm build
 
 # layer 5 copy all src files to current working dir. CREATE .dockerignore file for node_modules
@@ -27,4 +28,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # layer 8 can only be one and its just a script. [] format is known as exec form preferred way
-CMD ["npm", "dev"]
+CMD ["npm", "start"]
