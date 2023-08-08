@@ -236,7 +236,7 @@ const SpecModal = () => {
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
                         <h5 className="text-sm">
-                          {spec[0].vidia_geforce_experience ? "Yes" : "No"}
+                          {specs[0].vidia_geforce_experience ? "Yes" : "No"}
                         </h5>
                       </td>
                     </tr>
