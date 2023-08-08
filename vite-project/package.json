@@ -9,7 +9,7 @@
     "build": "npm install && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node mongoServer.js"
   },
   "dependencies": {
     "concurrently": "^8.2.0",
