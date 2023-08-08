@@ -45,7 +45,7 @@ if (cluster.isMaster) {
 
       // Get all from specs
       app.get("/VIDIA_database/specs", logWorkerAndMemory, (req, res) => {
-
+        console.log('working')
         db.collection("specs")
           .find()
           .sort({ name: 1 })
