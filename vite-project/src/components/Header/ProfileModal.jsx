@@ -14,7 +14,6 @@ const ProfileModal = ({ handleClick, handleReg }) => {
     e.preventDefault();
 
     if (validateData(formData)) {
-      console.log("validate is working");
       const options = {
         method: "POST",
         headers: {
@@ -46,56 +45,28 @@ const ProfileModal = ({ handleClick, handleReg }) => {
       verify: "",
     });
   }
-  const clearPassword = () => {
-    setFormData({ ...formData, password: "", verify: "" });
-  };
-
-  const resetForm = () => {
-    clearForm();
-  };
 
   const togglePass = () => {
     setSeePass(!seepass);
   };
 
   const validateData = (data) => {
-    let username = false;
-    let password = false;
-
     const regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&]){10,}/;
 
-    if (data.username === "") {
-      setMessage("Please enter a username of 8 letters or longer");
-    } else if (data.username.length < 8) {
-      setMessage("Please enter a username of 8 letters or longer");
-    } else {
-      username = true;
-    }
-    if (data.password === "") {
+    if (
+      data.username === "" ||
+      data.password === "" ||
+      !regExp.test(data.password) ||
+      data.username.length < 8 ||
+      data.password !== data.verify
+    ) {
+      clearForm();
       setMessage(
-        "Enter a password that is minimum 10 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special symbol..."
+        "Please enter a username of 8 letters or longer and a password that is minimum 10 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special symbol... "
       );
-    } else if (regExp.test(data.password)) {
-      password = true;
-      setMessage("You have entered a valid password");
-    } else if (!regExp.test(data.password)) {
-      clearPassword();
-      setMessage(
-        "Enter a password that is minimum 10 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special symbol..."
-      );
-    } else {
-      setMessage("");
-    }
-
-    if (data.password !== data.verify) {
-      clearPassword();
-      setMessage("Passwords do not match, try again.");
-    }
-
-    if (username && password) {
-      return true;
-    } else {
       return false;
+    } else {
+      return true;
     }
   };
 
@@ -147,23 +118,25 @@ const ProfileModal = ({ handleClick, handleReg }) => {
           />
           <div className="text-red-500">{message}</div>
           <button
+            onClick={clearForm}
+            className="btn-secondary  cursor-pointer hover:text-[#76b900]"
+            type="button"
+          >
+            Reset Form
+          </button>
+          <button
+            className="btn-tertiary  cursor-pointer hover:text-[#76b900]"
+            onClick={togglePass}
+            type="button"
+          >
+            Show Password
+          </button>
+          <button
             type="submit"
             className="btn-primary  cursor-pointer hover:text-[#76b900]"
           >
             Submit
           </button>
-          <button
-            onClick={resetForm}
-            className="btn-secondary  cursor-pointer hover:text-[#76b900]"
-          >
-            Reset Form
-          </button>
-          <buttton
-            className="btn-tertiary  cursor-pointer hover:text-[#76b900]"
-            onClick={togglePass}
-          >
-            Show Password
-          </buttton>
         </form>
       </div>
     </div>
