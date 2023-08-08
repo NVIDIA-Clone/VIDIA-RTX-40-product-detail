@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const ProfileModal = ({ handleClick, handleReg }) => {
   const [message, setMessage] = useState("");
+  const [seepass, setSeePass] = useState(false);
 
   const [formData, setFormData] = useState({
     username: "",
@@ -53,6 +54,10 @@ const ProfileModal = ({ handleClick, handleReg }) => {
     clearForm();
   };
 
+  const togglePass = () => {
+    setSeePass(!seepass);
+  };
+
   const validateData = (data) => {
     let username = false;
     let password = false;
@@ -67,13 +72,17 @@ const ProfileModal = ({ handleClick, handleReg }) => {
       username = true;
     }
     if (data.password === "") {
-      setMessage("Please enter a valid password");
+      setMessage(
+        "Enter a password that is minimum 10 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special symbol..."
+      );
     } else if (regExp.test(data.password)) {
       password = true;
       setMessage("You have entered a valid password");
     } else if (!regExp.test(data.password)) {
       clearPassword();
-      setMessage("Password does not meet requirements, please re-enter");
+      setMessage(
+        "Enter a password that is minimum 10 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special symbol..."
+      );
     } else {
       setMessage("");
     }
@@ -102,7 +111,10 @@ const ProfileModal = ({ handleClick, handleReg }) => {
         >
           X
         </button>
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <form
+          className="flex items-center flex-col gap-4"
+          onSubmit={handleSubmit}
+        >
           <h1 className="mb-4 text-2xl font-semibold">Register</h1>
           <label>Username</label>
           <input
@@ -119,7 +131,7 @@ const ProfileModal = ({ handleClick, handleReg }) => {
             className="input"
             placeholder="Choose a password"
             name="password"
-            type="password"
+            type={seepass ? "text" : "password"}
             onChange={handleChange}
             value={formData.password}
           />
@@ -129,7 +141,7 @@ const ProfileModal = ({ handleClick, handleReg }) => {
             className="input"
             placeholder="Re-enter password"
             name="verify"
-            type="password"
+            type={seepass ? "text" : "password"}
             onChange={handleChange}
             value={formData.verify}
           />
@@ -146,6 +158,12 @@ const ProfileModal = ({ handleClick, handleReg }) => {
           >
             Reset Form
           </button>
+          <buttton
+            className="btn-tertiary  cursor-pointer hover:text-[#76b900]"
+            onClick={togglePass}
+          >
+            Show Password
+          </buttton>
         </form>
       </div>
     </div>
