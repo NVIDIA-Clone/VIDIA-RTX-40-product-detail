@@ -1,7 +1,14 @@
 import SpecModal from "./SpecModal";
 import CompatibilityModal from "./CompatibilityModal";
 
+
+
+
 const Specs = () => {
+
+
+
+  
   return (
     <div className="grid w-full max-h-[44rem] grid-cols-8 grid-rows-6 tracking-tight bg-black specs-grid font-Sig text-NVWhiterTxt">
       <div className="specs-title col-start-3 col-span-4 row-start-1 row-span-1 justify-self-center w-28 text-[40px] mt-16 font-bold">
