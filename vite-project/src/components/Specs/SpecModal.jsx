@@ -396,7 +396,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs.vidia_encoder}</h5>
+                        <h5 className="text-sm">{specs[0].vidia_encoder}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row ">
@@ -407,7 +407,7 @@ const SpecModal = () => {
                         </h5>
                       </td>
                       <td className="w-40 py-4 border-t border-NVDropDownGray">
-                        <h5 className="text-sm">{specs.vidia_decoder}</h5>
+                        <h5 className="text-sm">{specs[0].vidia_decoder}</h5>
                       </td>
                     </tr>
                     <tr className="specs-row ">
